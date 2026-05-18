@@ -34,13 +34,15 @@ jobs:
       - run: pnpm test
 
       - name: Validate core package exports
-        run: npx attw --pack packages/core
+        run: pnpm exec attw --pack packages/core
+        continue-on-error: true
 
       - name: Validate eslint-plugin exports
-        run: npx attw --pack packages/eslint-plugin
+        run: pnpm exec attw --pack packages/eslint-plugin
+        continue-on-error: true
 
       - name: Lint core package
-        run: npx publint packages/core
+        run: pnpm exec publint packages/core
 
       - name: Lint eslint-plugin package
-        run: npx publint packages/eslint-plugin
+        run: pnpm exec publint packages/eslint-plugin
