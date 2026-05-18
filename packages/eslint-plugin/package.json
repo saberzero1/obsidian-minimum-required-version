@@ -1,0 +1,61 @@
+{
+  "name": "eslint-plugin-obsidian-minimum-required-version",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "ESLint plugin that warns when Obsidian plugin code uses APIs newer than the declared minAppVersion.",
+  "license": "Unlicense",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run --config vitest.config.ts"
+  },
+  "dependencies": {
+    "obsidian-minimum-required-version": "workspace:*"
+  },
+  "peerDependencies": {
+    "@typescript-eslint/utils": ">=8.0.0",
+    "eslint": ">=9.0.0",
+    "typescript": ">=5.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.5",
+    "@typescript-eslint/parser": "^8.18.0",
+    "@typescript-eslint/rule-tester": "^8.18.0",
+    "@typescript-eslint/utils": "^8.18.0",
+    "eslint": "^9.16.0",
+    "tsup": "^8.3.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "obsidian",
+    "obsidian-plugin",
+    "api-version"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/saberzero1/obsidian-minimum-required-version.git",
+    "directory": "packages/eslint-plugin"
+  }
+}

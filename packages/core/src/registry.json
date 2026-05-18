@@ -1,0 +1,2452 @@
+{
+  "generatedFrom": "obsidian@1.12.3",
+  "generatedAt": "2026-05-18T12:35:01.290Z",
+  "symbols": {
+    "AbstractInputSuggest": {
+      "since": "1.4.10",
+      "kind": "class"
+    },
+    "AbstractInputSuggest.prototype.getSuggestions": {
+      "since": "1.5.7",
+      "kind": "method"
+    },
+    "AbstractInputSuggest.prototype.getValue": {
+      "since": "1.4.10",
+      "kind": "method"
+    },
+    "AbstractInputSuggest.prototype.limit": {
+      "since": "1.4.10",
+      "kind": "property"
+    },
+    "AbstractInputSuggest.prototype.onSelect": {
+      "since": "1.4.10",
+      "kind": "method"
+    },
+    "AbstractInputSuggest.prototype.selectSuggestion": {
+      "since": "1.6.6",
+      "kind": "method"
+    },
+    "AbstractInputSuggest.prototype.setValue": {
+      "since": "1.4.10",
+      "kind": "method"
+    },
+    "AbstractTextComponent": {
+      "since": "0.9.21",
+      "kind": "class"
+    },
+    "AbstractTextComponent.prototype.getValue": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "AbstractTextComponent.prototype.inputEl": {
+      "since": "0.9.7",
+      "kind": "property"
+    },
+    "AbstractTextComponent.prototype.onChange": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "AbstractTextComponent.prototype.onChanged": {
+      "since": "0.9.21",
+      "kind": "method"
+    },
+    "AbstractTextComponent.prototype.setDisabled": {
+      "since": "1.2.3",
+      "kind": "method"
+    },
+    "AbstractTextComponent.prototype.setPlaceholder": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "AbstractTextComponent.prototype.setValue": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "App": {
+      "since": "0.9.7",
+      "kind": "class"
+    },
+    "App.prototype.fileManager": {
+      "since": "0.11.0",
+      "kind": "property"
+    },
+    "App.prototype.isDarkMode": {
+      "since": "1.10.0",
+      "kind": "method"
+    },
+    "App.prototype.keymap": {
+      "since": "0.9.7",
+      "kind": "property"
+    },
+    "App.prototype.lastEvent": {
+      "since": "0.12.17",
+      "kind": "property"
+    },
+    "App.prototype.loadLocalStorage": {
+      "since": "1.8.7",
+      "kind": "method"
+    },
+    "App.prototype.metadataCache": {
+      "since": "0.9.7",
+      "kind": "property"
+    },
+    "App.prototype.renderContext": {
+      "since": "1.10.0",
+      "kind": "property"
+    },
+    "App.prototype.saveLocalStorage": {
+      "since": "1.8.7",
+      "kind": "method"
+    },
+    "App.prototype.scope": {
+      "since": "0.9.7",
+      "kind": "property"
+    },
+    "App.prototype.secretStorage": {
+      "since": "1.11.4",
+      "kind": "property"
+    },
+    "App.prototype.vault": {
+      "since": "0.9.7",
+      "kind": "property"
+    },
+    "App.prototype.workspace": {
+      "since": "0.9.7",
+      "kind": "property"
+    },
+    "BaseComponent": {
+      "since": "0.10.3",
+      "kind": "class"
+    },
+    "BaseComponent.prototype.disabled": {
+      "since": "0.10.3",
+      "kind": "property"
+    },
+    "BaseComponent.prototype.setDisabled": {
+      "since": "1.2.3",
+      "kind": "method"
+    },
+    "BaseComponent.prototype.then": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "BasesAllOptions": {
+      "since": "1.10.0",
+      "kind": "type"
+    },
+    "BasesConfigFile": {
+      "since": "1.10.0",
+      "kind": "interface"
+    },
+    "BasesConfigFileFilter": {
+      "since": "1.10.0",
+      "kind": "type"
+    },
+    "BasesConfigFileView": {
+      "since": "1.10.0",
+      "kind": "interface"
+    },
+    "BasesDropdownOption": {
+      "since": "1.10.0",
+      "kind": "interface"
+    },
+    "BasesEntry": {
+      "since": "1.10.0",
+      "kind": "class"
+    },
+    "BasesEntry.prototype.file": {
+      "since": "1.10.0",
+      "kind": "property"
+    },
+    "BasesEntry.prototype.getValue": {
+      "since": "1.10.0",
+      "kind": "method"
+    },
+    "BasesEntryGroup": {
+      "since": "1.10.0",
+      "kind": "class"
+    },
+    "BasesEntryGroup.prototype.entries": {
+      "since": "1.10.0",
+      "kind": "property"
+    },
+    "BasesEntryGroup.prototype.hasKey": {
+      "since": "1.10.0",
+      "kind": "method"
+    },
+    "BasesEntryGroup.prototype.key": {
+      "since": "1.10.0",
+      "kind": "property"
+    },
+    "BasesFileOption": {
+      "since": "1.10.2",
+      "kind": "interface"
+    },
+    "BasesFolderOption": {
+      "since": "1.10.2",
+      "kind": "interface"
+    },
+    "BasesFormulaOption": {
+      "since": "1.10.2",
+      "kind": "interface"
+    },
+    "BasesMultitextOption": {
+      "since": "1.10.0",
+      "kind": "interface"
+    },
+    "BasesOption": {
+      "since": "1.10.0",
+      "kind": "interface"
+    },
+    "BasesOptionGroup": {
+      "since": "1.10.0",
+      "kind": "interface"
+    },
+    "BasesOptions": {
+      "since": "1.10.0",
+      "kind": "type"
+    },
+    "BasesProperty": {
+      "since": "1.10.0",
+      "kind": "interface"
+    },
+    "BasesPropertyId": {
+      "since": "1.10.0",
+      "kind": "type"
+    },
+    "BasesPropertyOption": {
+      "since": "1.10.0",
+      "kind": "interface"
+    },
+    "BasesPropertyType": {
+      "since": "1.10.0",
+      "kind": "type"
+    },
+    "BasesQueryResult": {
+      "since": "1.10.0",
+      "kind": "class"
+    },
+    "BasesQueryResult.prototype.data": {
+      "since": "1.10.0",
+      "kind": "property"
+    },
+    "BasesQueryResult.prototype.getSummaryValue": {
+      "since": "1.10.0",
+      "kind": "method"
+    },
+    "BasesSliderOption": {
+      "since": "1.10.0",
+      "kind": "interface"
+    },
+    "BasesSortConfig": {
+      "since": "1.10.0",
+      "kind": "type"
+    },
+    "BasesTextOption": {
+      "since": "1.10.0",
+      "kind": "interface"
+    },
+    "BasesToggleOption": {
+      "since": "1.10.0",
+      "kind": "interface"
+    },
+    "BasesView": {
+      "since": "1.10.0",
+      "kind": "class"
+    },
+    "BasesView.prototype.allProperties": {
+      "since": "1.10.0",
+      "kind": "property"
+    },
+    "BasesView.prototype.app": {
+      "since": "1.10.0",
+      "kind": "property"
+    },
+    "BasesView.prototype.config": {
+      "since": "1.10.0",
+      "kind": "property"
+    },
+    "BasesView.prototype.createFileForView": {
+      "since": "1.10.2",
+      "kind": "method"
+    },
+    "BasesView.prototype.data": {
+      "since": "1.10.0",
+      "kind": "property"
+    },
+    "BasesView.prototype.onDataUpdated": {
+      "since": "1.10.0",
+      "kind": "method"
+    },
+    "BasesView.prototype.type": {
+      "since": "1.10.0",
+      "kind": "property"
+    },
+    "BasesViewConfig": {
+      "since": "1.10.0",
+      "kind": "class"
+    },
+    "BasesViewConfig.prototype.get": {
+      "since": "1.10.0",
+      "kind": "method"
+    },
+    "BasesViewConfig.prototype.getAsPropertyId": {
+      "since": "1.10.0",
+      "kind": "method"
+    },
+    "BasesViewConfig.prototype.getDisplayName": {
+      "since": "1.10.0",
+      "kind": "method"
+    },
+    "BasesViewConfig.prototype.getEvaluatedFormula": {
+      "since": "1.10.2",
+      "kind": "method"
+    },
+    "BasesViewConfig.prototype.getOrder": {
+      "since": "1.10.0",
+      "kind": "method"
+    },
+    "BasesViewConfig.prototype.getSort": {
+      "since": "1.10.0",
+      "kind": "method"
+    },
+    "BasesViewConfig.prototype.name": {
+      "since": "1.10.0",
+      "kind": "property"
+    },
+    "BasesViewConfig.prototype.set": {
+      "since": "1.10.0",
+      "kind": "method"
+    },
+    "BasesViewFactory": {
+      "since": "1.10.0",
+      "kind": "type"
+    },
+    "BasesViewRegistration": {
+      "since": "1.10.0",
+      "kind": "interface"
+    },
+    "BlockCache": {
+      "since": "0.11.13",
+      "kind": "interface"
+    },
+    "BlockSubpathResult": {
+      "since": "0.13.26",
+      "kind": "interface"
+    },
+    "BooleanValue": {
+      "since": "1.10.0",
+      "kind": "class"
+    },
+    "BooleanValue.type": {
+      "since": "1.10.0",
+      "kind": "property"
+    },
+    "ButtonComponent": {
+      "since": "0.9.7",
+      "kind": "class"
+    },
+    "ButtonComponent.prototype.buttonEl": {
+      "since": "0.9.7",
+      "kind": "property"
+    },
+    "ButtonComponent.prototype.onClick": {
+      "since": "0.12.16",
+      "kind": "method"
+    },
+    "ButtonComponent.prototype.removeCta": {
+      "since": "0.9.20",
+      "kind": "method"
+    },
+    "ButtonComponent.prototype.setButtonText": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "ButtonComponent.prototype.setClass": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "ButtonComponent.prototype.setCta": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "ButtonComponent.prototype.setDisabled": {
+      "since": "1.2.3",
+      "kind": "method"
+    },
+    "ButtonComponent.prototype.setIcon": {
+      "since": "1.1.0",
+      "kind": "method"
+    },
+    "ButtonComponent.prototype.setTooltip": {
+      "since": "1.1.0",
+      "kind": "method"
+    },
+    "ButtonComponent.prototype.setWarning": {
+      "since": "0.11.0",
+      "kind": "method"
+    },
+    "CapacitorAdapter": {
+      "since": "1.7.2",
+      "kind": "class"
+    },
+    "CapacitorAdapter.prototype.append": {
+      "since": "1.7.2",
+      "kind": "method"
+    },
+    "CapacitorAdapter.prototype.appendBinary": {
+      "since": "1.12.3",
+      "kind": "method"
+    },
+    "CapacitorAdapter.prototype.copy": {
+      "since": "1.7.2",
+      "kind": "method"
+    },
+    "CapacitorAdapter.prototype.exists": {
+      "since": "1.7.2",
+      "kind": "method"
+    },
+    "CapacitorAdapter.prototype.getFullPath": {
+      "since": "1.7.2",
+      "kind": "method"
+    },
+    "CapacitorAdapter.prototype.getName": {
+      "since": "1.7.2",
+      "kind": "method"
+    },
+    "CapacitorAdapter.prototype.getResourcePath": {
+      "since": "1.7.2",
+      "kind": "method"
+    },
+    "CapacitorAdapter.prototype.list": {
+      "since": "1.7.2",
+      "kind": "method"
+    },
+    "CapacitorAdapter.prototype.mkdir": {
+      "since": "1.7.2",
+      "kind": "method"
+    },
+    "CapacitorAdapter.prototype.process": {
+      "since": "1.7.2",
+      "kind": "method"
+    },
+    "CapacitorAdapter.prototype.read": {
+      "since": "1.7.2",
+      "kind": "method"
+    },
+    "CapacitorAdapter.prototype.readBinary": {
+      "since": "1.7.2",
+      "kind": "method"
+    },
+    "CapacitorAdapter.prototype.remove": {
+      "since": "1.7.2",
+      "kind": "method"
+    },
+    "CapacitorAdapter.prototype.rename": {
+      "since": "1.7.2",
+      "kind": "method"
+    },
+    "CapacitorAdapter.prototype.rmdir": {
+      "since": "1.7.2",
+      "kind": "method"
+    },
+    "CapacitorAdapter.prototype.stat": {
+      "since": "1.7.2",
+      "kind": "method"
+    },
+    "CapacitorAdapter.prototype.trashLocal": {
+      "since": "1.7.2",
+      "kind": "method"
+    },
+    "CapacitorAdapter.prototype.trashSystem": {
+      "since": "1.7.2",
+      "kind": "method"
+    },
+    "CapacitorAdapter.prototype.write": {
+      "since": "1.7.2",
+      "kind": "method"
+    },
+    "CapacitorAdapter.prototype.writeBinary": {
+      "since": "1.7.2",
+      "kind": "method"
+    },
+    "CliData": {
+      "since": "1.12.2",
+      "kind": "interface"
+    },
+    "CliFlag": {
+      "since": "1.12.2",
+      "kind": "interface"
+    },
+    "CliFlags": {
+      "since": "1.12.2",
+      "kind": "type"
+    },
+    "CliHandler": {
+      "since": "1.12.2",
+      "kind": "type"
+    },
+    "ColorComponent": {
+      "since": "1.0.0",
+      "kind": "class"
+    },
+    "ColorComponent.prototype.getValue": {
+      "since": "1.0.0",
+      "kind": "method"
+    },
+    "ColorComponent.prototype.getValueHsl": {
+      "since": "1.0.0",
+      "kind": "method"
+    },
+    "ColorComponent.prototype.getValueRgb": {
+      "since": "1.0.0",
+      "kind": "method"
+    },
+    "ColorComponent.prototype.onChange": {
+      "since": "1.0.0",
+      "kind": "method"
+    },
+    "ColorComponent.prototype.setDisabled": {
+      "since": "1.2.3",
+      "kind": "method"
+    },
+    "ColorComponent.prototype.setValue": {
+      "since": "1.0.0",
+      "kind": "method"
+    },
+    "ColorComponent.prototype.setValueHsl": {
+      "since": "1.0.0",
+      "kind": "method"
+    },
+    "ColorComponent.prototype.setValueRgb": {
+      "since": "1.0.0",
+      "kind": "method"
+    },
+    "Component": {
+      "since": "0.9.7",
+      "kind": "class"
+    },
+    "Component.prototype.addChild": {
+      "since": "0.12.0",
+      "kind": "method"
+    },
+    "Component.prototype.load": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "Component.prototype.onload": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "Component.prototype.onunload": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "Component.prototype.register": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "Component.prototype.registerDomEvent": {
+      "since": "0.14.8",
+      "kind": "method"
+    },
+    "Component.prototype.registerEvent": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "Component.prototype.registerInterval": {
+      "since": "0.13.8",
+      "kind": "method"
+    },
+    "Component.prototype.removeChild": {
+      "since": "0.12.0",
+      "kind": "method"
+    },
+    "Component.prototype.unload": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "DateValue": {
+      "since": "1.10.0",
+      "kind": "class"
+    },
+    "DateValue.parseFromString": {
+      "since": "1.10.0",
+      "kind": "method"
+    },
+    "DateValue.prototype.dateOnly": {
+      "since": "1.10.0",
+      "kind": "method"
+    },
+    "DateValue.prototype.isTruthy": {
+      "since": "1.10.0",
+      "kind": "method"
+    },
+    "DateValue.prototype.relative": {
+      "since": "1.10.0",
+      "kind": "method"
+    },
+    "DateValue.prototype.toString": {
+      "since": "1.10.0",
+      "kind": "method"
+    },
+    "displayTooltip": {
+      "since": "1.8.7",
+      "kind": "function"
+    },
+    "DropdownComponent": {
+      "since": "0.9.7",
+      "kind": "class"
+    },
+    "DropdownComponent.prototype.addOption": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "DropdownComponent.prototype.addOptions": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "DropdownComponent.prototype.getValue": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "DropdownComponent.prototype.onChange": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "DropdownComponent.prototype.selectEl": {
+      "since": "0.9.7",
+      "kind": "property"
+    },
+    "DropdownComponent.prototype.setDisabled": {
+      "since": "1.2.3",
+      "kind": "method"
+    },
+    "DropdownComponent.prototype.setValue": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "DurationValue": {
+      "since": "1.10.0",
+      "kind": "class"
+    },
+    "DurationValue.fromMilliseconds": {
+      "since": "1.10.0",
+      "kind": "method"
+    },
+    "DurationValue.parseFromString": {
+      "since": "1.10.0",
+      "kind": "method"
+    },
+    "DurationValue.prototype.addToDate": {
+      "since": "1.10.0",
+      "kind": "method"
+    },
+    "DurationValue.prototype.getMilliseconds": {
+      "since": "1.10.0",
+      "kind": "method"
+    },
+    "DurationValue.prototype.isTruthy": {
+      "since": "1.10.0",
+      "kind": "method"
+    },
+    "DurationValue.prototype.toString": {
+      "since": "1.10.0",
+      "kind": "method"
+    },
+    "EditableFileView": {
+      "since": "0.9.7",
+      "kind": "class"
+    },
+    "Editor": {
+      "since": "0.11.11",
+      "kind": "class"
+    },
+    "Editor.prototype.blur": {
+      "since": "0.11.11",
+      "kind": "method"
+    },
+    "Editor.prototype.exec": {
+      "since": "0.12.2",
+      "kind": "method"
+    },
+    "Editor.prototype.focus": {
+      "since": "0.11.11",
+      "kind": "method"
+    },
+    "Editor.prototype.getCursor": {
+      "since": "0.11.11",
+      "kind": "method"
+    },
+    "Editor.prototype.getDoc": {
+      "since": "0.11.11",
+      "kind": "method"
+    },
+    "Editor.prototype.getLine": {
+      "since": "0.11.11",
+      "kind": "method"
+    },
+    "Editor.prototype.getRange": {
+      "since": "0.11.11",
+      "kind": "method"
+    },
+    "Editor.prototype.getScrollInfo": {
+      "since": "0.11.11",
+      "kind": "method"
+    },
+    "Editor.prototype.getSelection": {
+      "since": "0.11.11",
+      "kind": "method"
+    },
+    "Editor.prototype.getValue": {
+      "since": "0.11.11",
+      "kind": "method"
+    },
+    "Editor.prototype.hasFocus": {
+      "since": "0.11.11",
+      "kind": "method"
+    },
+    "Editor.prototype.lastLine": {
+      "since": "0.11.11",
+      "kind": "method"
+    },
+    "Editor.prototype.lineCount": {
+      "since": "0.11.11",
+      "kind": "method"
+    },
+    "Editor.prototype.listSelections": {
+      "since": "0.11.11",
+      "kind": "method"
+    },
+    "Editor.prototype.offsetToPos": {
+      "since": "0.11.11",
+      "kind": "method"
+    },
+    "Editor.prototype.posToOffset": {
+      "since": "0.11.11",
+      "kind": "method"
+    },
+    "Editor.prototype.processLines": {
+      "since": "0.13.26",
+      "kind": "method"
+    },
+    "Editor.prototype.redo": {
+      "since": "0.11.11",
+      "kind": "method"
+    },
+    "Editor.prototype.refresh": {
+      "since": "0.11.11",
+      "kind": "method"
+    },
+    "Editor.prototype.replaceRange": {
+      "since": "0.11.11",
+      "kind": "method"
+    },
+    "Editor.prototype.replaceSelection": {
+      "since": "0.11.11",
+      "kind": "method"
+    },
+    "Editor.prototype.scrollIntoView": {
+      "since": "0.13.0",
+      "kind": "method"
+    },
+    "Editor.prototype.scrollTo": {
+      "since": "0.11.11",
+      "kind": "method"
+    },
+    "Editor.prototype.setCursor": {
+      "since": "0.11.11",
+      "kind": "method"
+    },
+    "Editor.prototype.setLine": {
+      "since": "0.11.11",
+      "kind": "method"
+    },
+    "Editor.prototype.setSelection": {
+      "since": "0.11.11",
+      "kind": "method"
+    },
+    "Editor.prototype.setSelections": {
+      "since": "0.12.11",
+      "kind": "method"
+    },
+    "Editor.prototype.setValue": {
+      "since": "0.11.11",
+      "kind": "method"
+    },
+    "Editor.prototype.somethingSelected": {
+      "since": "0.11.11",
+      "kind": "method"
+    },
+    "Editor.prototype.transaction": {
+      "since": "0.13.0",
+      "kind": "method"
+    },
+    "Editor.prototype.undo": {
+      "since": "0.11.11",
+      "kind": "method"
+    },
+    "Editor.prototype.wordAt": {
+      "since": "0.11.11",
+      "kind": "method"
+    },
+    "EditorChange": {
+      "since": "0.12.11",
+      "kind": "interface"
+    },
+    "EditorPosition": {
+      "since": "0.12.11",
+      "kind": "interface"
+    },
+    "EditorRange": {
+      "since": "0.12.11",
+      "kind": "interface"
+    },
+    "EditorRangeOrCaret": {
+      "since": "0.12.11",
+      "kind": "interface"
+    },
+    "EditorScrollInfo": {
+      "since": "0.15.0",
+      "kind": "interface"
+    },
+    "EditorSelection": {
+      "since": "0.12.11",
+      "kind": "interface"
+    },
+    "EditorSelectionOrCaret": {
+      "since": "0.12.11",
+      "kind": "interface"
+    },
+    "EditorSuggest": {
+      "since": "0.12.17",
+      "kind": "class"
+    },
+    "EditorSuggest.prototype.context": {
+      "since": "0.12.17",
+      "kind": "property"
+    },
+    "EditorSuggest.prototype.getSuggestions": {
+      "since": "0.12.17",
+      "kind": "method"
+    },
+    "EditorSuggest.prototype.limit": {
+      "since": "0.12.17",
+      "kind": "property"
+    },
+    "EditorSuggest.prototype.onTrigger": {
+      "since": "1.1.13",
+      "kind": "method"
+    },
+    "EditorSuggest.prototype.setInstructions": {
+      "since": "0.13.0",
+      "kind": "method"
+    },
+    "EditorSuggestContext": {
+      "since": "0.12.17",
+      "kind": "interface"
+    },
+    "EditorSuggestTriggerInfo": {
+      "since": "0.12.17",
+      "kind": "interface"
+    },
+    "EmbedCache": {
+      "since": "0.9.7",
+      "kind": "interface"
+    },
+    "Events": {
+      "since": "0.9.7",
+      "kind": "class"
+    },
+    "Events.prototype.off": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "Events.prototype.offref": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "Events.prototype.on": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "Events.prototype.trigger": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "Events.prototype.tryTrigger": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "ExtraButtonComponent": {
+      "since": "0.9.7",
+      "kind": "class"
+    },
+    "ExtraButtonComponent.prototype.extraSettingsEl": {
+      "since": "0.9.7",
+      "kind": "property"
+    },
+    "ExtraButtonComponent.prototype.onClick": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "ExtraButtonComponent.prototype.setDisabled": {
+      "since": "1.2.3",
+      "kind": "method"
+    },
+    "ExtraButtonComponent.prototype.setIcon": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "ExtraButtonComponent.prototype.setTooltip": {
+      "since": "1.1.0",
+      "kind": "method"
+    },
+    "FileManager": {
+      "since": "0.9.7",
+      "kind": "class"
+    },
+    "FileManager.prototype.generateMarkdownLink": {
+      "since": "0.12.0",
+      "kind": "method"
+    },
+    "FileManager.prototype.getAvailablePathForAttachment": {
+      "since": "1.5.7",
+      "kind": "method"
+    },
+    "FileManager.prototype.getNewFileParent": {
+      "since": "1.1.13",
+      "kind": "method"
+    },
+    "FileManager.prototype.processFrontMatter": {
+      "since": "1.4.4",
+      "kind": "method"
+    },
+    "FileManager.prototype.promptForDeletion": {
+      "since": "0.15.0",
+      "kind": "method"
+    },
+    "FileManager.prototype.renameFile": {
+      "since": "0.11.0",
+      "kind": "method"
+    },
+    "FileManager.prototype.trashFile": {
+      "since": "1.6.6",
+      "kind": "method"
+    },
+    "FileSystemAdapter.prototype.appendBinary": {
+      "since": "1.12.3",
+      "kind": "method"
+    },
+    "FileSystemAdapter.prototype.getFilePath": {
+      "since": "0.14.3",
+      "kind": "method"
+    },
+    "FileSystemAdapter.prototype.stat": {
+      "since": "0.12.2",
+      "kind": "method"
+    },
+    "FileValue": {
+      "since": "1.10.0",
+      "kind": "class"
+    },
+    "FileValue.prototype.isTruthy": {
+      "since": "1.10.0",
+      "kind": "method"
+    },
+    "FileValue.prototype.toString": {
+      "since": "1.10.0",
+      "kind": "method"
+    },
+    "FileView.prototype.canAcceptExtension": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "FileView.prototype.setState": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "FootnoteSubpathResult": {
+      "since": "1.7.2",
+      "kind": "interface"
+    },
+    "FormulaContext": {
+      "since": "1.10.0",
+      "kind": "interface"
+    },
+    "FuzzyMatch": {
+      "since": "0.9.20",
+      "kind": "interface"
+    },
+    "FuzzySuggestModal": {
+      "since": "0.9.20",
+      "kind": "class"
+    },
+    "FuzzySuggestModal.prototype.getItems": {
+      "since": "0.9.20",
+      "kind": "method"
+    },
+    "FuzzySuggestModal.prototype.getItemText": {
+      "since": "0.9.20",
+      "kind": "method"
+    },
+    "FuzzySuggestModal.prototype.getSuggestions": {
+      "since": "0.9.20",
+      "kind": "method"
+    },
+    "FuzzySuggestModal.prototype.onChooseItem": {
+      "since": "0.9.20",
+      "kind": "method"
+    },
+    "FuzzySuggestModal.prototype.onChooseSuggestion": {
+      "since": "0.9.20",
+      "kind": "method"
+    },
+    "FuzzySuggestModal.prototype.renderSuggestion": {
+      "since": "0.9.20",
+      "kind": "method"
+    },
+    "getFrontMatterInfo": {
+      "since": "1.5.7",
+      "kind": "function"
+    },
+    "getLanguage": {
+      "since": "1.8.7",
+      "kind": "function"
+    },
+    "HeadingSubpathResult": {
+      "since": "0.9.16",
+      "kind": "interface"
+    },
+    "HoverParent": {
+      "since": "0.11.13",
+      "kind": "interface"
+    },
+    "HoverPopover": {
+      "since": "0.15.0",
+      "kind": "class"
+    },
+    "HSL": {
+      "since": "0.16.0",
+      "kind": "interface"
+    },
+    "HTMLValue": {
+      "since": "1.10.0",
+      "kind": "class"
+    },
+    "IconValue": {
+      "since": "1.10.0",
+      "kind": "class"
+    },
+    "ImageValue": {
+      "since": "1.10.0",
+      "kind": "class"
+    },
+    "Instruction": {
+      "since": "0.9.20",
+      "kind": "interface"
+    },
+    "ItemView": {
+      "since": "0.9.7",
+      "kind": "class"
+    },
+    "ItemView.prototype.addAction": {
+      "since": "1.1.0",
+      "kind": "method"
+    },
+    "Keymap": {
+      "since": "0.13.9",
+      "kind": "class"
+    },
+    "Keymap.isModEvent": {
+      "since": "0.16.0",
+      "kind": "method"
+    },
+    "Keymap.isModifier": {
+      "since": "0.12.17",
+      "kind": "method"
+    },
+    "Keymap.prototype.popScope": {
+      "since": "0.13.9",
+      "kind": "method"
+    },
+    "Keymap.prototype.pushScope": {
+      "since": "0.13.9",
+      "kind": "method"
+    },
+    "KeymapInfo": {
+      "since": "0.10.4",
+      "kind": "interface"
+    },
+    "LinkCache": {
+      "since": "0.9.7",
+      "kind": "interface"
+    },
+    "LinkValue": {
+      "since": "1.10.0",
+      "kind": "class"
+    },
+    "LinkValue.parseFromString": {
+      "since": "1.10.0",
+      "kind": "method"
+    },
+    "ListValue": {
+      "since": "1.10.0",
+      "kind": "class"
+    },
+    "ListValue.prototype.concat": {
+      "since": "1.10.0",
+      "kind": "method"
+    },
+    "ListValue.prototype.get": {
+      "since": "1.10.0",
+      "kind": "method"
+    },
+    "ListValue.prototype.includes": {
+      "since": "1.10.0",
+      "kind": "method"
+    },
+    "ListValue.prototype.isTruthy": {
+      "since": "1.10.0",
+      "kind": "method"
+    },
+    "ListValue.prototype.length": {
+      "since": "1.10.0",
+      "kind": "method"
+    },
+    "ListValue.prototype.toString": {
+      "since": "1.10.0",
+      "kind": "method"
+    },
+    "ListValue.type": {
+      "since": "1.10.0",
+      "kind": "property"
+    },
+    "MarkdownPostProcessor": {
+      "since": "0.10.12",
+      "kind": "interface"
+    },
+    "MarkdownPreviewRenderer": {
+      "since": "0.9.7",
+      "kind": "class"
+    },
+    "MarkdownPreviewRenderer.createCodeBlockPostProcessor": {
+      "since": "0.12.11",
+      "kind": "method"
+    },
+    "MarkdownPreviewRenderer.registerPostProcessor": {
+      "since": "0.10.12",
+      "kind": "method"
+    },
+    "MarkdownPreviewRenderer.unregisterPostProcessor": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "MarkdownRenderer": {
+      "since": "0.9.7",
+      "kind": "class"
+    },
+    "MarkdownRenderer.renderMarkdown": {
+      "since": "0.10.6",
+      "kind": "method"
+    },
+    "Menu.forEvent": {
+      "since": "1.6.0",
+      "kind": "method"
+    },
+    "Menu.prototype.setUseNativeMenu": {
+      "since": "0.16.0",
+      "kind": "method"
+    },
+    "Menu.prototype.showAtMouseEvent": {
+      "since": "0.12.6",
+      "kind": "method"
+    },
+    "Menu.prototype.showAtPosition": {
+      "since": "1.1.0",
+      "kind": "method"
+    },
+    "MenuItem.prototype.setIsLabel": {
+      "since": "0.15.0",
+      "kind": "method"
+    },
+    "MenuItem.prototype.setWarning": {
+      "since": "0.15.0",
+      "kind": "method"
+    },
+    "MenuPositionDef": {
+      "since": "1.1.0",
+      "kind": "interface"
+    },
+    "MenuSeparator": {
+      "since": "0.15.3",
+      "kind": "class"
+    },
+    "MetadataCache.prototype.getCache": {
+      "since": "0.14.5",
+      "kind": "method"
+    },
+    "MetadataCache.prototype.getFileCache": {
+      "since": "0.9.21",
+      "kind": "method"
+    },
+    "MetadataCache.prototype.getFirstLinkpathDest": {
+      "since": "0.12.5",
+      "kind": "method"
+    },
+    "Modal.prototype.setCloseCallback": {
+      "since": "1.10.0",
+      "kind": "method"
+    },
+    "Modal.prototype.shouldRestoreSelection": {
+      "since": "0.9.16",
+      "kind": "property"
+    },
+    "MomentFormatComponent": {
+      "since": "0.9.7",
+      "kind": "class"
+    },
+    "MomentFormatComponent.prototype.onChanged": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "MomentFormatComponent.prototype.sampleEl": {
+      "since": "0.9.7",
+      "kind": "property"
+    },
+    "MomentFormatComponent.prototype.setDefaultFormat": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "MomentFormatComponent.prototype.setSampleEl": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "MomentFormatComponent.prototype.setValue": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "MomentFormatComponent.prototype.updateSample": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "Notice": {
+      "since": "0.9.7",
+      "kind": "class"
+    },
+    "Notice.prototype.containerEl": {
+      "since": "1.8.7",
+      "kind": "property"
+    },
+    "Notice.prototype.hide": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "Notice.prototype.messageEl": {
+      "since": "1.8.7",
+      "kind": "property"
+    },
+    "Notice.prototype.noticeEl": {
+      "since": "0.9.7",
+      "kind": "property"
+    },
+    "Notice.prototype.setMessage": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "NotNullValue": {
+      "since": "1.10.0",
+      "kind": "class"
+    },
+    "NullValue": {
+      "since": "1.10.0",
+      "kind": "class"
+    },
+    "NullValue.prototype.isTruthy": {
+      "since": "1.10.0",
+      "kind": "method"
+    },
+    "NullValue.prototype.toString": {
+      "since": "1.10.0",
+      "kind": "method"
+    },
+    "NullValue.value": {
+      "since": "1.10.0",
+      "kind": "property"
+    },
+    "NumberValue": {
+      "since": "1.10.0",
+      "kind": "class"
+    },
+    "NumberValue.type": {
+      "since": "1.10.0",
+      "kind": "property"
+    },
+    "ObjectValue": {
+      "since": "1.10.0",
+      "kind": "class"
+    },
+    "ObjectValue.prototype.get": {
+      "since": "1.10.0",
+      "kind": "method"
+    },
+    "ObjectValue.prototype.isEmpty": {
+      "since": "1.10.0",
+      "kind": "method"
+    },
+    "ObjectValue.prototype.isTruthy": {
+      "since": "1.10.0",
+      "kind": "method"
+    },
+    "ObjectValue.prototype.toString": {
+      "since": "1.10.0",
+      "kind": "method"
+    },
+    "ObjectValue.type": {
+      "since": "1.10.0",
+      "kind": "property"
+    },
+    "parsePropertyId": {
+      "since": "1.10.0",
+      "kind": "function"
+    },
+    "Platform": {
+      "since": "0.12.2",
+      "kind": "variable"
+    },
+    "Plugin": {
+      "since": "0.9.7",
+      "kind": "class"
+    },
+    "Plugin.prototype.addCommand": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "Plugin.prototype.addRibbonIcon": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "Plugin.prototype.addSettingTab": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "Plugin.prototype.addStatusBarItem": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "Plugin.prototype.app": {
+      "since": "0.9.7",
+      "kind": "property"
+    },
+    "Plugin.prototype.loadData": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "Plugin.prototype.manifest": {
+      "since": "0.9.7",
+      "kind": "property"
+    },
+    "Plugin.prototype.onExternalSettingsChange": {
+      "since": "1.5.7",
+      "kind": "method"
+    },
+    "Plugin.prototype.onload": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "Plugin.prototype.onUserEnable": {
+      "since": "1.7.2",
+      "kind": "method"
+    },
+    "Plugin.prototype.registerBasesView": {
+      "since": "1.10.0",
+      "kind": "method"
+    },
+    "Plugin.prototype.registerCliHandler": {
+      "since": "1.12.2",
+      "kind": "method"
+    },
+    "Plugin.prototype.registerEditorExtension": {
+      "since": "0.12.8",
+      "kind": "method"
+    },
+    "Plugin.prototype.registerEditorSuggest": {
+      "since": "0.12.7",
+      "kind": "method"
+    },
+    "Plugin.prototype.registerExtensions": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "Plugin.prototype.registerHoverLinkSource": {
+      "since": "1.1.0",
+      "kind": "method"
+    },
+    "Plugin.prototype.registerMarkdownCodeBlockProcessor": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "Plugin.prototype.registerMarkdownPostProcessor": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "Plugin.prototype.registerObsidianProtocolHandler": {
+      "since": "0.11.0",
+      "kind": "method"
+    },
+    "Plugin.prototype.registerView": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "Plugin.prototype.removeCommand": {
+      "since": "1.7.2",
+      "kind": "method"
+    },
+    "Plugin.prototype.saveData": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "PluginSettingTab": {
+      "since": "0.9.7",
+      "kind": "class"
+    },
+    "PrimitiveValue": {
+      "since": "1.10.0",
+      "kind": "class"
+    },
+    "PrimitiveValue.prototype.isTruthy": {
+      "since": "1.10.0",
+      "kind": "method"
+    },
+    "PrimitiveValue.prototype.toString": {
+      "since": "1.10.0",
+      "kind": "method"
+    },
+    "ProgressBarComponent": {
+      "since": "1.4.4",
+      "kind": "class"
+    },
+    "QueryController": {
+      "since": "1.10.0",
+      "kind": "class"
+    },
+    "ReferenceLinkCache": {
+      "since": "1.8.7",
+      "kind": "interface"
+    },
+    "RegExpValue": {
+      "since": "1.10.0",
+      "kind": "class"
+    },
+    "RegExpValue.prototype.isTruthy": {
+      "since": "1.10.0",
+      "kind": "method"
+    },
+    "RegExpValue.prototype.toString": {
+      "since": "1.10.0",
+      "kind": "method"
+    },
+    "RelativeDateValue": {
+      "since": "1.10.0",
+      "kind": "class"
+    },
+    "RenderContext": {
+      "since": "1.10.0",
+      "kind": "class"
+    },
+    "RenderContext.prototype.hoverPopover": {
+      "since": "1.10.0",
+      "kind": "property"
+    },
+    "request": {
+      "since": "0.12.11",
+      "kind": "function"
+    },
+    "RGB": {
+      "since": "0.16.0",
+      "kind": "interface"
+    },
+    "SearchComponent": {
+      "since": "0.9.21",
+      "kind": "class"
+    },
+    "SearchComponent.prototype.clearButtonEl": {
+      "since": "0.9.21",
+      "kind": "property"
+    },
+    "SearchResult": {
+      "since": "0.9.21",
+      "kind": "interface"
+    },
+    "SearchResultContainer": {
+      "since": "0.9.21",
+      "kind": "interface"
+    },
+    "SecretComponent": {
+      "since": "1.11.1",
+      "kind": "class"
+    },
+    "SecretComponent.prototype.onChange": {
+      "since": "1.11.4",
+      "kind": "method"
+    },
+    "SecretComponent.prototype.setValue": {
+      "since": "1.11.4",
+      "kind": "method"
+    },
+    "SecretStorage": {
+      "since": "1.11.4",
+      "kind": "class"
+    },
+    "SecretStorage.prototype.getSecret": {
+      "since": "1.11.4",
+      "kind": "method"
+    },
+    "SecretStorage.prototype.listSecrets": {
+      "since": "1.11.4",
+      "kind": "method"
+    },
+    "SecretStorage.prototype.setSecret": {
+      "since": "1.11.4",
+      "kind": "method"
+    },
+    "Setting": {
+      "since": "0.9.7",
+      "kind": "class"
+    },
+    "Setting.prototype.addButton": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "Setting.prototype.addComponent": {
+      "since": "1.11.0",
+      "kind": "method"
+    },
+    "Setting.prototype.addExtraButton": {
+      "since": "0.9.16",
+      "kind": "method"
+    },
+    "Setting.prototype.addMomentFormat": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "Setting.prototype.addSearch": {
+      "since": "0.9.21",
+      "kind": "method"
+    },
+    "Setting.prototype.addSlider": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "Setting.prototype.addText": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "Setting.prototype.addTextArea": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "Setting.prototype.addToggle": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "Setting.prototype.clear": {
+      "since": "0.13.8",
+      "kind": "method"
+    },
+    "Setting.prototype.components": {
+      "since": "0.9.7",
+      "kind": "property"
+    },
+    "Setting.prototype.controlEl": {
+      "since": "0.9.7",
+      "kind": "property"
+    },
+    "Setting.prototype.descEl": {
+      "since": "0.9.7",
+      "kind": "property"
+    },
+    "Setting.prototype.infoEl": {
+      "since": "0.9.7",
+      "kind": "property"
+    },
+    "Setting.prototype.nameEl": {
+      "since": "0.9.7",
+      "kind": "property"
+    },
+    "Setting.prototype.setClass": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "Setting.prototype.setDesc": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "Setting.prototype.setDisabled": {
+      "since": "1.2.3",
+      "kind": "method"
+    },
+    "Setting.prototype.setHeading": {
+      "since": "0.9.16",
+      "kind": "method"
+    },
+    "Setting.prototype.setName": {
+      "since": "0.12.16",
+      "kind": "method"
+    },
+    "Setting.prototype.settingEl": {
+      "since": "0.9.7",
+      "kind": "property"
+    },
+    "Setting.prototype.setTooltip": {
+      "since": "1.1.0",
+      "kind": "method"
+    },
+    "Setting.prototype.then": {
+      "since": "0.9.20",
+      "kind": "method"
+    },
+    "SettingGroup": {
+      "since": "1.11.0",
+      "kind": "class"
+    },
+    "SettingGroup.prototype.addClass": {
+      "since": "1.11.0",
+      "kind": "method"
+    },
+    "SettingGroup.prototype.addExtraButton": {
+      "since": "1.11.0",
+      "kind": "method"
+    },
+    "SettingGroup.prototype.addSearch": {
+      "since": "1.11.0",
+      "kind": "method"
+    },
+    "SettingGroup.prototype.addSetting": {
+      "since": "1.11.0",
+      "kind": "method"
+    },
+    "SettingGroup.prototype.setHeading": {
+      "since": "1.11.0",
+      "kind": "method"
+    },
+    "SettingTab": {
+      "since": "0.9.7",
+      "kind": "class"
+    },
+    "SettingTab.prototype.icon": {
+      "since": "1.11.0",
+      "kind": "property"
+    },
+    "setTooltip": {
+      "since": "1.4.4",
+      "kind": "function"
+    },
+    "SliderComponent": {
+      "since": "0.9.7",
+      "kind": "class"
+    },
+    "SliderComponent.prototype.getValue": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "SliderComponent.prototype.getValuePretty": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "SliderComponent.prototype.onChange": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "SliderComponent.prototype.setDisabled": {
+      "since": "1.2.3",
+      "kind": "method"
+    },
+    "SliderComponent.prototype.setDynamicTooltip": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "SliderComponent.prototype.setInstant": {
+      "since": "1.6.6",
+      "kind": "method"
+    },
+    "SliderComponent.prototype.setLimits": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "SliderComponent.prototype.setValue": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "SliderComponent.prototype.showTooltip": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "StringValue": {
+      "since": "1.10.0",
+      "kind": "class"
+    },
+    "StringValue.type": {
+      "since": "1.10.0",
+      "kind": "property"
+    },
+    "SuggestModal.prototype.emptyStateText": {
+      "since": "0.9.20",
+      "kind": "property"
+    },
+    "SuggestModal.prototype.getSuggestions": {
+      "since": "1.5.7",
+      "kind": "method"
+    },
+    "SuggestModal.prototype.onChooseSuggestion": {
+      "since": "1.5.7",
+      "kind": "method"
+    },
+    "SuggestModal.prototype.onNoSuggestion": {
+      "since": "0.9.20",
+      "kind": "method"
+    },
+    "SuggestModal.prototype.renderSuggestion": {
+      "since": "1.5.7",
+      "kind": "method"
+    },
+    "SuggestModal.prototype.resultContainerEl": {
+      "since": "0.9.20",
+      "kind": "property"
+    },
+    "SuggestModal.prototype.selectActiveSuggestion": {
+      "since": "1.7.2",
+      "kind": "method"
+    },
+    "SuggestModal.prototype.selectSuggestion": {
+      "since": "0.9.20",
+      "kind": "method"
+    },
+    "SuggestModal.prototype.setInstructions": {
+      "since": "0.9.20",
+      "kind": "method"
+    },
+    "SuggestModal.prototype.setPlaceholder": {
+      "since": "0.9.20",
+      "kind": "method"
+    },
+    "TAbstractFile": {
+      "since": "0.9.7",
+      "kind": "class"
+    },
+    "TAbstractFile.prototype.name": {
+      "since": "0.9.7",
+      "kind": "property"
+    },
+    "TAbstractFile.prototype.parent": {
+      "since": "0.9.7",
+      "kind": "property"
+    },
+    "TAbstractFile.prototype.path": {
+      "since": "0.9.7",
+      "kind": "property"
+    },
+    "TAbstractFile.prototype.vault": {
+      "since": "0.9.7",
+      "kind": "property"
+    },
+    "TagCache": {
+      "since": "0.9.7",
+      "kind": "interface"
+    },
+    "TagValue": {
+      "since": "1.10.0",
+      "kind": "class"
+    },
+    "Tasks": {
+      "since": "0.10.2",
+      "kind": "class"
+    },
+    "Tasks.prototype.add": {
+      "since": "0.10.2",
+      "kind": "method"
+    },
+    "Tasks.prototype.addPromise": {
+      "since": "0.10.2",
+      "kind": "method"
+    },
+    "Tasks.prototype.isEmpty": {
+      "since": "0.10.2",
+      "kind": "method"
+    },
+    "Tasks.prototype.promise": {
+      "since": "0.10.2",
+      "kind": "method"
+    },
+    "TextAreaComponent": {
+      "since": "0.9.7",
+      "kind": "class"
+    },
+    "TextComponent": {
+      "since": "0.9.21",
+      "kind": "class"
+    },
+    "TextFileView": {
+      "since": "0.10.12",
+      "kind": "class"
+    },
+    "TextFileView.prototype.clear": {
+      "since": "0.10.12",
+      "kind": "method"
+    },
+    "TextFileView.prototype.data": {
+      "since": "0.10.12",
+      "kind": "property"
+    },
+    "TextFileView.prototype.getViewData": {
+      "since": "0.10.12",
+      "kind": "method"
+    },
+    "TextFileView.prototype.onLoadFile": {
+      "since": "0.10.12",
+      "kind": "method"
+    },
+    "TextFileView.prototype.onUnloadFile": {
+      "since": "0.10.12",
+      "kind": "method"
+    },
+    "TextFileView.prototype.requestSave": {
+      "since": "0.10.12",
+      "kind": "property"
+    },
+    "TextFileView.prototype.save": {
+      "since": "0.10.12",
+      "kind": "method"
+    },
+    "TextFileView.prototype.setViewData": {
+      "since": "0.10.12",
+      "kind": "method"
+    },
+    "TFile": {
+      "since": "0.9.7",
+      "kind": "class"
+    },
+    "TFile.prototype.basename": {
+      "since": "0.9.7",
+      "kind": "property"
+    },
+    "TFile.prototype.extension": {
+      "since": "0.9.7",
+      "kind": "property"
+    },
+    "TFile.prototype.stat": {
+      "since": "0.9.7",
+      "kind": "property"
+    },
+    "TFolder": {
+      "since": "0.9.7",
+      "kind": "class"
+    },
+    "TFolder.prototype.children": {
+      "since": "0.9.7",
+      "kind": "property"
+    },
+    "TFolder.prototype.isRoot": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "ToggleComponent": {
+      "since": "0.9.7",
+      "kind": "class"
+    },
+    "ToggleComponent.prototype.getValue": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "ToggleComponent.prototype.onChange": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "ToggleComponent.prototype.onClick": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "ToggleComponent.prototype.setDisabled": {
+      "since": "1.2.3",
+      "kind": "method"
+    },
+    "ToggleComponent.prototype.setTooltip": {
+      "since": "1.1.1",
+      "kind": "method"
+    },
+    "ToggleComponent.prototype.setValue": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "ToggleComponent.prototype.toggleEl": {
+      "since": "0.9.7",
+      "kind": "property"
+    },
+    "UrlValue": {
+      "since": "1.10.0",
+      "kind": "class"
+    },
+    "Value": {
+      "since": "1.10.0",
+      "kind": "class"
+    },
+    "Value.equals": {
+      "since": "1.10.0",
+      "kind": "method"
+    },
+    "Value.looseEquals": {
+      "since": "1.10.0",
+      "kind": "method"
+    },
+    "Value.prototype.equals": {
+      "since": "1.10.0",
+      "kind": "method"
+    },
+    "Value.prototype.isTruthy": {
+      "since": "1.10.0",
+      "kind": "method"
+    },
+    "Value.prototype.looseEquals": {
+      "since": "1.10.0",
+      "kind": "method"
+    },
+    "Value.prototype.renderTo": {
+      "since": "1.10.0",
+      "kind": "method"
+    },
+    "Value.prototype.toString": {
+      "since": "1.10.0",
+      "kind": "method"
+    },
+    "Value.type": {
+      "since": "1.10.0",
+      "kind": "property"
+    },
+    "ValueComponent": {
+      "since": "0.9.7",
+      "kind": "class"
+    },
+    "ValueComponent.prototype.getValue": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "ValueComponent.prototype.registerOptionListener": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "ValueComponent.prototype.setValue": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "Vault": {
+      "since": "0.9.7",
+      "kind": "class"
+    },
+    "Vault.prototype.adapter": {
+      "since": "0.9.7",
+      "kind": "property"
+    },
+    "Vault.prototype.append": {
+      "since": "0.13.0",
+      "kind": "method"
+    },
+    "Vault.prototype.appendBinary": {
+      "since": "1.12.3",
+      "kind": "method"
+    },
+    "Vault.prototype.cachedRead": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "Vault.prototype.configDir": {
+      "since": "0.11.1",
+      "kind": "property"
+    },
+    "Vault.prototype.copy": {
+      "since": "1.8.7",
+      "kind": "method"
+    },
+    "Vault.prototype.create": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "Vault.prototype.createBinary": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "Vault.prototype.createFolder": {
+      "since": "1.4.0",
+      "kind": "method"
+    },
+    "Vault.prototype.delete": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "Vault.prototype.getAbstractFileByPath": {
+      "since": "0.11.11",
+      "kind": "method"
+    },
+    "Vault.prototype.getAllFolders": {
+      "since": "1.6.6",
+      "kind": "method"
+    },
+    "Vault.prototype.getAllLoadedFiles": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "Vault.prototype.getFileByPath": {
+      "since": "1.5.7",
+      "kind": "method"
+    },
+    "Vault.prototype.getFiles": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "Vault.prototype.getFolderByPath": {
+      "since": "1.5.7",
+      "kind": "method"
+    },
+    "Vault.prototype.getMarkdownFiles": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "Vault.prototype.getName": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "Vault.prototype.getResourcePath": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "Vault.prototype.getRoot": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "Vault.prototype.modify": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "Vault.prototype.modifyBinary": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "Vault.prototype.on": {
+      "since": "0.9.7",
+      "kind": "method",
+      "overloads": [
+        {
+          "discriminant": "create",
+          "since": "0.9.7"
+        },
+        {
+          "discriminant": "delete",
+          "since": "0.9.7"
+        },
+        {
+          "discriminant": "modify",
+          "since": "0.9.7"
+        },
+        {
+          "discriminant": "rename",
+          "since": "0.9.7"
+        }
+      ]
+    },
+    "Vault.prototype.process": {
+      "since": "1.1.0",
+      "kind": "method"
+    },
+    "Vault.prototype.read": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "Vault.prototype.readBinary": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "Vault.prototype.rename": {
+      "since": "0.9.11",
+      "kind": "method"
+    },
+    "Vault.prototype.trash": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "Vault.recurseChildren": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "View": {
+      "since": "0.9.7",
+      "kind": "class"
+    },
+    "View.prototype.app": {
+      "since": "0.9.7",
+      "kind": "property"
+    },
+    "View.prototype.containerEl": {
+      "since": "0.9.7",
+      "kind": "property"
+    },
+    "View.prototype.getDisplayText": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "View.prototype.getEphemeralState": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "View.prototype.getIcon": {
+      "since": "1.1.0",
+      "kind": "method"
+    },
+    "View.prototype.getState": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "View.prototype.getViewType": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "View.prototype.icon": {
+      "since": "1.1.0",
+      "kind": "property"
+    },
+    "View.prototype.leaf": {
+      "since": "0.9.7",
+      "kind": "property"
+    },
+    "View.prototype.navigation": {
+      "since": "0.15.1",
+      "kind": "property"
+    },
+    "View.prototype.onClose": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "View.prototype.onOpen": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "View.prototype.onPaneMenu": {
+      "since": "0.15.3",
+      "kind": "method"
+    },
+    "View.prototype.onResize": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "View.prototype.scope": {
+      "since": "1.5.7",
+      "kind": "property"
+    },
+    "View.prototype.setEphemeralState": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "View.prototype.setState": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "Workspace": {
+      "since": "0.9.7",
+      "kind": "class"
+    },
+    "Workspace.prototype.activeLeaf": {
+      "since": "0.9.7",
+      "kind": "property"
+    },
+    "Workspace.prototype.changeLayout": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "Workspace.prototype.containerEl": {
+      "since": "0.9.7",
+      "kind": "property"
+    },
+    "Workspace.prototype.createLeafBySplit": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "Workspace.prototype.createLeafInParent": {
+      "since": "0.9.11",
+      "kind": "method"
+    },
+    "Workspace.prototype.detachLeavesOfType": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "Workspace.prototype.duplicateLeaf": {
+      "since": "1.1.0",
+      "kind": "method"
+    },
+    "Workspace.prototype.ensureSideLeaf": {
+      "since": "1.7.2",
+      "kind": "method"
+    },
+    "Workspace.prototype.getActiveViewOfType": {
+      "since": "0.9.16",
+      "kind": "method"
+    },
+    "Workspace.prototype.getGroupLeaves": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "Workspace.prototype.getLastOpenFiles": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "Workspace.prototype.getLayout": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "Workspace.prototype.getLeaf": {
+      "since": "0.16.0",
+      "kind": "method",
+      "overloads": [
+        {
+          "discriminant": "split",
+          "since": "0.16.0"
+        }
+      ]
+    },
+    "Workspace.prototype.getLeafById": {
+      "since": "1.5.1",
+      "kind": "method"
+    },
+    "Workspace.prototype.getLeavesOfType": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "Workspace.prototype.getLeftLeaf": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "Workspace.prototype.getMostRecentLeaf": {
+      "since": "0.15.4",
+      "kind": "method"
+    },
+    "Workspace.prototype.getRightLeaf": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "Workspace.prototype.handleLinkContextMenu": {
+      "since": "0.12.10",
+      "kind": "method"
+    },
+    "Workspace.prototype.iterateAllLeaves": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "Workspace.prototype.iterateRootLeaves": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "Workspace.prototype.layoutReady": {
+      "since": "0.9.7",
+      "kind": "property"
+    },
+    "Workspace.prototype.leftRibbon": {
+      "since": "0.9.7",
+      "kind": "property"
+    },
+    "Workspace.prototype.leftSplit": {
+      "since": "0.9.7",
+      "kind": "property"
+    },
+    "Workspace.prototype.moveLeafToPopout": {
+      "since": "0.15.4",
+      "kind": "method"
+    },
+    "Workspace.prototype.on": {
+      "since": "1.5.1",
+      "kind": "method",
+      "overloads": [
+        {
+          "discriminant": "active-leaf-change",
+          "since": "0.10.9"
+        },
+        {
+          "discriminant": "css-change",
+          "since": "0.9.7"
+        },
+        {
+          "discriminant": "editor-change",
+          "since": "1.1.1"
+        },
+        {
+          "discriminant": "editor-drop",
+          "since": "1.1.0"
+        },
+        {
+          "discriminant": "editor-menu",
+          "since": "1.1.0"
+        },
+        {
+          "discriminant": "editor-paste",
+          "since": "1.1.0"
+        },
+        {
+          "discriminant": "file-menu",
+          "since": "0.9.12"
+        },
+        {
+          "discriminant": "file-open",
+          "since": "0.10.9"
+        },
+        {
+          "discriminant": "files-menu",
+          "since": "1.4.10"
+        },
+        {
+          "discriminant": "layout-change",
+          "since": "0.9.20"
+        },
+        {
+          "discriminant": "quick-preview",
+          "since": "0.9.7"
+        },
+        {
+          "discriminant": "quit",
+          "since": "0.10.2"
+        },
+        {
+          "discriminant": "resize",
+          "since": "0.9.7"
+        },
+        {
+          "discriminant": "url-menu",
+          "since": "1.5.1"
+        },
+        {
+          "discriminant": "window-close",
+          "since": "0.15.3"
+        },
+        {
+          "discriminant": "window-open",
+          "since": "0.15.3"
+        }
+      ]
+    },
+    "Workspace.prototype.onLayoutReady": {
+      "since": "0.11.0",
+      "kind": "method"
+    },
+    "Workspace.prototype.openLinkText": {
+      "since": "0.16.0",
+      "kind": "method"
+    },
+    "Workspace.prototype.openPopoutLeaf": {
+      "since": "0.15.4",
+      "kind": "method"
+    },
+    "Workspace.prototype.requestSaveLayout": {
+      "since": "0.16.0",
+      "kind": "property"
+    },
+    "Workspace.prototype.revealLeaf": {
+      "since": "1.7.2",
+      "kind": "method"
+    },
+    "Workspace.prototype.rightSplit": {
+      "since": "0.9.7",
+      "kind": "property"
+    },
+    "Workspace.prototype.rootSplit": {
+      "since": "0.9.7",
+      "kind": "property"
+    },
+    "Workspace.prototype.setActiveLeaf": {
+      "since": "0.16.3",
+      "kind": "method"
+    },
+    "Workspace.prototype.splitActiveLeaf": {
+      "since": "0.9.7",
+      "kind": "method"
+    },
+    "Workspace.prototype.updateOptions": {
+      "since": "0.13.21",
+      "kind": "method"
+    },
+    "WorkspaceContainer": {
+      "since": "0.15.4",
+      "kind": "class"
+    },
+    "WorkspaceContainer.prototype.doc": {
+      "since": "0.15.4",
+      "kind": "property"
+    },
+    "WorkspaceContainer.prototype.win": {
+      "since": "0.15.4",
+      "kind": "property"
+    },
+    "WorkspaceFloating": {
+      "since": "0.15.2",
+      "kind": "class"
+    },
+    "WorkspaceFloating.prototype.parent": {
+      "since": "0.15.2",
+      "kind": "property"
+    },
+    "WorkspaceItem": {
+      "since": "0.10.2",
+      "kind": "class"
+    },
+    "WorkspaceItem.prototype.getContainer": {
+      "since": "0.15.4",
+      "kind": "method"
+    },
+    "WorkspaceItem.prototype.getRoot": {
+      "since": "0.10.2",
+      "kind": "method"
+    },
+    "WorkspaceItem.prototype.parent": {
+      "since": "1.6.6",
+      "kind": "property"
+    },
+    "WorkspaceLeaf.prototype.loadIfDeferred": {
+      "since": "1.7.2",
+      "kind": "method"
+    },
+    "WorkspaceMobileDrawer": {
+      "since": "1.6.6",
+      "kind": "class"
+    },
+    "WorkspaceParent": {
+      "since": "0.9.7",
+      "kind": "class"
+    },
+    "WorkspaceRoot": {
+      "since": "0.15.2",
+      "kind": "class"
+    },
+    "WorkspaceSidedock": {
+      "since": "0.15.4",
+      "kind": "class"
+    },
+    "WorkspaceSidedock.prototype.collapse": {
+      "since": "0.12.11",
+      "kind": "method"
+    },
+    "WorkspaceSidedock.prototype.collapsed": {
+      "since": "0.12.11",
+      "kind": "property"
+    },
+    "WorkspaceSidedock.prototype.expand": {
+      "since": "0.12.11",
+      "kind": "method"
+    },
+    "WorkspaceSidedock.prototype.toggle": {
+      "since": "0.12.11",
+      "kind": "method"
+    },
+    "WorkspaceSplit": {
+      "since": "0.9.7",
+      "kind": "class"
+    },
+    "WorkspaceWindow": {
+      "since": "0.15.4",
+      "kind": "class"
+    }
+  }
+}

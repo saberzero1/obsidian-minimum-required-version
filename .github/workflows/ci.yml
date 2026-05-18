@@ -1,0 +1,46 @@
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18, 20, 22]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: pnpm
+
+      - run: pnpm install
+
+      - run: pnpm typecheck
+
+      - run: pnpm lint
+
+      - run: pnpm test
+
+      - run: pnpm build
+
+      - name: Validate core package exports
+        run: npx attw --pack packages/core
+
+      - name: Validate eslint-plugin exports
+        run: npx attw --pack packages/eslint-plugin
+
+      - name: Lint core package
+        run: npx publint packages/core
+
+      - name: Lint eslint-plugin package
+        run: npx publint packages/eslint-plugin

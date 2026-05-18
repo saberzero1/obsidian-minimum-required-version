@@ -1,0 +1,54 @@
+{
+  "name": "obsidian-minimum-required-version",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Registry mapping Obsidian API symbols to minimum version requirements, with runtime version-gated execution helpers.",
+  "license": "Unlicense",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "obsidian": ">=1.0.0"
+  },
+  "peerDependenciesMeta": {
+    "obsidian": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "tsup": "^8.3.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "obsidian",
+    "obsidian-plugin",
+    "api-version",
+    "compatibility"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/saberzero1/obsidian-minimum-required-version.git",
+    "directory": "packages/core"
+  }
+}
