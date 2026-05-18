@@ -25,13 +25,13 @@ jobs:
 
       - run: pnpm install
 
+      - run: pnpm build
+
       - run: pnpm typecheck
 
       - run: pnpm lint
 
       - run: pnpm test
-
-      - run: pnpm build
 
       - name: Validate core package exports
         run: npx attw --pack packages/core
