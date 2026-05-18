@@ -1,47 +1,97 @@
 # obsidian-minimum-required-version
 
-A comprehensive registry and utility suite for tracking the minimum Obsidian API version required for specific symbols.
+`obsidian-minimum-required-version` provides a programmatic way to map Obsidian API symbols to their minimum version requirements.
 
-## Problem Statement
+## Problem statement
 
-The Obsidian API evolves over time, introducing new functions, classes, and properties in different versions. However, the `obsidian.d.ts` type definitions do not provide a programmatic way to check which version introduced a specific symbol. Developers often have to manually check the API changelog or risk their plugins crashing on older Obsidian installations when using newer features.
+The Obsidian API evolves across versions, frequently introducing new functions, classes, and properties. Developers need to know which version introduced a specific symbol to ensure compatibility with their plugin's `minAppVersion`. While the official `obsidian.d.ts` contains `@since` JSDoc tags, there's no built-in programmatic way to query this information at runtime or during build processes. This library bridges that gap by providing a typed registry and utility suite.
 
-## How it Works
+## How it works
 
-This project automatically extracts `@since` JSDoc annotations from the official `obsidian.d.ts` file into a static registry. This registry maps over 589 API symbols to their respective minimum required versions, covering 60 different Obsidian releases up to version 1.12.3.
-
-## Packages
-
-| Package                                           | Description                                                                   |
-| ------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `obsidian-minimum-required-version`               | Core registry and runtime utilities for version checking.                     |
-| `eslint-plugin-obsidian-minimum-required-version` | ESLint rules to catch usage of APIs newer than your plugin's `minAppVersion`. |
+This library extracts `@since` JSDoc annotations from the official `obsidian.d.ts` source and compiles them into a structured, typed registry. It tracks over 589 symbols across more than 60 versions of the Obsidian API. The registry is automatically updated to stay in sync with the latest API releases.
 
 ## Installation
-
-Install the core package:
 
 ```bash
 npm install obsidian-minimum-required-version
 ```
 
-Install the ESLint plugin:
+## Quick Start
 
-```bash
-npm install -D eslint-plugin-obsidian-minimum-required-version
+The library supports three main usage patterns depending on your needs for developer experience, runtime safety, or backward compatibility.
+
+### Pattern A: Direct version access via namespace
+
+This pattern provides the best developer experience with full TypeScript autocompletion. The `obsidianApi` object mirrors the Obsidian API structure but provides metadata about each symbol.
+
+```typescript
+import { obsidianApi } from "obsidian-minimum-required-version";
+
+// Access the minimum version string directly
+const minVersion = obsidianApi.Vault.append.$since; // '1.7.2'
+
+// Access metadata for overloaded methods
+const eventVersion = obsidianApi.Workspace.on["files-menu"].$since; // '1.4.10'
 ```
 
-## Core Package API Reference
+### Pattern B: Runtime conditional execution
 
-### getMinVersion(symbol)
+Use the `ifApisAvailable` helper to safely execute code only when the required APIs are present in the current Obsidian environment.
 
-Returns the minimum version string for a given symbol. Returns `undefined` if the symbol is not in the registry.
+```typescript
+import {
+  obsidianApi,
+  ifApisAvailable,
+} from "obsidian-minimum-required-version";
+
+ifApisAvailable(
+  [obsidianApi.Vault.append],
+  () => {
+    // This block runs only if Vault.append is available (Obsidian >= 1.7.2)
+    app.vault.append(file, content);
+  },
+  () => {
+    // Fallback for older versions
+    const existing = await app.vault.read(file);
+    await app.vault.modify(file, existing + content);
+  },
+);
+```
+
+### Pattern C: String-based lookup
+
+For cases where you only have the symbol name as a string, use the `getMinVersion` function. This is useful for dynamic lookups or backward compatibility with older registry formats.
 
 ```typescript
 import { getMinVersion } from "obsidian-minimum-required-version";
 
-const version = getMinVersion("Vault.prototype.append");
-// '1.7.2'
+const version = getMinVersion("Vault.prototype.append"); // '1.7.2'
+```
+
+## API Reference: Namespace Object
+
+### obsidianApi
+
+The `obsidianApi` object is a flat namespace where instance and static members are accessible directly on their respective classes. This simplifies access compared to the internal registry format.
+
+Each node in the namespace is an `ApiNode` containing:
+
+- `$since`: The version string literal (e.g., `'1.7.2'`).
+- `$kind`: The type of symbol (e.g., `'method'`, `'property'`, `'class'`).
+- `$key`: The full registry key string (e.g., `'Vault.prototype.append'`).
+
+Overloaded methods are represented as objects where sub-properties act as discriminants for each overload.
+
+## API Reference: Lookup Functions
+
+### getMinVersion(symbol)
+
+Accepts an `ApiSymbol` string, a raw string, or an `ApiNode`. Returns the minimum version string or `undefined` if not found.
+
+```typescript
+function getMinVersion(
+  symbol: ApiSymbol | string | ApiNode,
+): string | undefined;
 ```
 
 ### getMinVersionForOverload(symbol, discriminant)
@@ -49,176 +99,169 @@ const version = getMinVersion("Vault.prototype.append");
 Returns the minimum version for a specific overload of a symbol.
 
 ```typescript
-import { getMinVersionForOverload } from "obsidian-minimum-required-version";
-
-const version = getMinVersionForOverload(
-  "Workspace.prototype.on",
-  "files-menu",
-);
-// '1.4.10'
+function getMinVersionForOverload(
+  symbol: string,
+  discriminant: string,
+): string | undefined;
 ```
 
 ### isAvailable(symbol)
 
-Checks if a symbol is available in the current Obsidian runtime environment.
+Performs a runtime check against the current Obsidian version to determine if the symbol is available.
 
 ```typescript
-import { isAvailable } from "obsidian-minimum-required-version";
-
-if (isAvailable("Vault.prototype.append")) {
-  // Safe to use vault.append()
-}
+function isAvailable(symbol: ApiSymbol | string | ApiNode): boolean;
 ```
 
 ### getAllSymbols()
 
-Returns an array of all symbols present in the registry.
+Returns an array of all known API symbols in the registry.
 
 ### getSymbolsForVersion(version)
 
-Returns all symbols that were introduced in a specific version.
+Returns a list of symbols introduced in a specific Obsidian version.
 
 ### getSymbolsRequiringAtLeast(version)
 
-Returns all symbols that require at least the specified version.
+Returns all symbols that require a version equal to or greater than the specified version.
 
 ### getRegistry()
 
-Returns the full raw registry object, including metadata about when and from which version it was generated.
+Returns the raw registry object containing all symbol metadata.
 
 ### compareVersions(a, b)
 
-A utility function to compare two version strings. Returns `1` if `a > b`, `-1` if `a < b`, and `0` if they are equal.
+A utility to compare two version strings. Returns `1` if `a > b`, `-1` if `a < b`, and `0` if they are equal.
 
-## Runtime Helpers
+### sinceOf(node)
+
+Extracts the `$since` version from an `ApiNode`.
+
+### keyOf(node)
+
+Extracts the `$key` registry string from an `ApiNode`.
+
+## API Reference: Runtime Helpers
 
 ### requireApis(symbols)
 
-Calculates the highest minimum version required among a list of symbols. Throws an error if any symbol is unknown.
+Accepts an array of `ApiSymbol` strings, raw strings, or `ApiNode` objects. Returns the highest minimum version required among all provided symbols. Throws if a symbol is unknown.
 
 ```typescript
-import { requireApis } from "obsidian-minimum-required-version";
-
-const minVersion = requireApis([
-  "Vault.prototype.append",
-  "App.prototype.isDarkMode",
-]);
-// Returns the highest version required
+function requireApis(symbols: (ApiSymbol | string | ApiNode)[]): string;
 ```
 
 ### ifApisAvailable(symbols, execute, fallback?)
 
-Executes a callback if all specified symbols are available in the current environment. Optionally executes a fallback if they are not.
+Checks if all provided symbols are available in the current environment. If they are, it calls `execute`. Otherwise, it calls the optional `fallback`.
 
 ```typescript
-import { ifApisAvailable } from "obsidian-minimum-required-version";
+function ifApisAvailable<T>(
+  symbols: (ApiSymbol | string | ApiNode)[],
+  execute: () => T,
+  fallback?: () => T,
+): T | undefined;
+```
 
-ifApisAvailable(
-  ["Vault.prototype.append"],
-  () => this.app.vault.append(file, content),
-  () => this.app.vault.modify(file, existingContent + content),
-);
+## Types
+
+### ApiSymbol
+
+A string literal union of all known symbols in the registry (e.g., `'Vault.prototype.append' | 'App.prototype.isDarkMode' | ...`).
+
+### ApiNode
+
+The structure used in the `obsidianApi` namespace.
+
+```typescript
+interface ApiNode {
+  readonly $key: string;
+  readonly $since: string;
+  readonly $kind: string;
+}
+```
+
+### Registry
+
+The full registry structure.
+
+```typescript
+interface Registry {
+  generatedFrom: string;
+  generatedAt: string;
+  symbols: Record<string, SymbolEntry>;
+}
+```
+
+### SymbolEntry
+
+Metadata for a single symbol.
+
+```typescript
+interface SymbolEntry {
+  since: string;
+  kind:
+    | "class"
+    | "interface"
+    | "type"
+    | "function"
+    | "variable"
+    | "method"
+    | "property";
+  overloads?: OverloadEntry[];
+}
+```
+
+### OverloadEntry
+
+Metadata for a specific method overload.
+
+```typescript
+interface OverloadEntry {
+  discriminant: string;
+  since: string;
+}
 ```
 
 ## Symbol Naming Convention
 
-Symbols in the registry follow a specific naming convention to distinguish between different types of API members.
+The library uses a consistent naming convention for registry keys. Note that while the `obsidianApi` namespace uses flat access, the underlying registry keys use the full format.
 
-| Symbol Type           | Format                             | Example                             |
-| --------------------- | ---------------------------------- | ----------------------------------- |
-| Class                 | `ClassName`                        | `App`                               |
-| Interface             | `InterfaceName`                    | `Command`                           |
-| Type alias            | `TypeName`                         | `ViewStateResult`                   |
-| Module-level function | `functionName`                     | `addIcon`                           |
-| Module-level variable | `variableName`                     | `apiVersion`                        |
-| Static method         | `ClassName.methodName`             | `Keymap.isModEvent`                 |
-| Instance method       | `ClassName.prototype.methodName`   | `Vault.prototype.append`            |
-| Instance property     | `ClassName.prototype.propertyName` | `App.prototype.fileManager`         |
-| Overload (granular)   | `SymbolName:discriminant`          | `Workspace.prototype.on:files-menu` |
+| Symbol Type       | Format                             | Example                             |
+| ----------------- | ---------------------------------- | ----------------------------------- |
+| Class             | `ClassName`                        | `App`                               |
+| Interface         | `InterfaceName`                    | `Command`                           |
+| Type alias        | `TypeName`                         | `ViewStateResult`                   |
+| Global function   | `functionName`                     | `addIcon`                           |
+| Global variable   | `variableName`                     | `apiVersion`                        |
+| Static method     | `ClassName.methodName`             | `Keymap.isModEvent`                 |
+| Instance method   | `ClassName.prototype.methodName`   | `Vault.prototype.append`            |
+| Instance property | `ClassName.prototype.propertyName` | `App.prototype.fileManager`         |
+| Overload          | `SymbolName:discriminant`          | `Workspace.prototype.on:files-menu` |
 
-## ESLint Plugin
+## ESLint
 
-The ESLint plugin helps you ensure that your code doesn't use APIs that are newer than the `minAppVersion` specified in your `manifest.json`.
-
-### Installation
-
-```bash
-npm install -D eslint-plugin-obsidian-minimum-required-version
-```
-
-### Setup
-
-Add the plugin to your `eslint.config.js` (Flat Config):
-
-```javascript
-import obsidianVersionPlugin from "eslint-plugin-obsidian-minimum-required-version";
-
-export default [
-  obsidianVersionPlugin.configs.recommended,
-  // or for type-checked projects:
-  // obsidianVersionPlugin.configs.recommendedTypeChecked,
-];
-```
-
-### Detection
-
-The plugin detects usage of symbols that require a higher version than your manifest's `minAppVersion`.
-
-```typescript
-// If manifest.json has "minAppVersion": "1.5.0"
-this.app.vault.append(file, content);
-// ESLint Error: 'Vault.prototype.append' requires Obsidian 1.7.2, but minAppVersion is 1.5.0
-```
-
-### Rule Options
-
-The `require-min-version` rule accepts an optional `manifestPath` if your `manifest.json` is not in the project root.
-
-```javascript
-{
-  rules: {
-    'obsidian-minimum-required-version/require-min-version': [
-      'error',
-      { manifestPath: './plugin/manifest.json' }
-    ]
-  }
-}
-```
-
-### Configs
-
-- `recommended`: Basic checks based on property names and global variables.
-- `recommendedTypeChecked`: More accurate checks using TypeScript type information to resolve symbols.
+For ESLint-based version checking, use the `obsidianmd/no-unsupported-api` rule from [`eslint-plugin-obsidianmd`](https://github.com/obsidianmd/eslint-plugin). It reads `@since` tags from the same `obsidian.d.ts` source and integrates with the TypeScript type checker for comprehensive detection. This ensures that your code remains compatible with your target Obsidian version during development.
 
 ## Registry Updates
 
-The registry is kept in sync with the official Obsidian API through an automated GitHub Action. This action runs weekly, checking for new releases of the `obsidian` npm package, extracting new `@since` tags, and submitting a pull request if updates are found.
+The registry is maintained via an automated weekly GitHub Action. This process fetches the latest `obsidian.d.ts`, parses new `@since` annotations, and updates the registry and types to ensure they reflect the current state of the Obsidian API.
 
 ## Contributing
 
-To contribute to the project, you can run the following commands:
-
-Regenerate the registry from the current `obsidian` package:
+Contributions are welcome. To set up the project locally, use the following commands:
 
 ```bash
+# Regenerate the registry and types from obsidian.d.ts
 pnpm extract-registry
-```
 
-Run tests:
-
-```bash
+# Run the test suite
 pnpm test
-```
 
-Build all packages:
-
-```bash
+# Build the project
 pnpm build
-```
 
-Type-check all packages:
-
-```bash
+# Run type checking
 pnpm typecheck
 ```
 

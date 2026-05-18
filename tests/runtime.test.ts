@@ -20,6 +20,7 @@ vi.mock("../src/obsidian-runtime.js", () => ({
 }));
 
 const { ifApisAvailable, requireApis } = await import("../src/runtime.js");
+const { obsidianApi } = await import("../src/generated.js");
 
 describe("requireApis", () => {
   it("returns highest version across symbols", () => {
@@ -79,5 +80,38 @@ describe("ifApisAvailable", () => {
     const result = ifApisAvailable(["App"], execute);
 
     expect(result).toBe(42);
+  });
+});
+
+describe("requireApis with ApiNode", () => {
+  it("accepts ApiNode array", () => {
+    expect(requireApis([obsidianApi.App])).toBe("0.9.7");
+  });
+
+  it("returns highest version from mixed ApiNode array", () => {
+    const result = requireApis([obsidianApi.App, obsidianApi.Workspace.on]);
+    expect(result).toBe("1.5.1");
+  });
+});
+
+describe("ifApisAvailable with ApiNode", () => {
+  it("calls execute when ApiNode APIs are available", () => {
+    const execute = vi.fn(() => "ok");
+    const result = ifApisAvailable([obsidianApi.App], execute);
+    expect(result).toBe("ok");
+    expect(execute).toHaveBeenCalledTimes(1);
+  });
+
+  it("calls fallback when ApiNode API is not available", () => {
+    const execute = vi.fn(() => "ok");
+    const fallback = vi.fn(() => "fallback");
+    const result = ifApisAvailable(
+      [obsidianApi.Workspace.on],
+      execute,
+      fallback,
+    );
+    expect(result).toBe("fallback");
+    expect(execute).not.toHaveBeenCalled();
+    expect(fallback).toHaveBeenCalledTimes(1);
   });
 });

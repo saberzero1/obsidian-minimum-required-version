@@ -1,4 +1,4 @@
-import * as ts from "typescript";
+import ts from "typescript";
 
 type SymbolKind =
   | "class"
@@ -21,6 +21,15 @@ type Registry = {
   symbols: Record<string, SymbolEntry>;
 };
 
+type ApiNode = {
+  $since: string;
+  $kind: SymbolKind;
+  $key: string;
+  members: Map<string, ApiNode>;
+  overloads: Map<string, { $since: string; $key: string }>;
+  isStatic?: boolean;
+};
+
 type MethodInfo = {
   since: string;
   overloads: { discriminant: string; since: string }[];
@@ -29,7 +38,8 @@ type MethodInfo = {
 const repoRoot = ts.sys.getCurrentDirectory();
 const obsidianDtsPath = `${repoRoot}/node_modules/obsidian/obsidian.d.ts`;
 const obsidianPackageJsonPath = `${repoRoot}/node_modules/obsidian/package.json`;
-const registryOutputPath = `${repoRoot}/packages/core/src/registry.json`;
+const registryOutputPath = `${repoRoot}/src/registry.json`;
+const generatedOutputPath = `${repoRoot}/src/generated.ts`;
 
 function compareVersions(a: string, b: string): number {
   const aParts = a.split(".").map((part) => Number(part));
@@ -101,6 +111,178 @@ function getDiscriminant(method: ts.MethodDeclaration): string | undefined {
   }
 
   return undefined;
+}
+
+function quoteString(value: string): string {
+  const escaped = value.replace(/\\/g, "\\\\").replace(/'/g, "\\'");
+  return `'${escaped}'`;
+}
+
+function isValidIdentifier(name: string): boolean {
+  return /^[$A-Z_][0-9A-Z_$]*$/i.test(name);
+}
+
+function formatPropertyName(name: string): string {
+  return isValidIdentifier(name) ? name : quoteString(name);
+}
+
+function createNode(
+  entry: SymbolEntry,
+  key: string,
+  isStatic?: boolean,
+): ApiNode {
+  return {
+    $since: entry.since,
+    $kind: entry.kind,
+    $key: key,
+    members: new Map(),
+    overloads: new Map(),
+    isStatic,
+  };
+}
+
+function serializeNode(node: ApiNode, indentLevel: number): string {
+  const indent = "  ".repeat(indentLevel);
+  const innerIndent = "  ".repeat(indentLevel + 1);
+  const lines: string[] = [];
+  lines.push("{");
+  lines.push(`${innerIndent}$since: ${quoteString(node.$since)},`);
+  lines.push(`${innerIndent}$kind: ${quoteString(node.$kind)},`);
+  lines.push(`${innerIndent}$key: ${quoteString(node.$key)},`);
+
+  if (node.overloads.size > 0) {
+    const overloadEntries = Array.from(node.overloads.entries()).sort(
+      ([left], [right]) => left.localeCompare(right),
+    );
+    for (const [discriminant, overload] of overloadEntries) {
+      const prop = formatPropertyName(discriminant);
+      lines.push(
+        `${innerIndent}${prop}: { $since: ${quoteString(overload.$since)}, $key: ${quoteString(overload.$key)} },`,
+      );
+    }
+  }
+
+  if (node.members.size > 0) {
+    const memberEntries = Array.from(node.members.entries()).sort(
+      ([left], [right]) => left.localeCompare(right),
+    );
+    for (const [memberName, member] of memberEntries) {
+      const prop = formatPropertyName(memberName);
+      lines.push(
+        `${innerIndent}${prop}: ${serializeNode(member, indentLevel + 1)},`,
+      );
+    }
+  }
+
+  lines.push(`${indent}}`);
+  return lines.join("\n");
+}
+
+function buildGeneratedSource(
+  sortedSymbols: Record<string, SymbolEntry>,
+): string {
+  const apiSymbols: string[] = [];
+  const apiNodes = new Map<string, ApiNode>();
+
+  for (const [symbol, entry] of Object.entries(sortedSymbols)) {
+    apiSymbols.push(symbol);
+    if (entry.overloads) {
+      for (const overload of entry.overloads) {
+        apiSymbols.push(`${symbol}:${overload.discriminant}`);
+      }
+    }
+  }
+
+  apiSymbols.sort((left, right) => left.localeCompare(right));
+
+  for (const [symbol, entry] of Object.entries(sortedSymbols)) {
+    if (!symbol.includes(".")) {
+      apiNodes.set(symbol, createNode(entry, symbol));
+    }
+  }
+
+  for (const [symbol, entry] of Object.entries(sortedSymbols)) {
+    const prototypeIndex = symbol.indexOf(".prototype.");
+    if (prototypeIndex !== -1) {
+      const className = symbol.slice(0, prototypeIndex);
+      const memberName = symbol.slice(prototypeIndex + ".prototype.".length);
+      const parentEntry = sortedSymbols[className];
+      const parent =
+        apiNodes.get(className) ?? createNode(parentEntry ?? entry, className);
+      if (!apiNodes.has(className)) {
+        apiNodes.set(className, parent);
+      }
+      const member = createNode(entry, symbol, false);
+      if (entry.overloads) {
+        for (const overload of entry.overloads) {
+          member.overloads.set(overload.discriminant, {
+            $since: overload.since,
+            $key: `${symbol}:${overload.discriminant}`,
+          });
+        }
+      }
+      const existing = parent.members.get(memberName);
+      if (!existing || (member.isStatic && !existing.isStatic)) {
+        parent.members.set(memberName, member);
+      }
+      continue;
+    }
+
+    const dotIndex = symbol.indexOf(".");
+    if (dotIndex !== -1) {
+      const className = symbol.slice(0, dotIndex);
+      const memberName = symbol.slice(dotIndex + 1);
+      const parentEntry = sortedSymbols[className];
+      const parent =
+        apiNodes.get(className) ?? createNode(parentEntry ?? entry, className);
+      if (!apiNodes.has(className)) {
+        apiNodes.set(className, parent);
+      }
+      const member = createNode(entry, symbol, true);
+      if (entry.overloads) {
+        for (const overload of entry.overloads) {
+          member.overloads.set(overload.discriminant, {
+            $since: overload.since,
+            $key: `${symbol}:${overload.discriminant}`,
+          });
+        }
+      }
+      const existing = parent.members.get(memberName);
+      if (!existing || (member.isStatic && !existing.isStatic)) {
+        parent.members.set(memberName, member);
+      }
+    }
+  }
+
+  const topLevelEntries = Array.from(apiNodes.entries()).sort(
+    ([left], [right]) => left.localeCompare(right),
+  );
+  const obsidianApiLines: string[] = [];
+  obsidianApiLines.push("export const obsidianApi = {");
+  for (const [name, node] of topLevelEntries) {
+    obsidianApiLines.push(
+      `  ${formatPropertyName(name)}: ${serializeNode(node, 1)},`,
+    );
+  }
+  obsidianApiLines.push("} as const;");
+
+  const apiSymbolLines: string[] = [];
+  apiSymbolLines.push("export type ApiSymbol =");
+  for (const symbol of apiSymbols) {
+    apiSymbolLines.push(`  | ${quoteString(symbol)}`);
+  }
+  apiSymbolLines.push("  ;");
+
+  return [
+    "// Auto-generated by scripts/extract-registry.ts — do not edit manually.",
+    "",
+    "export type ApiNode = { readonly $key: string; readonly $since: string };",
+    "",
+    ...apiSymbolLines,
+    "",
+    ...obsidianApiLines,
+    "",
+  ].join("\n");
 }
 
 async function main(): Promise<void> {
@@ -286,6 +468,7 @@ async function main(): Promise<void> {
     registryOutputPath,
     `${JSON.stringify(registry, null, 2)}\n`,
   );
+  ts.sys.writeFile(generatedOutputPath, buildGeneratedSource(sortedSymbols));
   console.log(
     `Extracted ${Object.keys(sortedSymbols).length} symbols across ${versionSet.size} versions from obsidian@${packageJson.version}`,
   );

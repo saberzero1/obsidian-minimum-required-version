@@ -1,22 +1,50 @@
 {
-  "name": "obsidian-minimum-required-version-monorepo",
-  "private": true,
+  "name": "obsidian-minimum-required-version",
+  "version": "0.2.0",
   "type": "module",
+  "description": "Registry mapping Obsidian API symbols to minimum version requirements, with runtime version-gated execution helpers.",
+  "license": "Unlicense",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build": "pnpm -r run build",
+    "build": "tsup",
     "test": "vitest run",
     "test:watch": "vitest",
-    "typecheck": "pnpm -r run typecheck",
+    "typecheck": "tsc --noEmit",
     "lint": "prettier --check .",
     "format": "prettier --write .",
     "extract-registry": "tsx scripts/extract-registry.ts"
   },
+  "peerDependencies": {
+    "obsidian": ">=1.0.0"
+  },
+  "peerDependenciesMeta": {
+    "obsidian": {
+      "optional": true
+    }
+  },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.18.0",
-    "js-yaml": "^4.1.0",
     "obsidian": "^1.7.2",
     "prettier": "^3.4.0",
     "publint": "^0.3.0",
+    "tsup": "^8.3.0",
     "tsx": "^4.19.0",
     "typescript": "^5.7.0",
     "vitest": "^3.0.0"
@@ -24,5 +52,15 @@
   "engines": {
     "node": ">=18"
   },
-  "packageManager": "pnpm@9.15.4"
+  "packageManager": "pnpm@9.15.4",
+  "keywords": [
+    "obsidian",
+    "obsidian-plugin",
+    "api-version",
+    "compatibility"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/saberzero1/obsidian-minimum-required-version.git"
+  }
 }

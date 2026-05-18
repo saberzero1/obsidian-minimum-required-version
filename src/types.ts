@@ -21,3 +21,5 @@ export interface Registry {
   generatedAt: string;
   symbols: Record<string, SymbolEntry>;
 }
+
+export type ApiNode = { readonly $key: string; readonly $since: string };

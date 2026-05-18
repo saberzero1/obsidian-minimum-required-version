@@ -1,7 +1,9 @@
+import { existsSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 
 import registry from "../src/registry.json";
 import type { Registry } from "../src/types.js";
+import { obsidianApi } from "../src/generated.js";
 
 const typedRegistry = registry as unknown as Registry;
 
@@ -40,5 +42,24 @@ describe("extraction snapshot", () => {
 
     expect(filesMenu?.since).toBe("1.4.10");
     expect(cssChange?.since).toBe("0.9.7");
+  });
+});
+
+describe("generated.ts", () => {
+  it("file exists", () => {
+    expect(existsSync("src/generated.ts")).toBe(true);
+  });
+
+  it("exports obsidianApi with known classes", () => {
+    expect(obsidianApi.App).toBeDefined();
+    expect(obsidianApi.Vault).toBeDefined();
+    expect(obsidianApi.Workspace).toBeDefined();
+  });
+
+  it("obsidianApi values match registry data", () => {
+    expect(obsidianApi.App.$since).toBe(typedRegistry.symbols["App"]?.since);
+    expect(obsidianApi.Workspace.on.$since).toBe(
+      typedRegistry.symbols["Workspace.prototype.on"]?.since,
+    );
   });
 });

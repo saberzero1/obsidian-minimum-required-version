@@ -26,14 +26,7 @@ jobs:
 
       - run: pnpm build
 
-      - name: Publish core package
-        if: startsWith(github.event.release.tag_name, 'core@')
-        run: pnpm --filter obsidian-minimum-required-version publish --no-git-checks --access public --provenance
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-      - name: Publish eslint-plugin
-        if: startsWith(github.event.release.tag_name, 'eslint-plugin@')
-        run: pnpm --filter eslint-plugin-obsidian-minimum-required-version publish --no-git-checks --access public --provenance
+      - name: Publish
+        run: pnpm publish --no-git-checks --access public --provenance
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

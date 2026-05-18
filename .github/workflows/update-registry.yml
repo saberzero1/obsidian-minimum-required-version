@@ -27,7 +27,7 @@ jobs:
       - name: Check for new obsidian version
         id: check
         run: |
-          CURRENT=$(node -e "const r=JSON.parse(require('fs').readFileSync('packages/core/src/registry.json','utf8')); console.log(r.generatedFrom.replace('obsidian@',''))")
+          CURRENT=$(node -e "const r=JSON.parse(require('fs').readFileSync('src/registry.json','utf8')); console.log(r.generatedFrom.replace('obsidian@',''))")
           LATEST=$(npm view obsidian version)
           echo "current=$CURRENT" >> "$GITHUB_OUTPUT"
           echo "latest=$LATEST" >> "$GITHUB_OUTPUT"
@@ -39,7 +39,7 @@ jobs:
 
       - name: Update obsidian package
         if: steps.check.outputs.updated == 'true'
-        run: pnpm add -Dw obsidian@${{ steps.check.outputs.latest }}
+        run: pnpm add -D obsidian@${{ steps.check.outputs.latest }}
 
       - name: Regenerate registry
         if: steps.check.outputs.updated == 'true'
