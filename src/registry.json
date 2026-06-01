@@ -1,6 +1,6 @@
 {
-  "generatedFrom": "obsidian@1.12.3",
-  "generatedAt": "2026-05-18T15:24:25.806Z",
+  "generatedFrom": "obsidian@1.13.0",
+  "generatedAt": "2026-06-01T10:41:16.150Z",
   "symbols": {
     "AbstractInputSuggest": {
       "since": "1.4.10",
@@ -358,6 +358,10 @@
       "since": "0.9.20",
       "kind": "method"
     },
+    "ButtonComponent.prototype.removeDestructive": {
+      "since": "1.13.0",
+      "kind": "method"
+    },
     "ButtonComponent.prototype.setButtonText": {
       "since": "0.9.7",
       "kind": "method"
@@ -368,6 +372,10 @@
     },
     "ButtonComponent.prototype.setCta": {
       "since": "0.9.7",
+      "kind": "method"
+    },
+    "ButtonComponent.prototype.setDestructive": {
+      "since": "1.13.0",
       "kind": "method"
     },
     "ButtonComponent.prototype.setDisabled": {
@@ -565,6 +573,50 @@
     "Component.prototype.unload": {
       "since": "0.9.7",
       "kind": "method"
+    },
+    "ConfirmationButton": {
+      "since": "1.13.0",
+      "kind": "class"
+    },
+    "ConfirmationButton.prototype.onClick": {
+      "since": "1.13.0",
+      "kind": "method"
+    },
+    "ConfirmationButton.prototype.setCancel": {
+      "since": "1.13.0",
+      "kind": "method"
+    },
+    "ConfirmationButton.prototype.setInitialFocus": {
+      "since": "1.13.0",
+      "kind": "method"
+    },
+    "ConfirmationButton.prototype.setSecondary": {
+      "since": "1.13.0",
+      "kind": "method"
+    },
+    "ConfirmationModal": {
+      "since": "1.13.0",
+      "kind": "class"
+    },
+    "ConfirmationModal.prototype.addButton": {
+      "since": "1.13.0",
+      "kind": "method"
+    },
+    "ConfirmationModal.prototype.addCancelButton": {
+      "since": "1.13.0",
+      "kind": "method"
+    },
+    "ConfirmationModal.prototype.addCheckbox": {
+      "since": "1.13.0",
+      "kind": "method"
+    },
+    "ConfirmationModal.prototype.addClass": {
+      "since": "1.13.0",
+      "kind": "method"
+    },
+    "ConfirmationModal.prototype.buttonContainerEl": {
+      "since": "1.13.0",
+      "kind": "property"
     },
     "DateValue": {
       "since": "1.10.0",
@@ -1154,6 +1206,18 @@
       "since": "1.6.0",
       "kind": "method"
     },
+    "Menu.prototype.addItem": {
+      "since": "0.15.3",
+      "kind": "method"
+    },
+    "Menu.prototype.addSeparator": {
+      "since": "0.15.3",
+      "kind": "method"
+    },
+    "Menu.prototype.setParentElement": {
+      "since": "0.16.0",
+      "kind": "method"
+    },
     "Menu.prototype.setUseNativeMenu": {
       "since": "0.16.0",
       "kind": "method"
@@ -1166,8 +1230,24 @@
       "since": "1.1.0",
       "kind": "method"
     },
+    "MenuItem.prototype.setChecked": {
+      "since": "0.16.2",
+      "kind": "method"
+    },
+    "MenuItem.prototype.setDisabled": {
+      "since": "0.15.0",
+      "kind": "method"
+    },
+    "MenuItem.prototype.setIcon": {
+      "since": "0.16.2",
+      "kind": "method"
+    },
     "MenuItem.prototype.setIsLabel": {
       "since": "0.15.0",
+      "kind": "method"
+    },
+    "MenuItem.prototype.setSection": {
+      "since": "0.15.3",
       "kind": "method"
     },
     "MenuItem.prototype.setWarning": {
@@ -1406,9 +1486,25 @@
       "since": "0.9.7",
       "kind": "method"
     },
+    "Plugin.prototype.settings": {
+      "since": "1.13.0",
+      "kind": "property"
+    },
     "PluginSettingTab": {
       "since": "0.9.7",
       "kind": "class"
+    },
+    "PluginSettingTab.prototype.getControlValue": {
+      "since": "1.13.0",
+      "kind": "method"
+    },
+    "PluginSettingTab.prototype.getSettingDefinitions": {
+      "since": "1.13.0",
+      "kind": "method"
+    },
+    "PluginSettingTab.prototype.setControlValue": {
+      "since": "1.13.0",
+      "kind": "method"
     },
     "PrimitiveValue": {
       "since": "1.10.0",
@@ -1566,6 +1662,10 @@
       "since": "0.9.7",
       "kind": "property"
     },
+    "Setting.prototype.errorEl": {
+      "since": "1.13.0",
+      "kind": "property"
+    },
     "Setting.prototype.infoEl": {
       "since": "0.9.7",
       "kind": "property"
@@ -1584,6 +1684,10 @@
     },
     "Setting.prototype.setDisabled": {
       "since": "1.2.3",
+      "kind": "method"
+    },
+    "Setting.prototype.setErrorMessage": {
+      "since": "1.13.0",
       "kind": "method"
     },
     "Setting.prototype.setHeading": {
@@ -1606,6 +1710,74 @@
       "since": "0.9.20",
       "kind": "method"
     },
+    "SettingColorControl": {
+      "since": "1.13.0",
+      "kind": "interface"
+    },
+    "SettingControl": {
+      "since": "1.13.0",
+      "kind": "type"
+    },
+    "SettingControlBase": {
+      "since": "1.13.0",
+      "kind": "interface"
+    },
+    "SettingDefinition": {
+      "since": "1.13.0",
+      "kind": "type"
+    },
+    "SettingDefinitionAction": {
+      "since": "1.13.0",
+      "kind": "interface"
+    },
+    "SettingDefinitionAddItem": {
+      "since": "1.13.0",
+      "kind": "interface"
+    },
+    "SettingDefinitionBase": {
+      "since": "1.13.0",
+      "kind": "interface"
+    },
+    "SettingDefinitionControl": {
+      "since": "1.13.0",
+      "kind": "interface"
+    },
+    "SettingDefinitionEmpty": {
+      "since": "1.13.0",
+      "kind": "interface"
+    },
+    "SettingDefinitionGroup": {
+      "since": "1.13.0",
+      "kind": "interface"
+    },
+    "SettingDefinitionItem": {
+      "since": "1.13.0",
+      "kind": "type"
+    },
+    "SettingDefinitionList": {
+      "since": "1.13.0",
+      "kind": "interface"
+    },
+    "SettingDefinitionPage": {
+      "since": "1.13.0",
+      "kind": "interface"
+    },
+    "SettingDefinitionRender": {
+      "since": "1.13.0",
+      "kind": "interface"
+    },
+    "SettingDropdownControl": {
+      "since": "1.13.0",
+      "kind": "interface"
+    },
+    "SettingFileControl": {
+      "since": "1.13.0",
+      "kind": "interface"
+    },
+    "SettingFolderControl": {
+      "since": "1.13.0",
+      "kind": "interface"
+    },
     "SettingGroup": {
       "since": "1.11.0",
       "kind": "class"
@@ -1626,17 +1798,97 @@
       "since": "1.11.0",
       "kind": "method"
     },
+    "SettingGroup.prototype.listEl": {
+      "since": "1.11.0",
+      "kind": "property"
+    },
     "SettingGroup.prototype.setHeading": {
       "since": "1.11.0",
       "kind": "method"
+    },
+    "SettingGroupItem": {
+      "since": "1.13.0",
+      "kind": "type"
+    },
+    "SettingNumberControl": {
+      "since": "1.13.0",
+      "kind": "interface"
+    },
+    "SettingPage": {
+      "since": "1.13.0",
+      "kind": "class"
+    },
+    "SettingPage.prototype.containerEl": {
+      "since": "1.13.0",
+      "kind": "property"
+    },
+    "SettingPage.prototype.display": {
+      "since": "1.13.0",
+      "kind": "method"
+    },
+    "SettingPage.prototype.hide": {
+      "since": "1.13.0",
+      "kind": "method"
+    },
+    "SettingPage.prototype.rootEl": {
+      "since": "1.13.0",
+      "kind": "property"
+    },
+    "SettingPage.prototype.title": {
+      "since": "1.13.0",
+      "kind": "property"
+    },
+    "SettingPage.prototype.titlebarEl": {
+      "since": "1.13.0",
+      "kind": "property"
+    },
+    "SettingSliderControl": {
+      "since": "1.13.0",
+      "kind": "interface"
     },
     "SettingTab": {
       "since": "0.9.7",
       "kind": "class"
     },
+    "SettingTab.prototype.getControlValue": {
+      "since": "1.13.0",
+      "kind": "method"
+    },
+    "SettingTab.prototype.getSettingDefinitions": {
+      "since": "1.13.0",
+      "kind": "method"
+    },
     "SettingTab.prototype.icon": {
       "since": "1.11.0",
       "kind": "property"
+    },
+    "SettingTab.prototype.refreshDomState": {
+      "since": "1.13.0",
+      "kind": "method"
+    },
+    "SettingTab.prototype.setControlValue": {
+      "since": "1.13.0",
+      "kind": "method"
+    },
+    "SettingTab.prototype.settingItems": {
+      "since": "1.13.0",
+      "kind": "property"
+    },
+    "SettingTab.prototype.update": {
+      "since": "1.13.0",
+      "kind": "method"
+    },
+    "SettingTextAreaControl": {
+      "since": "1.13.0",
+      "kind": "interface"
+    },
+    "SettingTextControl": {
+      "since": "1.13.0",
+      "kind": "interface"
+    },
+    "SettingToggleControl": {
+      "since": "1.13.0",
+      "kind": "interface"
     },
     "setTooltip": {
       "since": "1.4.4",
