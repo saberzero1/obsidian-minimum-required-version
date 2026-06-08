@@ -3,3651 +3,3991 @@
 export type ApiNode = { readonly $key: string; readonly $since: string };
 
 export type ApiSymbol =
-  | "AbstractInputSuggest"
-  | "AbstractInputSuggest.prototype.getSuggestions"
-  | "AbstractInputSuggest.prototype.getValue"
-  | "AbstractInputSuggest.prototype.limit"
-  | "AbstractInputSuggest.prototype.onSelect"
-  | "AbstractInputSuggest.prototype.selectSuggestion"
-  | "AbstractInputSuggest.prototype.setValue"
-  | "AbstractTextComponent"
-  | "AbstractTextComponent.prototype.getValue"
-  | "AbstractTextComponent.prototype.inputEl"
-  | "AbstractTextComponent.prototype.onChange"
-  | "AbstractTextComponent.prototype.onChanged"
-  | "AbstractTextComponent.prototype.setDisabled"
-  | "AbstractTextComponent.prototype.setPlaceholder"
-  | "AbstractTextComponent.prototype.setValue"
-  | "App"
-  | "App.prototype.fileManager"
-  | "App.prototype.isDarkMode"
-  | "App.prototype.keymap"
-  | "App.prototype.lastEvent"
-  | "App.prototype.loadLocalStorage"
-  | "App.prototype.metadataCache"
-  | "App.prototype.renderContext"
-  | "App.prototype.saveLocalStorage"
-  | "App.prototype.scope"
-  | "App.prototype.secretStorage"
-  | "App.prototype.vault"
-  | "App.prototype.workspace"
-  | "BaseComponent"
-  | "BaseComponent.prototype.disabled"
-  | "BaseComponent.prototype.setDisabled"
-  | "BaseComponent.prototype.then"
-  | "BasesAllOptions"
-  | "BasesConfigFile"
-  | "BasesConfigFileFilter"
-  | "BasesConfigFileView"
-  | "BasesDropdownOption"
-  | "BasesEntry"
-  | "BasesEntry.prototype.file"
-  | "BasesEntry.prototype.getValue"
-  | "BasesEntryGroup"
-  | "BasesEntryGroup.prototype.entries"
-  | "BasesEntryGroup.prototype.hasKey"
-  | "BasesEntryGroup.prototype.key"
-  | "BasesFileOption"
-  | "BasesFolderOption"
-  | "BasesFormulaOption"
-  | "BasesMultitextOption"
-  | "BasesOption"
-  | "BasesOptionGroup"
-  | "BasesOptions"
-  | "BasesProperty"
-  | "BasesPropertyId"
-  | "BasesPropertyOption"
-  | "BasesPropertyType"
-  | "BasesQueryResult"
-  | "BasesQueryResult.prototype.data"
-  | "BasesQueryResult.prototype.getSummaryValue"
-  | "BasesSliderOption"
-  | "BasesSortConfig"
-  | "BasesTextOption"
-  | "BasesToggleOption"
-  | "BasesView"
-  | "BasesView.prototype.allProperties"
-  | "BasesView.prototype.app"
-  | "BasesView.prototype.config"
-  | "BasesView.prototype.createFileForView"
-  | "BasesView.prototype.data"
-  | "BasesView.prototype.onDataUpdated"
-  | "BasesView.prototype.type"
-  | "BasesViewConfig"
-  | "BasesViewConfig.prototype.get"
-  | "BasesViewConfig.prototype.getAsPropertyId"
-  | "BasesViewConfig.prototype.getDisplayName"
-  | "BasesViewConfig.prototype.getEvaluatedFormula"
-  | "BasesViewConfig.prototype.getOrder"
-  | "BasesViewConfig.prototype.getSort"
-  | "BasesViewConfig.prototype.name"
-  | "BasesViewConfig.prototype.set"
-  | "BasesViewFactory"
-  | "BasesViewRegistration"
-  | "BlockCache"
-  | "BlockSubpathResult"
-  | "BooleanValue"
-  | "BooleanValue.type"
-  | "ButtonComponent"
-  | "ButtonComponent.prototype.buttonEl"
-  | "ButtonComponent.prototype.onClick"
-  | "ButtonComponent.prototype.removeCta"
-  | "ButtonComponent.prototype.setButtonText"
-  | "ButtonComponent.prototype.setClass"
-  | "ButtonComponent.prototype.setCta"
-  | "ButtonComponent.prototype.setDisabled"
-  | "ButtonComponent.prototype.setIcon"
-  | "ButtonComponent.prototype.setTooltip"
-  | "ButtonComponent.prototype.setWarning"
-  | "CapacitorAdapter"
-  | "CapacitorAdapter.prototype.append"
-  | "CapacitorAdapter.prototype.appendBinary"
-  | "CapacitorAdapter.prototype.copy"
-  | "CapacitorAdapter.prototype.exists"
-  | "CapacitorAdapter.prototype.getFullPath"
-  | "CapacitorAdapter.prototype.getName"
-  | "CapacitorAdapter.prototype.getResourcePath"
-  | "CapacitorAdapter.prototype.list"
-  | "CapacitorAdapter.prototype.mkdir"
-  | "CapacitorAdapter.prototype.process"
-  | "CapacitorAdapter.prototype.read"
-  | "CapacitorAdapter.prototype.readBinary"
-  | "CapacitorAdapter.prototype.remove"
-  | "CapacitorAdapter.prototype.rename"
-  | "CapacitorAdapter.prototype.rmdir"
-  | "CapacitorAdapter.prototype.stat"
-  | "CapacitorAdapter.prototype.trashLocal"
-  | "CapacitorAdapter.prototype.trashSystem"
-  | "CapacitorAdapter.prototype.write"
-  | "CapacitorAdapter.prototype.writeBinary"
-  | "CliData"
-  | "CliFlag"
-  | "CliFlags"
-  | "CliHandler"
-  | "ColorComponent"
-  | "ColorComponent.prototype.getValue"
-  | "ColorComponent.prototype.getValueHsl"
-  | "ColorComponent.prototype.getValueRgb"
-  | "ColorComponent.prototype.onChange"
-  | "ColorComponent.prototype.setDisabled"
-  | "ColorComponent.prototype.setValue"
-  | "ColorComponent.prototype.setValueHsl"
-  | "ColorComponent.prototype.setValueRgb"
-  | "Component"
-  | "Component.prototype.addChild"
-  | "Component.prototype.load"
-  | "Component.prototype.onload"
-  | "Component.prototype.onunload"
-  | "Component.prototype.register"
-  | "Component.prototype.registerDomEvent"
-  | "Component.prototype.registerEvent"
-  | "Component.prototype.registerInterval"
-  | "Component.prototype.removeChild"
-  | "Component.prototype.unload"
-  | "DateValue"
-  | "DateValue.parseFromString"
-  | "DateValue.prototype.dateOnly"
-  | "DateValue.prototype.isTruthy"
-  | "DateValue.prototype.relative"
-  | "DateValue.prototype.toString"
-  | "displayTooltip"
-  | "DropdownComponent"
-  | "DropdownComponent.prototype.addOption"
-  | "DropdownComponent.prototype.addOptions"
-  | "DropdownComponent.prototype.getValue"
-  | "DropdownComponent.prototype.onChange"
-  | "DropdownComponent.prototype.selectEl"
-  | "DropdownComponent.prototype.setDisabled"
-  | "DropdownComponent.prototype.setValue"
-  | "DurationValue"
-  | "DurationValue.fromMilliseconds"
-  | "DurationValue.parseFromString"
-  | "DurationValue.prototype.addToDate"
-  | "DurationValue.prototype.getMilliseconds"
-  | "DurationValue.prototype.isTruthy"
-  | "DurationValue.prototype.toString"
-  | "EditableFileView"
-  | "Editor"
-  | "Editor.prototype.blur"
-  | "Editor.prototype.exec"
-  | "Editor.prototype.focus"
-  | "Editor.prototype.getCursor"
-  | "Editor.prototype.getDoc"
-  | "Editor.prototype.getLine"
-  | "Editor.prototype.getRange"
-  | "Editor.prototype.getScrollInfo"
-  | "Editor.prototype.getSelection"
-  | "Editor.prototype.getValue"
-  | "Editor.prototype.hasFocus"
-  | "Editor.prototype.lastLine"
-  | "Editor.prototype.lineCount"
-  | "Editor.prototype.listSelections"
-  | "Editor.prototype.offsetToPos"
-  | "Editor.prototype.posToOffset"
-  | "Editor.prototype.processLines"
-  | "Editor.prototype.redo"
-  | "Editor.prototype.refresh"
-  | "Editor.prototype.replaceRange"
-  | "Editor.prototype.replaceSelection"
-  | "Editor.prototype.scrollIntoView"
-  | "Editor.prototype.scrollTo"
-  | "Editor.prototype.setCursor"
-  | "Editor.prototype.setLine"
-  | "Editor.prototype.setSelection"
-  | "Editor.prototype.setSelections"
-  | "Editor.prototype.setValue"
-  | "Editor.prototype.somethingSelected"
-  | "Editor.prototype.transaction"
-  | "Editor.prototype.undo"
-  | "Editor.prototype.wordAt"
-  | "EditorChange"
-  | "EditorPosition"
-  | "EditorRange"
-  | "EditorRangeOrCaret"
-  | "EditorScrollInfo"
-  | "EditorSelection"
-  | "EditorSelectionOrCaret"
-  | "EditorSuggest"
-  | "EditorSuggest.prototype.context"
-  | "EditorSuggest.prototype.getSuggestions"
-  | "EditorSuggest.prototype.limit"
-  | "EditorSuggest.prototype.onTrigger"
-  | "EditorSuggest.prototype.setInstructions"
-  | "EditorSuggestContext"
-  | "EditorSuggestTriggerInfo"
-  | "EmbedCache"
-  | "Events"
-  | "Events.prototype.off"
-  | "Events.prototype.offref"
-  | "Events.prototype.on"
-  | "Events.prototype.trigger"
-  | "Events.prototype.tryTrigger"
-  | "ExtraButtonComponent"
-  | "ExtraButtonComponent.prototype.extraSettingsEl"
-  | "ExtraButtonComponent.prototype.onClick"
-  | "ExtraButtonComponent.prototype.setDisabled"
-  | "ExtraButtonComponent.prototype.setIcon"
-  | "ExtraButtonComponent.prototype.setTooltip"
-  | "FileManager"
-  | "FileManager.prototype.generateMarkdownLink"
-  | "FileManager.prototype.getAvailablePathForAttachment"
-  | "FileManager.prototype.getNewFileParent"
-  | "FileManager.prototype.processFrontMatter"
-  | "FileManager.prototype.promptForDeletion"
-  | "FileManager.prototype.renameFile"
-  | "FileManager.prototype.trashFile"
-  | "FileSystemAdapter.prototype.appendBinary"
-  | "FileSystemAdapter.prototype.getFilePath"
-  | "FileSystemAdapter.prototype.stat"
-  | "FileValue"
-  | "FileValue.prototype.isTruthy"
-  | "FileValue.prototype.toString"
-  | "FileView.prototype.canAcceptExtension"
-  | "FileView.prototype.setState"
-  | "FootnoteSubpathResult"
-  | "FormulaContext"
-  | "FuzzyMatch"
-  | "FuzzySuggestModal"
-  | "FuzzySuggestModal.prototype.getItems"
-  | "FuzzySuggestModal.prototype.getItemText"
-  | "FuzzySuggestModal.prototype.getSuggestions"
-  | "FuzzySuggestModal.prototype.onChooseItem"
-  | "FuzzySuggestModal.prototype.onChooseSuggestion"
-  | "FuzzySuggestModal.prototype.renderSuggestion"
-  | "getFrontMatterInfo"
-  | "getLanguage"
-  | "HeadingSubpathResult"
-  | "HoverParent"
-  | "HoverPopover"
-  | "HSL"
-  | "HTMLValue"
-  | "IconValue"
-  | "ImageValue"
-  | "Instruction"
-  | "ItemView"
-  | "ItemView.prototype.addAction"
-  | "Keymap"
-  | "Keymap.isModEvent"
-  | "Keymap.isModifier"
-  | "Keymap.prototype.popScope"
-  | "Keymap.prototype.pushScope"
-  | "KeymapInfo"
-  | "LinkCache"
-  | "LinkValue"
-  | "LinkValue.parseFromString"
-  | "ListValue"
-  | "ListValue.prototype.concat"
-  | "ListValue.prototype.get"
-  | "ListValue.prototype.includes"
-  | "ListValue.prototype.isTruthy"
-  | "ListValue.prototype.length"
-  | "ListValue.prototype.toString"
-  | "ListValue.type"
-  | "MarkdownPostProcessor"
-  | "MarkdownPreviewRenderer"
-  | "MarkdownPreviewRenderer.createCodeBlockPostProcessor"
-  | "MarkdownPreviewRenderer.registerPostProcessor"
-  | "MarkdownPreviewRenderer.unregisterPostProcessor"
-  | "MarkdownRenderer"
-  | "MarkdownRenderer.renderMarkdown"
-  | "Menu.forEvent"
-  | "Menu.prototype.setUseNativeMenu"
-  | "Menu.prototype.showAtMouseEvent"
-  | "Menu.prototype.showAtPosition"
-  | "MenuItem.prototype.setIsLabel"
-  | "MenuItem.prototype.setWarning"
-  | "MenuPositionDef"
-  | "MenuSeparator"
-  | "MetadataCache.prototype.getCache"
-  | "MetadataCache.prototype.getFileCache"
-  | "MetadataCache.prototype.getFirstLinkpathDest"
-  | "Modal.prototype.setCloseCallback"
-  | "Modal.prototype.shouldRestoreSelection"
-  | "MomentFormatComponent"
-  | "MomentFormatComponent.prototype.onChanged"
-  | "MomentFormatComponent.prototype.sampleEl"
-  | "MomentFormatComponent.prototype.setDefaultFormat"
-  | "MomentFormatComponent.prototype.setSampleEl"
-  | "MomentFormatComponent.prototype.setValue"
-  | "MomentFormatComponent.prototype.updateSample"
-  | "Notice"
-  | "Notice.prototype.containerEl"
-  | "Notice.prototype.hide"
-  | "Notice.prototype.messageEl"
-  | "Notice.prototype.noticeEl"
-  | "Notice.prototype.setMessage"
-  | "NotNullValue"
-  | "NullValue"
-  | "NullValue.prototype.isTruthy"
-  | "NullValue.prototype.toString"
-  | "NullValue.value"
-  | "NumberValue"
-  | "NumberValue.type"
-  | "ObjectValue"
-  | "ObjectValue.prototype.get"
-  | "ObjectValue.prototype.isEmpty"
-  | "ObjectValue.prototype.isTruthy"
-  | "ObjectValue.prototype.toString"
-  | "ObjectValue.type"
-  | "parsePropertyId"
-  | "Platform"
-  | "Plugin"
-  | "Plugin.prototype.addCommand"
-  | "Plugin.prototype.addRibbonIcon"
-  | "Plugin.prototype.addSettingTab"
-  | "Plugin.prototype.addStatusBarItem"
-  | "Plugin.prototype.app"
-  | "Plugin.prototype.loadData"
-  | "Plugin.prototype.manifest"
-  | "Plugin.prototype.onExternalSettingsChange"
-  | "Plugin.prototype.onload"
-  | "Plugin.prototype.onUserEnable"
-  | "Plugin.prototype.registerBasesView"
-  | "Plugin.prototype.registerCliHandler"
-  | "Plugin.prototype.registerEditorExtension"
-  | "Plugin.prototype.registerEditorSuggest"
-  | "Plugin.prototype.registerExtensions"
-  | "Plugin.prototype.registerHoverLinkSource"
-  | "Plugin.prototype.registerMarkdownCodeBlockProcessor"
-  | "Plugin.prototype.registerMarkdownPostProcessor"
-  | "Plugin.prototype.registerObsidianProtocolHandler"
-  | "Plugin.prototype.registerView"
-  | "Plugin.prototype.removeCommand"
-  | "Plugin.prototype.saveData"
-  | "PluginSettingTab"
-  | "PrimitiveValue"
-  | "PrimitiveValue.prototype.isTruthy"
-  | "PrimitiveValue.prototype.toString"
-  | "ProgressBarComponent"
-  | "QueryController"
-  | "ReferenceLinkCache"
-  | "RegExpValue"
-  | "RegExpValue.prototype.isTruthy"
-  | "RegExpValue.prototype.toString"
-  | "RelativeDateValue"
-  | "RenderContext"
-  | "RenderContext.prototype.hoverPopover"
-  | "request"
-  | "RGB"
-  | "SearchComponent"
-  | "SearchComponent.prototype.clearButtonEl"
-  | "SearchResult"
-  | "SearchResultContainer"
-  | "SecretComponent"
-  | "SecretComponent.prototype.onChange"
-  | "SecretComponent.prototype.setValue"
-  | "SecretStorage"
-  | "SecretStorage.prototype.getSecret"
-  | "SecretStorage.prototype.listSecrets"
-  | "SecretStorage.prototype.setSecret"
-  | "Setting"
-  | "Setting.prototype.addButton"
-  | "Setting.prototype.addComponent"
-  | "Setting.prototype.addExtraButton"
-  | "Setting.prototype.addMomentFormat"
-  | "Setting.prototype.addSearch"
-  | "Setting.prototype.addSlider"
-  | "Setting.prototype.addText"
-  | "Setting.prototype.addTextArea"
-  | "Setting.prototype.addToggle"
-  | "Setting.prototype.clear"
-  | "Setting.prototype.components"
-  | "Setting.prototype.controlEl"
-  | "Setting.prototype.descEl"
-  | "Setting.prototype.infoEl"
-  | "Setting.prototype.nameEl"
-  | "Setting.prototype.setClass"
-  | "Setting.prototype.setDesc"
-  | "Setting.prototype.setDisabled"
-  | "Setting.prototype.setHeading"
-  | "Setting.prototype.setName"
-  | "Setting.prototype.settingEl"
-  | "Setting.prototype.setTooltip"
-  | "Setting.prototype.then"
-  | "SettingGroup"
-  | "SettingGroup.prototype.addClass"
-  | "SettingGroup.prototype.addExtraButton"
-  | "SettingGroup.prototype.addSearch"
-  | "SettingGroup.prototype.addSetting"
-  | "SettingGroup.prototype.setHeading"
-  | "SettingTab"
-  | "SettingTab.prototype.icon"
-  | "setTooltip"
-  | "SliderComponent"
-  | "SliderComponent.prototype.getValue"
-  | "SliderComponent.prototype.getValuePretty"
-  | "SliderComponent.prototype.onChange"
-  | "SliderComponent.prototype.setDisabled"
-  | "SliderComponent.prototype.setDynamicTooltip"
-  | "SliderComponent.prototype.setInstant"
-  | "SliderComponent.prototype.setLimits"
-  | "SliderComponent.prototype.setValue"
-  | "SliderComponent.prototype.showTooltip"
-  | "StringValue"
-  | "StringValue.type"
-  | "SuggestModal.prototype.emptyStateText"
-  | "SuggestModal.prototype.getSuggestions"
-  | "SuggestModal.prototype.onChooseSuggestion"
-  | "SuggestModal.prototype.onNoSuggestion"
-  | "SuggestModal.prototype.renderSuggestion"
-  | "SuggestModal.prototype.resultContainerEl"
-  | "SuggestModal.prototype.selectActiveSuggestion"
-  | "SuggestModal.prototype.selectSuggestion"
-  | "SuggestModal.prototype.setInstructions"
-  | "SuggestModal.prototype.setPlaceholder"
-  | "TAbstractFile"
-  | "TAbstractFile.prototype.name"
-  | "TAbstractFile.prototype.parent"
-  | "TAbstractFile.prototype.path"
-  | "TAbstractFile.prototype.vault"
-  | "TagCache"
-  | "TagValue"
-  | "Tasks"
-  | "Tasks.prototype.add"
-  | "Tasks.prototype.addPromise"
-  | "Tasks.prototype.isEmpty"
-  | "Tasks.prototype.promise"
-  | "TextAreaComponent"
-  | "TextComponent"
-  | "TextFileView"
-  | "TextFileView.prototype.clear"
-  | "TextFileView.prototype.data"
-  | "TextFileView.prototype.getViewData"
-  | "TextFileView.prototype.onLoadFile"
-  | "TextFileView.prototype.onUnloadFile"
-  | "TextFileView.prototype.requestSave"
-  | "TextFileView.prototype.save"
-  | "TextFileView.prototype.setViewData"
-  | "TFile"
-  | "TFile.prototype.basename"
-  | "TFile.prototype.extension"
-  | "TFile.prototype.stat"
-  | "TFolder"
-  | "TFolder.prototype.children"
-  | "TFolder.prototype.isRoot"
-  | "ToggleComponent"
-  | "ToggleComponent.prototype.getValue"
-  | "ToggleComponent.prototype.onChange"
-  | "ToggleComponent.prototype.onClick"
-  | "ToggleComponent.prototype.setDisabled"
-  | "ToggleComponent.prototype.setTooltip"
-  | "ToggleComponent.prototype.setValue"
-  | "ToggleComponent.prototype.toggleEl"
-  | "UrlValue"
-  | "Value"
-  | "Value.equals"
-  | "Value.looseEquals"
-  | "Value.prototype.equals"
-  | "Value.prototype.isTruthy"
-  | "Value.prototype.looseEquals"
-  | "Value.prototype.renderTo"
-  | "Value.prototype.toString"
-  | "Value.type"
-  | "ValueComponent"
-  | "ValueComponent.prototype.getValue"
-  | "ValueComponent.prototype.registerOptionListener"
-  | "ValueComponent.prototype.setValue"
-  | "Vault"
-  | "Vault.prototype.adapter"
-  | "Vault.prototype.append"
-  | "Vault.prototype.appendBinary"
-  | "Vault.prototype.cachedRead"
-  | "Vault.prototype.configDir"
-  | "Vault.prototype.copy"
-  | "Vault.prototype.create"
-  | "Vault.prototype.createBinary"
-  | "Vault.prototype.createFolder"
-  | "Vault.prototype.delete"
-  | "Vault.prototype.getAbstractFileByPath"
-  | "Vault.prototype.getAllFolders"
-  | "Vault.prototype.getAllLoadedFiles"
-  | "Vault.prototype.getFileByPath"
-  | "Vault.prototype.getFiles"
-  | "Vault.prototype.getFolderByPath"
-  | "Vault.prototype.getMarkdownFiles"
-  | "Vault.prototype.getName"
-  | "Vault.prototype.getResourcePath"
-  | "Vault.prototype.getRoot"
-  | "Vault.prototype.modify"
-  | "Vault.prototype.modifyBinary"
-  | "Vault.prototype.on"
-  | "Vault.prototype.on:create"
-  | "Vault.prototype.on:delete"
-  | "Vault.prototype.on:modify"
-  | "Vault.prototype.on:rename"
-  | "Vault.prototype.process"
-  | "Vault.prototype.read"
-  | "Vault.prototype.readBinary"
-  | "Vault.prototype.rename"
-  | "Vault.prototype.trash"
-  | "Vault.recurseChildren"
-  | "View"
-  | "View.prototype.app"
-  | "View.prototype.containerEl"
-  | "View.prototype.getDisplayText"
-  | "View.prototype.getEphemeralState"
-  | "View.prototype.getIcon"
-  | "View.prototype.getState"
-  | "View.prototype.getViewType"
-  | "View.prototype.icon"
-  | "View.prototype.leaf"
-  | "View.prototype.navigation"
-  | "View.prototype.onClose"
-  | "View.prototype.onOpen"
-  | "View.prototype.onPaneMenu"
-  | "View.prototype.onResize"
-  | "View.prototype.scope"
-  | "View.prototype.setEphemeralState"
-  | "View.prototype.setState"
-  | "Workspace"
-  | "Workspace.prototype.activeLeaf"
-  | "Workspace.prototype.changeLayout"
-  | "Workspace.prototype.containerEl"
-  | "Workspace.prototype.createLeafBySplit"
-  | "Workspace.prototype.createLeafInParent"
-  | "Workspace.prototype.detachLeavesOfType"
-  | "Workspace.prototype.duplicateLeaf"
-  | "Workspace.prototype.ensureSideLeaf"
-  | "Workspace.prototype.getActiveViewOfType"
-  | "Workspace.prototype.getGroupLeaves"
-  | "Workspace.prototype.getLastOpenFiles"
-  | "Workspace.prototype.getLayout"
-  | "Workspace.prototype.getLeaf"
-  | "Workspace.prototype.getLeaf:split"
-  | "Workspace.prototype.getLeafById"
-  | "Workspace.prototype.getLeavesOfType"
-  | "Workspace.prototype.getLeftLeaf"
-  | "Workspace.prototype.getMostRecentLeaf"
-  | "Workspace.prototype.getRightLeaf"
-  | "Workspace.prototype.handleLinkContextMenu"
-  | "Workspace.prototype.iterateAllLeaves"
-  | "Workspace.prototype.iterateRootLeaves"
-  | "Workspace.prototype.layoutReady"
-  | "Workspace.prototype.leftRibbon"
-  | "Workspace.prototype.leftSplit"
-  | "Workspace.prototype.moveLeafToPopout"
-  | "Workspace.prototype.on"
-  | "Workspace.prototype.on:active-leaf-change"
-  | "Workspace.prototype.on:css-change"
-  | "Workspace.prototype.on:editor-change"
-  | "Workspace.prototype.on:editor-drop"
-  | "Workspace.prototype.on:editor-menu"
-  | "Workspace.prototype.on:editor-paste"
-  | "Workspace.prototype.on:file-menu"
-  | "Workspace.prototype.on:file-open"
-  | "Workspace.prototype.on:files-menu"
-  | "Workspace.prototype.on:layout-change"
-  | "Workspace.prototype.on:quick-preview"
-  | "Workspace.prototype.on:quit"
-  | "Workspace.prototype.on:resize"
-  | "Workspace.prototype.on:url-menu"
-  | "Workspace.prototype.on:window-close"
-  | "Workspace.prototype.on:window-open"
-  | "Workspace.prototype.onLayoutReady"
-  | "Workspace.prototype.openLinkText"
-  | "Workspace.prototype.openPopoutLeaf"
-  | "Workspace.prototype.requestSaveLayout"
-  | "Workspace.prototype.revealLeaf"
-  | "Workspace.prototype.rightSplit"
-  | "Workspace.prototype.rootSplit"
-  | "Workspace.prototype.setActiveLeaf"
-  | "Workspace.prototype.splitActiveLeaf"
-  | "Workspace.prototype.updateOptions"
-  | "WorkspaceContainer"
-  | "WorkspaceContainer.prototype.doc"
-  | "WorkspaceContainer.prototype.win"
-  | "WorkspaceFloating"
-  | "WorkspaceFloating.prototype.parent"
-  | "WorkspaceItem"
-  | "WorkspaceItem.prototype.getContainer"
-  | "WorkspaceItem.prototype.getRoot"
-  | "WorkspaceItem.prototype.parent"
-  | "WorkspaceLeaf.prototype.loadIfDeferred"
-  | "WorkspaceMobileDrawer"
-  | "WorkspaceParent"
-  | "WorkspaceRoot"
-  | "WorkspaceSidedock"
-  | "WorkspaceSidedock.prototype.collapse"
-  | "WorkspaceSidedock.prototype.collapsed"
-  | "WorkspaceSidedock.prototype.expand"
-  | "WorkspaceSidedock.prototype.toggle"
-  | "WorkspaceSplit"
-  | "WorkspaceWindow";
+  | 'AbstractInputSuggest'
+  | 'AbstractInputSuggest.prototype.getSuggestions'
+  | 'AbstractInputSuggest.prototype.getValue'
+  | 'AbstractInputSuggest.prototype.limit'
+  | 'AbstractInputSuggest.prototype.onSelect'
+  | 'AbstractInputSuggest.prototype.selectSuggestion'
+  | 'AbstractInputSuggest.prototype.setValue'
+  | 'AbstractTextComponent'
+  | 'AbstractTextComponent.prototype.getValue'
+  | 'AbstractTextComponent.prototype.inputEl'
+  | 'AbstractTextComponent.prototype.onChange'
+  | 'AbstractTextComponent.prototype.onChanged'
+  | 'AbstractTextComponent.prototype.setDisabled'
+  | 'AbstractTextComponent.prototype.setPlaceholder'
+  | 'AbstractTextComponent.prototype.setValue'
+  | 'App'
+  | 'App.prototype.fileManager'
+  | 'App.prototype.isDarkMode'
+  | 'App.prototype.keymap'
+  | 'App.prototype.lastEvent'
+  | 'App.prototype.loadLocalStorage'
+  | 'App.prototype.metadataCache'
+  | 'App.prototype.renderContext'
+  | 'App.prototype.saveLocalStorage'
+  | 'App.prototype.scope'
+  | 'App.prototype.secretStorage'
+  | 'App.prototype.vault'
+  | 'App.prototype.workspace'
+  | 'BaseComponent'
+  | 'BaseComponent.prototype.disabled'
+  | 'BaseComponent.prototype.setDisabled'
+  | 'BaseComponent.prototype.then'
+  | 'BasesAllOptions'
+  | 'BasesConfigFile'
+  | 'BasesConfigFileFilter'
+  | 'BasesConfigFileView'
+  | 'BasesDropdownOption'
+  | 'BasesEntry'
+  | 'BasesEntry.prototype.file'
+  | 'BasesEntry.prototype.getValue'
+  | 'BasesEntryGroup'
+  | 'BasesEntryGroup.prototype.entries'
+  | 'BasesEntryGroup.prototype.hasKey'
+  | 'BasesEntryGroup.prototype.key'
+  | 'BasesFileOption'
+  | 'BasesFolderOption'
+  | 'BasesFormulaOption'
+  | 'BasesMultitextOption'
+  | 'BasesOption'
+  | 'BasesOptionGroup'
+  | 'BasesOptions'
+  | 'BasesProperty'
+  | 'BasesPropertyId'
+  | 'BasesPropertyOption'
+  | 'BasesPropertyType'
+  | 'BasesQueryResult'
+  | 'BasesQueryResult.prototype.data'
+  | 'BasesQueryResult.prototype.getSummaryValue'
+  | 'BasesSliderOption'
+  | 'BasesSortConfig'
+  | 'BasesTextOption'
+  | 'BasesToggleOption'
+  | 'BasesView'
+  | 'BasesView.prototype.allProperties'
+  | 'BasesView.prototype.app'
+  | 'BasesView.prototype.config'
+  | 'BasesView.prototype.createFileForView'
+  | 'BasesView.prototype.data'
+  | 'BasesView.prototype.onDataUpdated'
+  | 'BasesView.prototype.type'
+  | 'BasesViewConfig'
+  | 'BasesViewConfig.prototype.get'
+  | 'BasesViewConfig.prototype.getAsPropertyId'
+  | 'BasesViewConfig.prototype.getDisplayName'
+  | 'BasesViewConfig.prototype.getEvaluatedFormula'
+  | 'BasesViewConfig.prototype.getOrder'
+  | 'BasesViewConfig.prototype.getSort'
+  | 'BasesViewConfig.prototype.name'
+  | 'BasesViewConfig.prototype.set'
+  | 'BasesViewFactory'
+  | 'BasesViewRegistration'
+  | 'BlockCache'
+  | 'BlockSubpathResult'
+  | 'BooleanValue'
+  | 'BooleanValue.type'
+  | 'ButtonComponent'
+  | 'ButtonComponent.prototype.buttonEl'
+  | 'ButtonComponent.prototype.onClick'
+  | 'ButtonComponent.prototype.removeCta'
+  | 'ButtonComponent.prototype.removeDestructive'
+  | 'ButtonComponent.prototype.setButtonText'
+  | 'ButtonComponent.prototype.setClass'
+  | 'ButtonComponent.prototype.setCta'
+  | 'ButtonComponent.prototype.setDestructive'
+  | 'ButtonComponent.prototype.setDisabled'
+  | 'ButtonComponent.prototype.setIcon'
+  | 'ButtonComponent.prototype.setTooltip'
+  | 'ButtonComponent.prototype.setWarning'
+  | 'CapacitorAdapter'
+  | 'CapacitorAdapter.prototype.append'
+  | 'CapacitorAdapter.prototype.appendBinary'
+  | 'CapacitorAdapter.prototype.copy'
+  | 'CapacitorAdapter.prototype.exists'
+  | 'CapacitorAdapter.prototype.getFullPath'
+  | 'CapacitorAdapter.prototype.getName'
+  | 'CapacitorAdapter.prototype.getResourcePath'
+  | 'CapacitorAdapter.prototype.list'
+  | 'CapacitorAdapter.prototype.mkdir'
+  | 'CapacitorAdapter.prototype.process'
+  | 'CapacitorAdapter.prototype.read'
+  | 'CapacitorAdapter.prototype.readBinary'
+  | 'CapacitorAdapter.prototype.remove'
+  | 'CapacitorAdapter.prototype.rename'
+  | 'CapacitorAdapter.prototype.rmdir'
+  | 'CapacitorAdapter.prototype.stat'
+  | 'CapacitorAdapter.prototype.trashLocal'
+  | 'CapacitorAdapter.prototype.trashSystem'
+  | 'CapacitorAdapter.prototype.write'
+  | 'CapacitorAdapter.prototype.writeBinary'
+  | 'CliData'
+  | 'CliFlag'
+  | 'CliFlags'
+  | 'CliHandler'
+  | 'ColorComponent'
+  | 'ColorComponent.prototype.getValue'
+  | 'ColorComponent.prototype.getValueHsl'
+  | 'ColorComponent.prototype.getValueRgb'
+  | 'ColorComponent.prototype.onChange'
+  | 'ColorComponent.prototype.setDisabled'
+  | 'ColorComponent.prototype.setValue'
+  | 'ColorComponent.prototype.setValueHsl'
+  | 'ColorComponent.prototype.setValueRgb'
+  | 'Component'
+  | 'Component.prototype.addChild'
+  | 'Component.prototype.load'
+  | 'Component.prototype.onload'
+  | 'Component.prototype.onunload'
+  | 'Component.prototype.register'
+  | 'Component.prototype.registerDomEvent'
+  | 'Component.prototype.registerEvent'
+  | 'Component.prototype.registerInterval'
+  | 'Component.prototype.removeChild'
+  | 'Component.prototype.unload'
+  | 'ConfirmationButton'
+  | 'ConfirmationButton.prototype.onClick'
+  | 'ConfirmationButton.prototype.setCancel'
+  | 'ConfirmationButton.prototype.setInitialFocus'
+  | 'ConfirmationButton.prototype.setSecondary'
+  | 'ConfirmationModal'
+  | 'ConfirmationModal.prototype.addButton'
+  | 'ConfirmationModal.prototype.addCancelButton'
+  | 'ConfirmationModal.prototype.addCheckbox'
+  | 'ConfirmationModal.prototype.addClass'
+  | 'ConfirmationModal.prototype.buttonContainerEl'
+  | 'DateValue'
+  | 'DateValue.parseFromString'
+  | 'DateValue.prototype.dateOnly'
+  | 'DateValue.prototype.isTruthy'
+  | 'DateValue.prototype.relative'
+  | 'DateValue.prototype.toString'
+  | 'displayTooltip'
+  | 'DropdownComponent'
+  | 'DropdownComponent.prototype.addOption'
+  | 'DropdownComponent.prototype.addOptions'
+  | 'DropdownComponent.prototype.getValue'
+  | 'DropdownComponent.prototype.onChange'
+  | 'DropdownComponent.prototype.selectEl'
+  | 'DropdownComponent.prototype.setDisabled'
+  | 'DropdownComponent.prototype.setValue'
+  | 'DurationValue'
+  | 'DurationValue.fromMilliseconds'
+  | 'DurationValue.parseFromString'
+  | 'DurationValue.prototype.addToDate'
+  | 'DurationValue.prototype.getMilliseconds'
+  | 'DurationValue.prototype.isTruthy'
+  | 'DurationValue.prototype.toString'
+  | 'EditableFileView'
+  | 'Editor'
+  | 'Editor.prototype.blur'
+  | 'Editor.prototype.exec'
+  | 'Editor.prototype.focus'
+  | 'Editor.prototype.getCursor'
+  | 'Editor.prototype.getDoc'
+  | 'Editor.prototype.getLine'
+  | 'Editor.prototype.getRange'
+  | 'Editor.prototype.getScrollInfo'
+  | 'Editor.prototype.getSelection'
+  | 'Editor.prototype.getValue'
+  | 'Editor.prototype.hasFocus'
+  | 'Editor.prototype.lastLine'
+  | 'Editor.prototype.lineCount'
+  | 'Editor.prototype.listSelections'
+  | 'Editor.prototype.offsetToPos'
+  | 'Editor.prototype.posToOffset'
+  | 'Editor.prototype.processLines'
+  | 'Editor.prototype.redo'
+  | 'Editor.prototype.refresh'
+  | 'Editor.prototype.replaceRange'
+  | 'Editor.prototype.replaceSelection'
+  | 'Editor.prototype.scrollIntoView'
+  | 'Editor.prototype.scrollTo'
+  | 'Editor.prototype.setCursor'
+  | 'Editor.prototype.setLine'
+  | 'Editor.prototype.setSelection'
+  | 'Editor.prototype.setSelections'
+  | 'Editor.prototype.setValue'
+  | 'Editor.prototype.somethingSelected'
+  | 'Editor.prototype.transaction'
+  | 'Editor.prototype.undo'
+  | 'Editor.prototype.wordAt'
+  | 'EditorChange'
+  | 'EditorPosition'
+  | 'EditorRange'
+  | 'EditorRangeOrCaret'
+  | 'EditorScrollInfo'
+  | 'EditorSelection'
+  | 'EditorSelectionOrCaret'
+  | 'EditorSuggest'
+  | 'EditorSuggest.prototype.context'
+  | 'EditorSuggest.prototype.getSuggestions'
+  | 'EditorSuggest.prototype.limit'
+  | 'EditorSuggest.prototype.onTrigger'
+  | 'EditorSuggest.prototype.setInstructions'
+  | 'EditorSuggestContext'
+  | 'EditorSuggestTriggerInfo'
+  | 'EmbedCache'
+  | 'Events'
+  | 'Events.prototype.off'
+  | 'Events.prototype.offref'
+  | 'Events.prototype.on'
+  | 'Events.prototype.trigger'
+  | 'Events.prototype.tryTrigger'
+  | 'ExtraButtonComponent'
+  | 'ExtraButtonComponent.prototype.extraSettingsEl'
+  | 'ExtraButtonComponent.prototype.onClick'
+  | 'ExtraButtonComponent.prototype.setDisabled'
+  | 'ExtraButtonComponent.prototype.setIcon'
+  | 'ExtraButtonComponent.prototype.setTooltip'
+  | 'FileManager'
+  | 'FileManager.prototype.generateMarkdownLink'
+  | 'FileManager.prototype.getAvailablePathForAttachment'
+  | 'FileManager.prototype.getNewFileParent'
+  | 'FileManager.prototype.processFrontMatter'
+  | 'FileManager.prototype.promptForDeletion'
+  | 'FileManager.prototype.renameFile'
+  | 'FileManager.prototype.trashFile'
+  | 'FileSystemAdapter.prototype.appendBinary'
+  | 'FileSystemAdapter.prototype.getFilePath'
+  | 'FileSystemAdapter.prototype.stat'
+  | 'FileValue'
+  | 'FileValue.prototype.isTruthy'
+  | 'FileValue.prototype.toString'
+  | 'FileView.prototype.canAcceptExtension'
+  | 'FileView.prototype.setState'
+  | 'FootnoteSubpathResult'
+  | 'FormulaContext'
+  | 'FuzzyMatch'
+  | 'FuzzySuggestModal'
+  | 'FuzzySuggestModal.prototype.getItems'
+  | 'FuzzySuggestModal.prototype.getItemText'
+  | 'FuzzySuggestModal.prototype.getSuggestions'
+  | 'FuzzySuggestModal.prototype.onChooseItem'
+  | 'FuzzySuggestModal.prototype.onChooseSuggestion'
+  | 'FuzzySuggestModal.prototype.renderSuggestion'
+  | 'getFrontMatterInfo'
+  | 'getLanguage'
+  | 'HeadingSubpathResult'
+  | 'HoverParent'
+  | 'HoverPopover'
+  | 'HSL'
+  | 'HTMLValue'
+  | 'IconValue'
+  | 'ImageValue'
+  | 'Instruction'
+  | 'ItemView'
+  | 'ItemView.prototype.addAction'
+  | 'Keymap'
+  | 'Keymap.isModEvent'
+  | 'Keymap.isModifier'
+  | 'Keymap.prototype.popScope'
+  | 'Keymap.prototype.pushScope'
+  | 'KeymapInfo'
+  | 'LinkCache'
+  | 'LinkValue'
+  | 'LinkValue.parseFromString'
+  | 'ListValue'
+  | 'ListValue.prototype.concat'
+  | 'ListValue.prototype.get'
+  | 'ListValue.prototype.includes'
+  | 'ListValue.prototype.isTruthy'
+  | 'ListValue.prototype.length'
+  | 'ListValue.prototype.toString'
+  | 'ListValue.type'
+  | 'MarkdownPostProcessor'
+  | 'MarkdownPreviewRenderer'
+  | 'MarkdownPreviewRenderer.createCodeBlockPostProcessor'
+  | 'MarkdownPreviewRenderer.registerPostProcessor'
+  | 'MarkdownPreviewRenderer.unregisterPostProcessor'
+  | 'MarkdownRenderer'
+  | 'MarkdownRenderer.renderMarkdown'
+  | 'Menu.forEvent'
+  | 'Menu.prototype.addItem'
+  | 'Menu.prototype.addSeparator'
+  | 'Menu.prototype.setParentElement'
+  | 'Menu.prototype.setUseNativeMenu'
+  | 'Menu.prototype.showAtMouseEvent'
+  | 'Menu.prototype.showAtPosition'
+  | 'MenuItem.prototype.setChecked'
+  | 'MenuItem.prototype.setDisabled'
+  | 'MenuItem.prototype.setIcon'
+  | 'MenuItem.prototype.setIsLabel'
+  | 'MenuItem.prototype.setSection'
+  | 'MenuItem.prototype.setWarning'
+  | 'MenuPositionDef'
+  | 'MenuSeparator'
+  | 'MetadataCache.prototype.getCache'
+  | 'MetadataCache.prototype.getFileCache'
+  | 'MetadataCache.prototype.getFirstLinkpathDest'
+  | 'Modal.prototype.setCloseCallback'
+  | 'Modal.prototype.shouldRestoreSelection'
+  | 'MomentFormatComponent'
+  | 'MomentFormatComponent.prototype.onChanged'
+  | 'MomentFormatComponent.prototype.sampleEl'
+  | 'MomentFormatComponent.prototype.setDefaultFormat'
+  | 'MomentFormatComponent.prototype.setSampleEl'
+  | 'MomentFormatComponent.prototype.setValue'
+  | 'MomentFormatComponent.prototype.updateSample'
+  | 'Notice'
+  | 'Notice.prototype.containerEl'
+  | 'Notice.prototype.hide'
+  | 'Notice.prototype.messageEl'
+  | 'Notice.prototype.noticeEl'
+  | 'Notice.prototype.setMessage'
+  | 'NotNullValue'
+  | 'NullValue'
+  | 'NullValue.prototype.isTruthy'
+  | 'NullValue.prototype.toString'
+  | 'NullValue.value'
+  | 'NumberValue'
+  | 'NumberValue.type'
+  | 'ObjectValue'
+  | 'ObjectValue.prototype.get'
+  | 'ObjectValue.prototype.isEmpty'
+  | 'ObjectValue.prototype.isTruthy'
+  | 'ObjectValue.prototype.toString'
+  | 'ObjectValue.type'
+  | 'parsePropertyId'
+  | 'Platform'
+  | 'Plugin'
+  | 'Plugin.prototype.addCommand'
+  | 'Plugin.prototype.addRibbonIcon'
+  | 'Plugin.prototype.addSettingTab'
+  | 'Plugin.prototype.addStatusBarItem'
+  | 'Plugin.prototype.app'
+  | 'Plugin.prototype.loadData'
+  | 'Plugin.prototype.manifest'
+  | 'Plugin.prototype.onExternalSettingsChange'
+  | 'Plugin.prototype.onload'
+  | 'Plugin.prototype.onUserEnable'
+  | 'Plugin.prototype.registerBasesView'
+  | 'Plugin.prototype.registerCliHandler'
+  | 'Plugin.prototype.registerEditorExtension'
+  | 'Plugin.prototype.registerEditorSuggest'
+  | 'Plugin.prototype.registerExtensions'
+  | 'Plugin.prototype.registerHoverLinkSource'
+  | 'Plugin.prototype.registerMarkdownCodeBlockProcessor'
+  | 'Plugin.prototype.registerMarkdownPostProcessor'
+  | 'Plugin.prototype.registerObsidianProtocolHandler'
+  | 'Plugin.prototype.registerView'
+  | 'Plugin.prototype.removeCommand'
+  | 'Plugin.prototype.saveData'
+  | 'Plugin.prototype.settings'
+  | 'PluginSettingTab'
+  | 'PluginSettingTab.prototype.getControlValue'
+  | 'PluginSettingTab.prototype.getSettingDefinitions'
+  | 'PluginSettingTab.prototype.setControlValue'
+  | 'PrimitiveValue'
+  | 'PrimitiveValue.prototype.isTruthy'
+  | 'PrimitiveValue.prototype.toString'
+  | 'ProgressBarComponent'
+  | 'QueryController'
+  | 'ReferenceLinkCache'
+  | 'RegExpValue'
+  | 'RegExpValue.prototype.isTruthy'
+  | 'RegExpValue.prototype.toString'
+  | 'RelativeDateValue'
+  | 'RenderContext'
+  | 'RenderContext.prototype.hoverPopover'
+  | 'request'
+  | 'RGB'
+  | 'SearchComponent'
+  | 'SearchComponent.prototype.clearButtonEl'
+  | 'SearchResult'
+  | 'SearchResultContainer'
+  | 'SecretComponent'
+  | 'SecretComponent.prototype.onChange'
+  | 'SecretComponent.prototype.setValue'
+  | 'SecretStorage'
+  | 'SecretStorage.prototype.getSecret'
+  | 'SecretStorage.prototype.listSecrets'
+  | 'SecretStorage.prototype.setSecret'
+  | 'Setting'
+  | 'Setting.prototype.addButton'
+  | 'Setting.prototype.addComponent'
+  | 'Setting.prototype.addExtraButton'
+  | 'Setting.prototype.addMomentFormat'
+  | 'Setting.prototype.addSearch'
+  | 'Setting.prototype.addSlider'
+  | 'Setting.prototype.addText'
+  | 'Setting.prototype.addTextArea'
+  | 'Setting.prototype.addToggle'
+  | 'Setting.prototype.clear'
+  | 'Setting.prototype.components'
+  | 'Setting.prototype.controlEl'
+  | 'Setting.prototype.descEl'
+  | 'Setting.prototype.errorEl'
+  | 'Setting.prototype.infoEl'
+  | 'Setting.prototype.nameEl'
+  | 'Setting.prototype.setClass'
+  | 'Setting.prototype.setDesc'
+  | 'Setting.prototype.setDisabled'
+  | 'Setting.prototype.setErrorMessage'
+  | 'Setting.prototype.setHeading'
+  | 'Setting.prototype.setName'
+  | 'Setting.prototype.settingEl'
+  | 'Setting.prototype.setTooltip'
+  | 'Setting.prototype.then'
+  | 'SettingColorControl'
+  | 'SettingControl'
+  | 'SettingControlBase'
+  | 'SettingDefinition'
+  | 'SettingDefinitionAction'
+  | 'SettingDefinitionAddItem'
+  | 'SettingDefinitionBase'
+  | 'SettingDefinitionControl'
+  | 'SettingDefinitionEmpty'
+  | 'SettingDefinitionGroup'
+  | 'SettingDefinitionItem'
+  | 'SettingDefinitionList'
+  | 'SettingDefinitionPage'
+  | 'SettingDefinitionRender'
+  | 'SettingDropdownControl'
+  | 'SettingFileControl'
+  | 'SettingFolderControl'
+  | 'SettingGroup'
+  | 'SettingGroup.prototype.addClass'
+  | 'SettingGroup.prototype.addExtraButton'
+  | 'SettingGroup.prototype.addSearch'
+  | 'SettingGroup.prototype.addSetting'
+  | 'SettingGroup.prototype.listEl'
+  | 'SettingGroup.prototype.setHeading'
+  | 'SettingGroupItem'
+  | 'SettingNumberControl'
+  | 'SettingPage'
+  | 'SettingPage.prototype.containerEl'
+  | 'SettingPage.prototype.display'
+  | 'SettingPage.prototype.hide'
+  | 'SettingPage.prototype.rootEl'
+  | 'SettingPage.prototype.title'
+  | 'SettingPage.prototype.titlebarEl'
+  | 'SettingSliderControl'
+  | 'SettingTab'
+  | 'SettingTab.prototype.getControlValue'
+  | 'SettingTab.prototype.getSettingDefinitions'
+  | 'SettingTab.prototype.icon'
+  | 'SettingTab.prototype.refreshDomState'
+  | 'SettingTab.prototype.setControlValue'
+  | 'SettingTab.prototype.settingItems'
+  | 'SettingTab.prototype.update'
+  | 'SettingTextAreaControl'
+  | 'SettingTextControl'
+  | 'SettingToggleControl'
+  | 'setTooltip'
+  | 'SliderComponent'
+  | 'SliderComponent.prototype.getValue'
+  | 'SliderComponent.prototype.getValuePretty'
+  | 'SliderComponent.prototype.onChange'
+  | 'SliderComponent.prototype.setDisabled'
+  | 'SliderComponent.prototype.setDynamicTooltip'
+  | 'SliderComponent.prototype.setInstant'
+  | 'SliderComponent.prototype.setLimits'
+  | 'SliderComponent.prototype.setValue'
+  | 'SliderComponent.prototype.showTooltip'
+  | 'StringValue'
+  | 'StringValue.type'
+  | 'SuggestModal.prototype.emptyStateText'
+  | 'SuggestModal.prototype.getSuggestions'
+  | 'SuggestModal.prototype.onChooseSuggestion'
+  | 'SuggestModal.prototype.onNoSuggestion'
+  | 'SuggestModal.prototype.renderSuggestion'
+  | 'SuggestModal.prototype.resultContainerEl'
+  | 'SuggestModal.prototype.selectActiveSuggestion'
+  | 'SuggestModal.prototype.selectSuggestion'
+  | 'SuggestModal.prototype.setInstructions'
+  | 'SuggestModal.prototype.setPlaceholder'
+  | 'TAbstractFile'
+  | 'TAbstractFile.prototype.name'
+  | 'TAbstractFile.prototype.parent'
+  | 'TAbstractFile.prototype.path'
+  | 'TAbstractFile.prototype.vault'
+  | 'TagCache'
+  | 'TagValue'
+  | 'Tasks'
+  | 'Tasks.prototype.add'
+  | 'Tasks.prototype.addPromise'
+  | 'Tasks.prototype.isEmpty'
+  | 'Tasks.prototype.promise'
+  | 'TextAreaComponent'
+  | 'TextComponent'
+  | 'TextFileView'
+  | 'TextFileView.prototype.clear'
+  | 'TextFileView.prototype.data'
+  | 'TextFileView.prototype.getViewData'
+  | 'TextFileView.prototype.onLoadFile'
+  | 'TextFileView.prototype.onUnloadFile'
+  | 'TextFileView.prototype.requestSave'
+  | 'TextFileView.prototype.save'
+  | 'TextFileView.prototype.setViewData'
+  | 'TFile'
+  | 'TFile.prototype.basename'
+  | 'TFile.prototype.extension'
+  | 'TFile.prototype.stat'
+  | 'TFolder'
+  | 'TFolder.prototype.children'
+  | 'TFolder.prototype.isRoot'
+  | 'ToggleComponent'
+  | 'ToggleComponent.prototype.getValue'
+  | 'ToggleComponent.prototype.onChange'
+  | 'ToggleComponent.prototype.onClick'
+  | 'ToggleComponent.prototype.setDisabled'
+  | 'ToggleComponent.prototype.setTooltip'
+  | 'ToggleComponent.prototype.setValue'
+  | 'ToggleComponent.prototype.toggleEl'
+  | 'UrlValue'
+  | 'Value'
+  | 'Value.equals'
+  | 'Value.looseEquals'
+  | 'Value.prototype.equals'
+  | 'Value.prototype.isTruthy'
+  | 'Value.prototype.looseEquals'
+  | 'Value.prototype.renderTo'
+  | 'Value.prototype.toString'
+  | 'Value.type'
+  | 'ValueComponent'
+  | 'ValueComponent.prototype.getValue'
+  | 'ValueComponent.prototype.registerOptionListener'
+  | 'ValueComponent.prototype.setValue'
+  | 'Vault'
+  | 'Vault.prototype.adapter'
+  | 'Vault.prototype.append'
+  | 'Vault.prototype.appendBinary'
+  | 'Vault.prototype.cachedRead'
+  | 'Vault.prototype.configDir'
+  | 'Vault.prototype.copy'
+  | 'Vault.prototype.create'
+  | 'Vault.prototype.createBinary'
+  | 'Vault.prototype.createFolder'
+  | 'Vault.prototype.delete'
+  | 'Vault.prototype.getAbstractFileByPath'
+  | 'Vault.prototype.getAllFolders'
+  | 'Vault.prototype.getAllLoadedFiles'
+  | 'Vault.prototype.getFileByPath'
+  | 'Vault.prototype.getFiles'
+  | 'Vault.prototype.getFolderByPath'
+  | 'Vault.prototype.getMarkdownFiles'
+  | 'Vault.prototype.getName'
+  | 'Vault.prototype.getResourcePath'
+  | 'Vault.prototype.getRoot'
+  | 'Vault.prototype.modify'
+  | 'Vault.prototype.modifyBinary'
+  | 'Vault.prototype.on'
+  | 'Vault.prototype.on:create'
+  | 'Vault.prototype.on:delete'
+  | 'Vault.prototype.on:modify'
+  | 'Vault.prototype.on:rename'
+  | 'Vault.prototype.process'
+  | 'Vault.prototype.read'
+  | 'Vault.prototype.readBinary'
+  | 'Vault.prototype.rename'
+  | 'Vault.prototype.trash'
+  | 'Vault.recurseChildren'
+  | 'View'
+  | 'View.prototype.app'
+  | 'View.prototype.containerEl'
+  | 'View.prototype.getDisplayText'
+  | 'View.prototype.getEphemeralState'
+  | 'View.prototype.getIcon'
+  | 'View.prototype.getState'
+  | 'View.prototype.getViewType'
+  | 'View.prototype.icon'
+  | 'View.prototype.leaf'
+  | 'View.prototype.navigation'
+  | 'View.prototype.onClose'
+  | 'View.prototype.onOpen'
+  | 'View.prototype.onPaneMenu'
+  | 'View.prototype.onResize'
+  | 'View.prototype.scope'
+  | 'View.prototype.setEphemeralState'
+  | 'View.prototype.setState'
+  | 'Workspace'
+  | 'Workspace.prototype.activeLeaf'
+  | 'Workspace.prototype.changeLayout'
+  | 'Workspace.prototype.containerEl'
+  | 'Workspace.prototype.createLeafBySplit'
+  | 'Workspace.prototype.createLeafInParent'
+  | 'Workspace.prototype.detachLeavesOfType'
+  | 'Workspace.prototype.duplicateLeaf'
+  | 'Workspace.prototype.ensureSideLeaf'
+  | 'Workspace.prototype.getActiveViewOfType'
+  | 'Workspace.prototype.getGroupLeaves'
+  | 'Workspace.prototype.getLastOpenFiles'
+  | 'Workspace.prototype.getLayout'
+  | 'Workspace.prototype.getLeaf'
+  | 'Workspace.prototype.getLeaf:split'
+  | 'Workspace.prototype.getLeafById'
+  | 'Workspace.prototype.getLeavesOfType'
+  | 'Workspace.prototype.getLeftLeaf'
+  | 'Workspace.prototype.getMostRecentLeaf'
+  | 'Workspace.prototype.getRightLeaf'
+  | 'Workspace.prototype.handleLinkContextMenu'
+  | 'Workspace.prototype.iterateAllLeaves'
+  | 'Workspace.prototype.iterateRootLeaves'
+  | 'Workspace.prototype.layoutReady'
+  | 'Workspace.prototype.leftRibbon'
+  | 'Workspace.prototype.leftSplit'
+  | 'Workspace.prototype.moveLeafToPopout'
+  | 'Workspace.prototype.on'
+  | 'Workspace.prototype.on:active-leaf-change'
+  | 'Workspace.prototype.on:css-change'
+  | 'Workspace.prototype.on:editor-change'
+  | 'Workspace.prototype.on:editor-drop'
+  | 'Workspace.prototype.on:editor-menu'
+  | 'Workspace.prototype.on:editor-paste'
+  | 'Workspace.prototype.on:file-menu'
+  | 'Workspace.prototype.on:file-open'
+  | 'Workspace.prototype.on:files-menu'
+  | 'Workspace.prototype.on:layout-change'
+  | 'Workspace.prototype.on:quick-preview'
+  | 'Workspace.prototype.on:quit'
+  | 'Workspace.prototype.on:resize'
+  | 'Workspace.prototype.on:url-menu'
+  | 'Workspace.prototype.on:window-close'
+  | 'Workspace.prototype.on:window-open'
+  | 'Workspace.prototype.onLayoutReady'
+  | 'Workspace.prototype.openLinkText'
+  | 'Workspace.prototype.openPopoutLeaf'
+  | 'Workspace.prototype.requestSaveLayout'
+  | 'Workspace.prototype.revealLeaf'
+  | 'Workspace.prototype.rightSplit'
+  | 'Workspace.prototype.rootSplit'
+  | 'Workspace.prototype.setActiveLeaf'
+  | 'Workspace.prototype.splitActiveLeaf'
+  | 'Workspace.prototype.updateOptions'
+  | 'WorkspaceContainer'
+  | 'WorkspaceContainer.prototype.doc'
+  | 'WorkspaceContainer.prototype.win'
+  | 'WorkspaceFloating'
+  | 'WorkspaceFloating.prototype.parent'
+  | 'WorkspaceItem'
+  | 'WorkspaceItem.prototype.getContainer'
+  | 'WorkspaceItem.prototype.getRoot'
+  | 'WorkspaceItem.prototype.parent'
+  | 'WorkspaceLeaf.prototype.loadIfDeferred'
+  | 'WorkspaceMobileDrawer'
+  | 'WorkspaceParent'
+  | 'WorkspaceRoot'
+  | 'WorkspaceSidedock'
+  | 'WorkspaceSidedock.prototype.collapse'
+  | 'WorkspaceSidedock.prototype.collapsed'
+  | 'WorkspaceSidedock.prototype.expand'
+  | 'WorkspaceSidedock.prototype.toggle'
+  | 'WorkspaceSplit'
+  | 'WorkspaceWindow'
+  ;
 
 export const obsidianApi = {
   AbstractInputSuggest: {
-    $since: "1.4.10",
-    $kind: "class",
-    $key: "AbstractInputSuggest",
+    $since: '1.4.10',
+    $kind: 'class',
+    $key: 'AbstractInputSuggest',
     getSuggestions: {
-      $since: "1.5.7",
-      $kind: "method",
-      $key: "AbstractInputSuggest.prototype.getSuggestions",
+      $since: '1.5.7',
+      $kind: 'method',
+      $key: 'AbstractInputSuggest.prototype.getSuggestions',
     },
     getValue: {
-      $since: "1.4.10",
-      $kind: "method",
-      $key: "AbstractInputSuggest.prototype.getValue",
+      $since: '1.4.10',
+      $kind: 'method',
+      $key: 'AbstractInputSuggest.prototype.getValue',
     },
     limit: {
-      $since: "1.4.10",
-      $kind: "property",
-      $key: "AbstractInputSuggest.prototype.limit",
+      $since: '1.4.10',
+      $kind: 'property',
+      $key: 'AbstractInputSuggest.prototype.limit',
     },
     onSelect: {
-      $since: "1.4.10",
-      $kind: "method",
-      $key: "AbstractInputSuggest.prototype.onSelect",
+      $since: '1.4.10',
+      $kind: 'method',
+      $key: 'AbstractInputSuggest.prototype.onSelect',
     },
     selectSuggestion: {
-      $since: "1.6.6",
-      $kind: "method",
-      $key: "AbstractInputSuggest.prototype.selectSuggestion",
+      $since: '1.6.6',
+      $kind: 'method',
+      $key: 'AbstractInputSuggest.prototype.selectSuggestion',
     },
     setValue: {
-      $since: "1.4.10",
-      $kind: "method",
-      $key: "AbstractInputSuggest.prototype.setValue",
+      $since: '1.4.10',
+      $kind: 'method',
+      $key: 'AbstractInputSuggest.prototype.setValue',
     },
   },
   AbstractTextComponent: {
-    $since: "0.9.21",
-    $kind: "class",
-    $key: "AbstractTextComponent",
+    $since: '0.9.21',
+    $kind: 'class',
+    $key: 'AbstractTextComponent',
     getValue: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "AbstractTextComponent.prototype.getValue",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'AbstractTextComponent.prototype.getValue',
     },
     inputEl: {
-      $since: "0.9.7",
-      $kind: "property",
-      $key: "AbstractTextComponent.prototype.inputEl",
+      $since: '0.9.7',
+      $kind: 'property',
+      $key: 'AbstractTextComponent.prototype.inputEl',
     },
     onChange: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "AbstractTextComponent.prototype.onChange",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'AbstractTextComponent.prototype.onChange',
     },
     onChanged: {
-      $since: "0.9.21",
-      $kind: "method",
-      $key: "AbstractTextComponent.prototype.onChanged",
+      $since: '0.9.21',
+      $kind: 'method',
+      $key: 'AbstractTextComponent.prototype.onChanged',
     },
     setDisabled: {
-      $since: "1.2.3",
-      $kind: "method",
-      $key: "AbstractTextComponent.prototype.setDisabled",
+      $since: '1.2.3',
+      $kind: 'method',
+      $key: 'AbstractTextComponent.prototype.setDisabled',
     },
     setPlaceholder: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "AbstractTextComponent.prototype.setPlaceholder",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'AbstractTextComponent.prototype.setPlaceholder',
     },
     setValue: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "AbstractTextComponent.prototype.setValue",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'AbstractTextComponent.prototype.setValue',
     },
   },
   App: {
-    $since: "0.9.7",
-    $kind: "class",
-    $key: "App",
+    $since: '0.9.7',
+    $kind: 'class',
+    $key: 'App',
     fileManager: {
-      $since: "0.11.0",
-      $kind: "property",
-      $key: "App.prototype.fileManager",
+      $since: '0.11.0',
+      $kind: 'property',
+      $key: 'App.prototype.fileManager',
     },
     isDarkMode: {
-      $since: "1.10.0",
-      $kind: "method",
-      $key: "App.prototype.isDarkMode",
+      $since: '1.10.0',
+      $kind: 'method',
+      $key: 'App.prototype.isDarkMode',
     },
     keymap: {
-      $since: "0.9.7",
-      $kind: "property",
-      $key: "App.prototype.keymap",
+      $since: '0.9.7',
+      $kind: 'property',
+      $key: 'App.prototype.keymap',
     },
     lastEvent: {
-      $since: "0.12.17",
-      $kind: "property",
-      $key: "App.prototype.lastEvent",
+      $since: '0.12.17',
+      $kind: 'property',
+      $key: 'App.prototype.lastEvent',
     },
     loadLocalStorage: {
-      $since: "1.8.7",
-      $kind: "method",
-      $key: "App.prototype.loadLocalStorage",
+      $since: '1.8.7',
+      $kind: 'method',
+      $key: 'App.prototype.loadLocalStorage',
     },
     metadataCache: {
-      $since: "0.9.7",
-      $kind: "property",
-      $key: "App.prototype.metadataCache",
+      $since: '0.9.7',
+      $kind: 'property',
+      $key: 'App.prototype.metadataCache',
     },
     renderContext: {
-      $since: "1.10.0",
-      $kind: "property",
-      $key: "App.prototype.renderContext",
+      $since: '1.10.0',
+      $kind: 'property',
+      $key: 'App.prototype.renderContext',
     },
     saveLocalStorage: {
-      $since: "1.8.7",
-      $kind: "method",
-      $key: "App.prototype.saveLocalStorage",
+      $since: '1.8.7',
+      $kind: 'method',
+      $key: 'App.prototype.saveLocalStorage',
     },
     scope: {
-      $since: "0.9.7",
-      $kind: "property",
-      $key: "App.prototype.scope",
+      $since: '0.9.7',
+      $kind: 'property',
+      $key: 'App.prototype.scope',
     },
     secretStorage: {
-      $since: "1.11.4",
-      $kind: "property",
-      $key: "App.prototype.secretStorage",
+      $since: '1.11.4',
+      $kind: 'property',
+      $key: 'App.prototype.secretStorage',
     },
     vault: {
-      $since: "0.9.7",
-      $kind: "property",
-      $key: "App.prototype.vault",
+      $since: '0.9.7',
+      $kind: 'property',
+      $key: 'App.prototype.vault',
     },
     workspace: {
-      $since: "0.9.7",
-      $kind: "property",
-      $key: "App.prototype.workspace",
+      $since: '0.9.7',
+      $kind: 'property',
+      $key: 'App.prototype.workspace',
     },
   },
   BaseComponent: {
-    $since: "0.10.3",
-    $kind: "class",
-    $key: "BaseComponent",
+    $since: '0.10.3',
+    $kind: 'class',
+    $key: 'BaseComponent',
     disabled: {
-      $since: "0.10.3",
-      $kind: "property",
-      $key: "BaseComponent.prototype.disabled",
+      $since: '0.10.3',
+      $kind: 'property',
+      $key: 'BaseComponent.prototype.disabled',
     },
     setDisabled: {
-      $since: "1.2.3",
-      $kind: "method",
-      $key: "BaseComponent.prototype.setDisabled",
+      $since: '1.2.3',
+      $kind: 'method',
+      $key: 'BaseComponent.prototype.setDisabled',
     },
     then: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "BaseComponent.prototype.then",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'BaseComponent.prototype.then',
     },
   },
   BasesAllOptions: {
-    $since: "1.10.0",
-    $kind: "type",
-    $key: "BasesAllOptions",
+    $since: '1.10.0',
+    $kind: 'type',
+    $key: 'BasesAllOptions',
   },
   BasesConfigFile: {
-    $since: "1.10.0",
-    $kind: "interface",
-    $key: "BasesConfigFile",
+    $since: '1.10.0',
+    $kind: 'interface',
+    $key: 'BasesConfigFile',
   },
   BasesConfigFileFilter: {
-    $since: "1.10.0",
-    $kind: "type",
-    $key: "BasesConfigFileFilter",
+    $since: '1.10.0',
+    $kind: 'type',
+    $key: 'BasesConfigFileFilter',
   },
   BasesConfigFileView: {
-    $since: "1.10.0",
-    $kind: "interface",
-    $key: "BasesConfigFileView",
+    $since: '1.10.0',
+    $kind: 'interface',
+    $key: 'BasesConfigFileView',
   },
   BasesDropdownOption: {
-    $since: "1.10.0",
-    $kind: "interface",
-    $key: "BasesDropdownOption",
+    $since: '1.10.0',
+    $kind: 'interface',
+    $key: 'BasesDropdownOption',
   },
   BasesEntry: {
-    $since: "1.10.0",
-    $kind: "class",
-    $key: "BasesEntry",
+    $since: '1.10.0',
+    $kind: 'class',
+    $key: 'BasesEntry',
     file: {
-      $since: "1.10.0",
-      $kind: "property",
-      $key: "BasesEntry.prototype.file",
+      $since: '1.10.0',
+      $kind: 'property',
+      $key: 'BasesEntry.prototype.file',
     },
     getValue: {
-      $since: "1.10.0",
-      $kind: "method",
-      $key: "BasesEntry.prototype.getValue",
+      $since: '1.10.0',
+      $kind: 'method',
+      $key: 'BasesEntry.prototype.getValue',
     },
   },
   BasesEntryGroup: {
-    $since: "1.10.0",
-    $kind: "class",
-    $key: "BasesEntryGroup",
+    $since: '1.10.0',
+    $kind: 'class',
+    $key: 'BasesEntryGroup',
     entries: {
-      $since: "1.10.0",
-      $kind: "property",
-      $key: "BasesEntryGroup.prototype.entries",
+      $since: '1.10.0',
+      $kind: 'property',
+      $key: 'BasesEntryGroup.prototype.entries',
     },
     hasKey: {
-      $since: "1.10.0",
-      $kind: "method",
-      $key: "BasesEntryGroup.prototype.hasKey",
+      $since: '1.10.0',
+      $kind: 'method',
+      $key: 'BasesEntryGroup.prototype.hasKey',
     },
     key: {
-      $since: "1.10.0",
-      $kind: "property",
-      $key: "BasesEntryGroup.prototype.key",
+      $since: '1.10.0',
+      $kind: 'property',
+      $key: 'BasesEntryGroup.prototype.key',
     },
   },
   BasesFileOption: {
-    $since: "1.10.2",
-    $kind: "interface",
-    $key: "BasesFileOption",
+    $since: '1.10.2',
+    $kind: 'interface',
+    $key: 'BasesFileOption',
   },
   BasesFolderOption: {
-    $since: "1.10.2",
-    $kind: "interface",
-    $key: "BasesFolderOption",
+    $since: '1.10.2',
+    $kind: 'interface',
+    $key: 'BasesFolderOption',
   },
   BasesFormulaOption: {
-    $since: "1.10.2",
-    $kind: "interface",
-    $key: "BasesFormulaOption",
+    $since: '1.10.2',
+    $kind: 'interface',
+    $key: 'BasesFormulaOption',
   },
   BasesMultitextOption: {
-    $since: "1.10.0",
-    $kind: "interface",
-    $key: "BasesMultitextOption",
+    $since: '1.10.0',
+    $kind: 'interface',
+    $key: 'BasesMultitextOption',
   },
   BasesOption: {
-    $since: "1.10.0",
-    $kind: "interface",
-    $key: "BasesOption",
+    $since: '1.10.0',
+    $kind: 'interface',
+    $key: 'BasesOption',
   },
   BasesOptionGroup: {
-    $since: "1.10.0",
-    $kind: "interface",
-    $key: "BasesOptionGroup",
+    $since: '1.10.0',
+    $kind: 'interface',
+    $key: 'BasesOptionGroup',
   },
   BasesOptions: {
-    $since: "1.10.0",
-    $kind: "type",
-    $key: "BasesOptions",
+    $since: '1.10.0',
+    $kind: 'type',
+    $key: 'BasesOptions',
   },
   BasesProperty: {
-    $since: "1.10.0",
-    $kind: "interface",
-    $key: "BasesProperty",
+    $since: '1.10.0',
+    $kind: 'interface',
+    $key: 'BasesProperty',
   },
   BasesPropertyId: {
-    $since: "1.10.0",
-    $kind: "type",
-    $key: "BasesPropertyId",
+    $since: '1.10.0',
+    $kind: 'type',
+    $key: 'BasesPropertyId',
   },
   BasesPropertyOption: {
-    $since: "1.10.0",
-    $kind: "interface",
-    $key: "BasesPropertyOption",
+    $since: '1.10.0',
+    $kind: 'interface',
+    $key: 'BasesPropertyOption',
   },
   BasesPropertyType: {
-    $since: "1.10.0",
-    $kind: "type",
-    $key: "BasesPropertyType",
+    $since: '1.10.0',
+    $kind: 'type',
+    $key: 'BasesPropertyType',
   },
   BasesQueryResult: {
-    $since: "1.10.0",
-    $kind: "class",
-    $key: "BasesQueryResult",
+    $since: '1.10.0',
+    $kind: 'class',
+    $key: 'BasesQueryResult',
     data: {
-      $since: "1.10.0",
-      $kind: "property",
-      $key: "BasesQueryResult.prototype.data",
+      $since: '1.10.0',
+      $kind: 'property',
+      $key: 'BasesQueryResult.prototype.data',
     },
     getSummaryValue: {
-      $since: "1.10.0",
-      $kind: "method",
-      $key: "BasesQueryResult.prototype.getSummaryValue",
+      $since: '1.10.0',
+      $kind: 'method',
+      $key: 'BasesQueryResult.prototype.getSummaryValue',
     },
   },
   BasesSliderOption: {
-    $since: "1.10.0",
-    $kind: "interface",
-    $key: "BasesSliderOption",
+    $since: '1.10.0',
+    $kind: 'interface',
+    $key: 'BasesSliderOption',
   },
   BasesSortConfig: {
-    $since: "1.10.0",
-    $kind: "type",
-    $key: "BasesSortConfig",
+    $since: '1.10.0',
+    $kind: 'type',
+    $key: 'BasesSortConfig',
   },
   BasesTextOption: {
-    $since: "1.10.0",
-    $kind: "interface",
-    $key: "BasesTextOption",
+    $since: '1.10.0',
+    $kind: 'interface',
+    $key: 'BasesTextOption',
   },
   BasesToggleOption: {
-    $since: "1.10.0",
-    $kind: "interface",
-    $key: "BasesToggleOption",
+    $since: '1.10.0',
+    $kind: 'interface',
+    $key: 'BasesToggleOption',
   },
   BasesView: {
-    $since: "1.10.0",
-    $kind: "class",
-    $key: "BasesView",
+    $since: '1.10.0',
+    $kind: 'class',
+    $key: 'BasesView',
     allProperties: {
-      $since: "1.10.0",
-      $kind: "property",
-      $key: "BasesView.prototype.allProperties",
+      $since: '1.10.0',
+      $kind: 'property',
+      $key: 'BasesView.prototype.allProperties',
     },
     app: {
-      $since: "1.10.0",
-      $kind: "property",
-      $key: "BasesView.prototype.app",
+      $since: '1.10.0',
+      $kind: 'property',
+      $key: 'BasesView.prototype.app',
     },
     config: {
-      $since: "1.10.0",
-      $kind: "property",
-      $key: "BasesView.prototype.config",
+      $since: '1.10.0',
+      $kind: 'property',
+      $key: 'BasesView.prototype.config',
     },
     createFileForView: {
-      $since: "1.10.2",
-      $kind: "method",
-      $key: "BasesView.prototype.createFileForView",
+      $since: '1.10.2',
+      $kind: 'method',
+      $key: 'BasesView.prototype.createFileForView',
     },
     data: {
-      $since: "1.10.0",
-      $kind: "property",
-      $key: "BasesView.prototype.data",
+      $since: '1.10.0',
+      $kind: 'property',
+      $key: 'BasesView.prototype.data',
     },
     onDataUpdated: {
-      $since: "1.10.0",
-      $kind: "method",
-      $key: "BasesView.prototype.onDataUpdated",
+      $since: '1.10.0',
+      $kind: 'method',
+      $key: 'BasesView.prototype.onDataUpdated',
     },
     type: {
-      $since: "1.10.0",
-      $kind: "property",
-      $key: "BasesView.prototype.type",
+      $since: '1.10.0',
+      $kind: 'property',
+      $key: 'BasesView.prototype.type',
     },
   },
   BasesViewConfig: {
-    $since: "1.10.0",
-    $kind: "class",
-    $key: "BasesViewConfig",
+    $since: '1.10.0',
+    $kind: 'class',
+    $key: 'BasesViewConfig',
     get: {
-      $since: "1.10.0",
-      $kind: "method",
-      $key: "BasesViewConfig.prototype.get",
+      $since: '1.10.0',
+      $kind: 'method',
+      $key: 'BasesViewConfig.prototype.get',
     },
     getAsPropertyId: {
-      $since: "1.10.0",
-      $kind: "method",
-      $key: "BasesViewConfig.prototype.getAsPropertyId",
+      $since: '1.10.0',
+      $kind: 'method',
+      $key: 'BasesViewConfig.prototype.getAsPropertyId',
     },
     getDisplayName: {
-      $since: "1.10.0",
-      $kind: "method",
-      $key: "BasesViewConfig.prototype.getDisplayName",
+      $since: '1.10.0',
+      $kind: 'method',
+      $key: 'BasesViewConfig.prototype.getDisplayName',
     },
     getEvaluatedFormula: {
-      $since: "1.10.2",
-      $kind: "method",
-      $key: "BasesViewConfig.prototype.getEvaluatedFormula",
+      $since: '1.10.2',
+      $kind: 'method',
+      $key: 'BasesViewConfig.prototype.getEvaluatedFormula',
     },
     getOrder: {
-      $since: "1.10.0",
-      $kind: "method",
-      $key: "BasesViewConfig.prototype.getOrder",
+      $since: '1.10.0',
+      $kind: 'method',
+      $key: 'BasesViewConfig.prototype.getOrder',
     },
     getSort: {
-      $since: "1.10.0",
-      $kind: "method",
-      $key: "BasesViewConfig.prototype.getSort",
+      $since: '1.10.0',
+      $kind: 'method',
+      $key: 'BasesViewConfig.prototype.getSort',
     },
     name: {
-      $since: "1.10.0",
-      $kind: "property",
-      $key: "BasesViewConfig.prototype.name",
+      $since: '1.10.0',
+      $kind: 'property',
+      $key: 'BasesViewConfig.prototype.name',
     },
     set: {
-      $since: "1.10.0",
-      $kind: "method",
-      $key: "BasesViewConfig.prototype.set",
+      $since: '1.10.0',
+      $kind: 'method',
+      $key: 'BasesViewConfig.prototype.set',
     },
   },
   BasesViewFactory: {
-    $since: "1.10.0",
-    $kind: "type",
-    $key: "BasesViewFactory",
+    $since: '1.10.0',
+    $kind: 'type',
+    $key: 'BasesViewFactory',
   },
   BasesViewRegistration: {
-    $since: "1.10.0",
-    $kind: "interface",
-    $key: "BasesViewRegistration",
+    $since: '1.10.0',
+    $kind: 'interface',
+    $key: 'BasesViewRegistration',
   },
   BlockCache: {
-    $since: "0.11.13",
-    $kind: "interface",
-    $key: "BlockCache",
+    $since: '0.11.13',
+    $kind: 'interface',
+    $key: 'BlockCache',
   },
   BlockSubpathResult: {
-    $since: "0.13.26",
-    $kind: "interface",
-    $key: "BlockSubpathResult",
+    $since: '0.13.26',
+    $kind: 'interface',
+    $key: 'BlockSubpathResult',
   },
   BooleanValue: {
-    $since: "1.10.0",
-    $kind: "class",
-    $key: "BooleanValue",
+    $since: '1.10.0',
+    $kind: 'class',
+    $key: 'BooleanValue',
     type: {
-      $since: "1.10.0",
-      $kind: "property",
-      $key: "BooleanValue.type",
+      $since: '1.10.0',
+      $kind: 'property',
+      $key: 'BooleanValue.type',
     },
   },
   ButtonComponent: {
-    $since: "0.9.7",
-    $kind: "class",
-    $key: "ButtonComponent",
+    $since: '0.9.7',
+    $kind: 'class',
+    $key: 'ButtonComponent',
     buttonEl: {
-      $since: "0.9.7",
-      $kind: "property",
-      $key: "ButtonComponent.prototype.buttonEl",
+      $since: '0.9.7',
+      $kind: 'property',
+      $key: 'ButtonComponent.prototype.buttonEl',
     },
     onClick: {
-      $since: "0.12.16",
-      $kind: "method",
-      $key: "ButtonComponent.prototype.onClick",
+      $since: '0.12.16',
+      $kind: 'method',
+      $key: 'ButtonComponent.prototype.onClick',
     },
     removeCta: {
-      $since: "0.9.20",
-      $kind: "method",
-      $key: "ButtonComponent.prototype.removeCta",
+      $since: '0.9.20',
+      $kind: 'method',
+      $key: 'ButtonComponent.prototype.removeCta',
+    },
+    removeDestructive: {
+      $since: '1.13.0',
+      $kind: 'method',
+      $key: 'ButtonComponent.prototype.removeDestructive',
     },
     setButtonText: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "ButtonComponent.prototype.setButtonText",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'ButtonComponent.prototype.setButtonText',
     },
     setClass: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "ButtonComponent.prototype.setClass",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'ButtonComponent.prototype.setClass',
     },
     setCta: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "ButtonComponent.prototype.setCta",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'ButtonComponent.prototype.setCta',
+    },
+    setDestructive: {
+      $since: '1.13.0',
+      $kind: 'method',
+      $key: 'ButtonComponent.prototype.setDestructive',
     },
     setDisabled: {
-      $since: "1.2.3",
-      $kind: "method",
-      $key: "ButtonComponent.prototype.setDisabled",
+      $since: '1.2.3',
+      $kind: 'method',
+      $key: 'ButtonComponent.prototype.setDisabled',
     },
     setIcon: {
-      $since: "1.1.0",
-      $kind: "method",
-      $key: "ButtonComponent.prototype.setIcon",
+      $since: '1.1.0',
+      $kind: 'method',
+      $key: 'ButtonComponent.prototype.setIcon',
     },
     setTooltip: {
-      $since: "1.1.0",
-      $kind: "method",
-      $key: "ButtonComponent.prototype.setTooltip",
+      $since: '1.1.0',
+      $kind: 'method',
+      $key: 'ButtonComponent.prototype.setTooltip',
     },
     setWarning: {
-      $since: "0.11.0",
-      $kind: "method",
-      $key: "ButtonComponent.prototype.setWarning",
+      $since: '0.11.0',
+      $kind: 'method',
+      $key: 'ButtonComponent.prototype.setWarning',
     },
   },
   CapacitorAdapter: {
-    $since: "1.7.2",
-    $kind: "class",
-    $key: "CapacitorAdapter",
+    $since: '1.7.2',
+    $kind: 'class',
+    $key: 'CapacitorAdapter',
     append: {
-      $since: "1.7.2",
-      $kind: "method",
-      $key: "CapacitorAdapter.prototype.append",
+      $since: '1.7.2',
+      $kind: 'method',
+      $key: 'CapacitorAdapter.prototype.append',
     },
     appendBinary: {
-      $since: "1.12.3",
-      $kind: "method",
-      $key: "CapacitorAdapter.prototype.appendBinary",
+      $since: '1.12.3',
+      $kind: 'method',
+      $key: 'CapacitorAdapter.prototype.appendBinary',
     },
     copy: {
-      $since: "1.7.2",
-      $kind: "method",
-      $key: "CapacitorAdapter.prototype.copy",
+      $since: '1.7.2',
+      $kind: 'method',
+      $key: 'CapacitorAdapter.prototype.copy',
     },
     exists: {
-      $since: "1.7.2",
-      $kind: "method",
-      $key: "CapacitorAdapter.prototype.exists",
+      $since: '1.7.2',
+      $kind: 'method',
+      $key: 'CapacitorAdapter.prototype.exists',
     },
     getFullPath: {
-      $since: "1.7.2",
-      $kind: "method",
-      $key: "CapacitorAdapter.prototype.getFullPath",
+      $since: '1.7.2',
+      $kind: 'method',
+      $key: 'CapacitorAdapter.prototype.getFullPath',
     },
     getName: {
-      $since: "1.7.2",
-      $kind: "method",
-      $key: "CapacitorAdapter.prototype.getName",
+      $since: '1.7.2',
+      $kind: 'method',
+      $key: 'CapacitorAdapter.prototype.getName',
     },
     getResourcePath: {
-      $since: "1.7.2",
-      $kind: "method",
-      $key: "CapacitorAdapter.prototype.getResourcePath",
+      $since: '1.7.2',
+      $kind: 'method',
+      $key: 'CapacitorAdapter.prototype.getResourcePath',
     },
     list: {
-      $since: "1.7.2",
-      $kind: "method",
-      $key: "CapacitorAdapter.prototype.list",
+      $since: '1.7.2',
+      $kind: 'method',
+      $key: 'CapacitorAdapter.prototype.list',
     },
     mkdir: {
-      $since: "1.7.2",
-      $kind: "method",
-      $key: "CapacitorAdapter.prototype.mkdir",
+      $since: '1.7.2',
+      $kind: 'method',
+      $key: 'CapacitorAdapter.prototype.mkdir',
     },
     process: {
-      $since: "1.7.2",
-      $kind: "method",
-      $key: "CapacitorAdapter.prototype.process",
+      $since: '1.7.2',
+      $kind: 'method',
+      $key: 'CapacitorAdapter.prototype.process',
     },
     read: {
-      $since: "1.7.2",
-      $kind: "method",
-      $key: "CapacitorAdapter.prototype.read",
+      $since: '1.7.2',
+      $kind: 'method',
+      $key: 'CapacitorAdapter.prototype.read',
     },
     readBinary: {
-      $since: "1.7.2",
-      $kind: "method",
-      $key: "CapacitorAdapter.prototype.readBinary",
+      $since: '1.7.2',
+      $kind: 'method',
+      $key: 'CapacitorAdapter.prototype.readBinary',
     },
     remove: {
-      $since: "1.7.2",
-      $kind: "method",
-      $key: "CapacitorAdapter.prototype.remove",
+      $since: '1.7.2',
+      $kind: 'method',
+      $key: 'CapacitorAdapter.prototype.remove',
     },
     rename: {
-      $since: "1.7.2",
-      $kind: "method",
-      $key: "CapacitorAdapter.prototype.rename",
+      $since: '1.7.2',
+      $kind: 'method',
+      $key: 'CapacitorAdapter.prototype.rename',
     },
     rmdir: {
-      $since: "1.7.2",
-      $kind: "method",
-      $key: "CapacitorAdapter.prototype.rmdir",
+      $since: '1.7.2',
+      $kind: 'method',
+      $key: 'CapacitorAdapter.prototype.rmdir',
     },
     stat: {
-      $since: "1.7.2",
-      $kind: "method",
-      $key: "CapacitorAdapter.prototype.stat",
+      $since: '1.7.2',
+      $kind: 'method',
+      $key: 'CapacitorAdapter.prototype.stat',
     },
     trashLocal: {
-      $since: "1.7.2",
-      $kind: "method",
-      $key: "CapacitorAdapter.prototype.trashLocal",
+      $since: '1.7.2',
+      $kind: 'method',
+      $key: 'CapacitorAdapter.prototype.trashLocal',
     },
     trashSystem: {
-      $since: "1.7.2",
-      $kind: "method",
-      $key: "CapacitorAdapter.prototype.trashSystem",
+      $since: '1.7.2',
+      $kind: 'method',
+      $key: 'CapacitorAdapter.prototype.trashSystem',
     },
     write: {
-      $since: "1.7.2",
-      $kind: "method",
-      $key: "CapacitorAdapter.prototype.write",
+      $since: '1.7.2',
+      $kind: 'method',
+      $key: 'CapacitorAdapter.prototype.write',
     },
     writeBinary: {
-      $since: "1.7.2",
-      $kind: "method",
-      $key: "CapacitorAdapter.prototype.writeBinary",
+      $since: '1.7.2',
+      $kind: 'method',
+      $key: 'CapacitorAdapter.prototype.writeBinary',
     },
   },
   CliData: {
-    $since: "1.12.2",
-    $kind: "interface",
-    $key: "CliData",
+    $since: '1.12.2',
+    $kind: 'interface',
+    $key: 'CliData',
   },
   CliFlag: {
-    $since: "1.12.2",
-    $kind: "interface",
-    $key: "CliFlag",
+    $since: '1.12.2',
+    $kind: 'interface',
+    $key: 'CliFlag',
   },
   CliFlags: {
-    $since: "1.12.2",
-    $kind: "type",
-    $key: "CliFlags",
+    $since: '1.12.2',
+    $kind: 'type',
+    $key: 'CliFlags',
   },
   CliHandler: {
-    $since: "1.12.2",
-    $kind: "type",
-    $key: "CliHandler",
+    $since: '1.12.2',
+    $kind: 'type',
+    $key: 'CliHandler',
   },
   ColorComponent: {
-    $since: "1.0.0",
-    $kind: "class",
-    $key: "ColorComponent",
+    $since: '1.0.0',
+    $kind: 'class',
+    $key: 'ColorComponent',
     getValue: {
-      $since: "1.0.0",
-      $kind: "method",
-      $key: "ColorComponent.prototype.getValue",
+      $since: '1.0.0',
+      $kind: 'method',
+      $key: 'ColorComponent.prototype.getValue',
     },
     getValueHsl: {
-      $since: "1.0.0",
-      $kind: "method",
-      $key: "ColorComponent.prototype.getValueHsl",
+      $since: '1.0.0',
+      $kind: 'method',
+      $key: 'ColorComponent.prototype.getValueHsl',
     },
     getValueRgb: {
-      $since: "1.0.0",
-      $kind: "method",
-      $key: "ColorComponent.prototype.getValueRgb",
+      $since: '1.0.0',
+      $kind: 'method',
+      $key: 'ColorComponent.prototype.getValueRgb',
     },
     onChange: {
-      $since: "1.0.0",
-      $kind: "method",
-      $key: "ColorComponent.prototype.onChange",
+      $since: '1.0.0',
+      $kind: 'method',
+      $key: 'ColorComponent.prototype.onChange',
     },
     setDisabled: {
-      $since: "1.2.3",
-      $kind: "method",
-      $key: "ColorComponent.prototype.setDisabled",
+      $since: '1.2.3',
+      $kind: 'method',
+      $key: 'ColorComponent.prototype.setDisabled',
     },
     setValue: {
-      $since: "1.0.0",
-      $kind: "method",
-      $key: "ColorComponent.prototype.setValue",
+      $since: '1.0.0',
+      $kind: 'method',
+      $key: 'ColorComponent.prototype.setValue',
     },
     setValueHsl: {
-      $since: "1.0.0",
-      $kind: "method",
-      $key: "ColorComponent.prototype.setValueHsl",
+      $since: '1.0.0',
+      $kind: 'method',
+      $key: 'ColorComponent.prototype.setValueHsl',
     },
     setValueRgb: {
-      $since: "1.0.0",
-      $kind: "method",
-      $key: "ColorComponent.prototype.setValueRgb",
+      $since: '1.0.0',
+      $kind: 'method',
+      $key: 'ColorComponent.prototype.setValueRgb',
     },
   },
   Component: {
-    $since: "0.9.7",
-    $kind: "class",
-    $key: "Component",
+    $since: '0.9.7',
+    $kind: 'class',
+    $key: 'Component',
     addChild: {
-      $since: "0.12.0",
-      $kind: "method",
-      $key: "Component.prototype.addChild",
+      $since: '0.12.0',
+      $kind: 'method',
+      $key: 'Component.prototype.addChild',
     },
     load: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "Component.prototype.load",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'Component.prototype.load',
     },
     onload: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "Component.prototype.onload",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'Component.prototype.onload',
     },
     onunload: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "Component.prototype.onunload",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'Component.prototype.onunload',
     },
     register: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "Component.prototype.register",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'Component.prototype.register',
     },
     registerDomEvent: {
-      $since: "0.14.8",
-      $kind: "method",
-      $key: "Component.prototype.registerDomEvent",
+      $since: '0.14.8',
+      $kind: 'method',
+      $key: 'Component.prototype.registerDomEvent',
     },
     registerEvent: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "Component.prototype.registerEvent",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'Component.prototype.registerEvent',
     },
     registerInterval: {
-      $since: "0.13.8",
-      $kind: "method",
-      $key: "Component.prototype.registerInterval",
+      $since: '0.13.8',
+      $kind: 'method',
+      $key: 'Component.prototype.registerInterval',
     },
     removeChild: {
-      $since: "0.12.0",
-      $kind: "method",
-      $key: "Component.prototype.removeChild",
+      $since: '0.12.0',
+      $kind: 'method',
+      $key: 'Component.prototype.removeChild',
     },
     unload: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "Component.prototype.unload",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'Component.prototype.unload',
+    },
+  },
+  ConfirmationButton: {
+    $since: '1.13.0',
+    $kind: 'class',
+    $key: 'ConfirmationButton',
+    onClick: {
+      $since: '1.13.0',
+      $kind: 'method',
+      $key: 'ConfirmationButton.prototype.onClick',
+    },
+    setCancel: {
+      $since: '1.13.0',
+      $kind: 'method',
+      $key: 'ConfirmationButton.prototype.setCancel',
+    },
+    setInitialFocus: {
+      $since: '1.13.0',
+      $kind: 'method',
+      $key: 'ConfirmationButton.prototype.setInitialFocus',
+    },
+    setSecondary: {
+      $since: '1.13.0',
+      $kind: 'method',
+      $key: 'ConfirmationButton.prototype.setSecondary',
+    },
+  },
+  ConfirmationModal: {
+    $since: '1.13.0',
+    $kind: 'class',
+    $key: 'ConfirmationModal',
+    addButton: {
+      $since: '1.13.0',
+      $kind: 'method',
+      $key: 'ConfirmationModal.prototype.addButton',
+    },
+    addCancelButton: {
+      $since: '1.13.0',
+      $kind: 'method',
+      $key: 'ConfirmationModal.prototype.addCancelButton',
+    },
+    addCheckbox: {
+      $since: '1.13.0',
+      $kind: 'method',
+      $key: 'ConfirmationModal.prototype.addCheckbox',
+    },
+    addClass: {
+      $since: '1.13.0',
+      $kind: 'method',
+      $key: 'ConfirmationModal.prototype.addClass',
+    },
+    buttonContainerEl: {
+      $since: '1.13.0',
+      $kind: 'property',
+      $key: 'ConfirmationModal.prototype.buttonContainerEl',
     },
   },
   DateValue: {
-    $since: "1.10.0",
-    $kind: "class",
-    $key: "DateValue",
+    $since: '1.10.0',
+    $kind: 'class',
+    $key: 'DateValue',
     dateOnly: {
-      $since: "1.10.0",
-      $kind: "method",
-      $key: "DateValue.prototype.dateOnly",
+      $since: '1.10.0',
+      $kind: 'method',
+      $key: 'DateValue.prototype.dateOnly',
     },
     isTruthy: {
-      $since: "1.10.0",
-      $kind: "method",
-      $key: "DateValue.prototype.isTruthy",
+      $since: '1.10.0',
+      $kind: 'method',
+      $key: 'DateValue.prototype.isTruthy',
     },
     parseFromString: {
-      $since: "1.10.0",
-      $kind: "method",
-      $key: "DateValue.parseFromString",
+      $since: '1.10.0',
+      $kind: 'method',
+      $key: 'DateValue.parseFromString',
     },
     relative: {
-      $since: "1.10.0",
-      $kind: "method",
-      $key: "DateValue.prototype.relative",
+      $since: '1.10.0',
+      $kind: 'method',
+      $key: 'DateValue.prototype.relative',
     },
     toString: {
-      $since: "1.10.0",
-      $kind: "method",
-      $key: "DateValue.prototype.toString",
+      $since: '1.10.0',
+      $kind: 'method',
+      $key: 'DateValue.prototype.toString',
     },
   },
   displayTooltip: {
-    $since: "1.8.7",
-    $kind: "function",
-    $key: "displayTooltip",
+    $since: '1.8.7',
+    $kind: 'function',
+    $key: 'displayTooltip',
   },
   DropdownComponent: {
-    $since: "0.9.7",
-    $kind: "class",
-    $key: "DropdownComponent",
+    $since: '0.9.7',
+    $kind: 'class',
+    $key: 'DropdownComponent',
     addOption: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "DropdownComponent.prototype.addOption",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'DropdownComponent.prototype.addOption',
     },
     addOptions: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "DropdownComponent.prototype.addOptions",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'DropdownComponent.prototype.addOptions',
     },
     getValue: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "DropdownComponent.prototype.getValue",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'DropdownComponent.prototype.getValue',
     },
     onChange: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "DropdownComponent.prototype.onChange",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'DropdownComponent.prototype.onChange',
     },
     selectEl: {
-      $since: "0.9.7",
-      $kind: "property",
-      $key: "DropdownComponent.prototype.selectEl",
+      $since: '0.9.7',
+      $kind: 'property',
+      $key: 'DropdownComponent.prototype.selectEl',
     },
     setDisabled: {
-      $since: "1.2.3",
-      $kind: "method",
-      $key: "DropdownComponent.prototype.setDisabled",
+      $since: '1.2.3',
+      $kind: 'method',
+      $key: 'DropdownComponent.prototype.setDisabled',
     },
     setValue: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "DropdownComponent.prototype.setValue",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'DropdownComponent.prototype.setValue',
     },
   },
   DurationValue: {
-    $since: "1.10.0",
-    $kind: "class",
-    $key: "DurationValue",
+    $since: '1.10.0',
+    $kind: 'class',
+    $key: 'DurationValue',
     addToDate: {
-      $since: "1.10.0",
-      $kind: "method",
-      $key: "DurationValue.prototype.addToDate",
+      $since: '1.10.0',
+      $kind: 'method',
+      $key: 'DurationValue.prototype.addToDate',
     },
     fromMilliseconds: {
-      $since: "1.10.0",
-      $kind: "method",
-      $key: "DurationValue.fromMilliseconds",
+      $since: '1.10.0',
+      $kind: 'method',
+      $key: 'DurationValue.fromMilliseconds',
     },
     getMilliseconds: {
-      $since: "1.10.0",
-      $kind: "method",
-      $key: "DurationValue.prototype.getMilliseconds",
+      $since: '1.10.0',
+      $kind: 'method',
+      $key: 'DurationValue.prototype.getMilliseconds',
     },
     isTruthy: {
-      $since: "1.10.0",
-      $kind: "method",
-      $key: "DurationValue.prototype.isTruthy",
+      $since: '1.10.0',
+      $kind: 'method',
+      $key: 'DurationValue.prototype.isTruthy',
     },
     parseFromString: {
-      $since: "1.10.0",
-      $kind: "method",
-      $key: "DurationValue.parseFromString",
+      $since: '1.10.0',
+      $kind: 'method',
+      $key: 'DurationValue.parseFromString',
     },
     toString: {
-      $since: "1.10.0",
-      $kind: "method",
-      $key: "DurationValue.prototype.toString",
+      $since: '1.10.0',
+      $kind: 'method',
+      $key: 'DurationValue.prototype.toString',
     },
   },
   EditableFileView: {
-    $since: "0.9.7",
-    $kind: "class",
-    $key: "EditableFileView",
+    $since: '0.9.7',
+    $kind: 'class',
+    $key: 'EditableFileView',
   },
   Editor: {
-    $since: "0.11.11",
-    $kind: "class",
-    $key: "Editor",
+    $since: '0.11.11',
+    $kind: 'class',
+    $key: 'Editor',
     blur: {
-      $since: "0.11.11",
-      $kind: "method",
-      $key: "Editor.prototype.blur",
+      $since: '0.11.11',
+      $kind: 'method',
+      $key: 'Editor.prototype.blur',
     },
     exec: {
-      $since: "0.12.2",
-      $kind: "method",
-      $key: "Editor.prototype.exec",
+      $since: '0.12.2',
+      $kind: 'method',
+      $key: 'Editor.prototype.exec',
     },
     focus: {
-      $since: "0.11.11",
-      $kind: "method",
-      $key: "Editor.prototype.focus",
+      $since: '0.11.11',
+      $kind: 'method',
+      $key: 'Editor.prototype.focus',
     },
     getCursor: {
-      $since: "0.11.11",
-      $kind: "method",
-      $key: "Editor.prototype.getCursor",
+      $since: '0.11.11',
+      $kind: 'method',
+      $key: 'Editor.prototype.getCursor',
     },
     getDoc: {
-      $since: "0.11.11",
-      $kind: "method",
-      $key: "Editor.prototype.getDoc",
+      $since: '0.11.11',
+      $kind: 'method',
+      $key: 'Editor.prototype.getDoc',
     },
     getLine: {
-      $since: "0.11.11",
-      $kind: "method",
-      $key: "Editor.prototype.getLine",
+      $since: '0.11.11',
+      $kind: 'method',
+      $key: 'Editor.prototype.getLine',
     },
     getRange: {
-      $since: "0.11.11",
-      $kind: "method",
-      $key: "Editor.prototype.getRange",
+      $since: '0.11.11',
+      $kind: 'method',
+      $key: 'Editor.prototype.getRange',
     },
     getScrollInfo: {
-      $since: "0.11.11",
-      $kind: "method",
-      $key: "Editor.prototype.getScrollInfo",
+      $since: '0.11.11',
+      $kind: 'method',
+      $key: 'Editor.prototype.getScrollInfo',
     },
     getSelection: {
-      $since: "0.11.11",
-      $kind: "method",
-      $key: "Editor.prototype.getSelection",
+      $since: '0.11.11',
+      $kind: 'method',
+      $key: 'Editor.prototype.getSelection',
     },
     getValue: {
-      $since: "0.11.11",
-      $kind: "method",
-      $key: "Editor.prototype.getValue",
+      $since: '0.11.11',
+      $kind: 'method',
+      $key: 'Editor.prototype.getValue',
     },
     hasFocus: {
-      $since: "0.11.11",
-      $kind: "method",
-      $key: "Editor.prototype.hasFocus",
+      $since: '0.11.11',
+      $kind: 'method',
+      $key: 'Editor.prototype.hasFocus',
     },
     lastLine: {
-      $since: "0.11.11",
-      $kind: "method",
-      $key: "Editor.prototype.lastLine",
+      $since: '0.11.11',
+      $kind: 'method',
+      $key: 'Editor.prototype.lastLine',
     },
     lineCount: {
-      $since: "0.11.11",
-      $kind: "method",
-      $key: "Editor.prototype.lineCount",
+      $since: '0.11.11',
+      $kind: 'method',
+      $key: 'Editor.prototype.lineCount',
     },
     listSelections: {
-      $since: "0.11.11",
-      $kind: "method",
-      $key: "Editor.prototype.listSelections",
+      $since: '0.11.11',
+      $kind: 'method',
+      $key: 'Editor.prototype.listSelections',
     },
     offsetToPos: {
-      $since: "0.11.11",
-      $kind: "method",
-      $key: "Editor.prototype.offsetToPos",
+      $since: '0.11.11',
+      $kind: 'method',
+      $key: 'Editor.prototype.offsetToPos',
     },
     posToOffset: {
-      $since: "0.11.11",
-      $kind: "method",
-      $key: "Editor.prototype.posToOffset",
+      $since: '0.11.11',
+      $kind: 'method',
+      $key: 'Editor.prototype.posToOffset',
     },
     processLines: {
-      $since: "0.13.26",
-      $kind: "method",
-      $key: "Editor.prototype.processLines",
+      $since: '0.13.26',
+      $kind: 'method',
+      $key: 'Editor.prototype.processLines',
     },
     redo: {
-      $since: "0.11.11",
-      $kind: "method",
-      $key: "Editor.prototype.redo",
+      $since: '0.11.11',
+      $kind: 'method',
+      $key: 'Editor.prototype.redo',
     },
     refresh: {
-      $since: "0.11.11",
-      $kind: "method",
-      $key: "Editor.prototype.refresh",
+      $since: '0.11.11',
+      $kind: 'method',
+      $key: 'Editor.prototype.refresh',
     },
     replaceRange: {
-      $since: "0.11.11",
-      $kind: "method",
-      $key: "Editor.prototype.replaceRange",
+      $since: '0.11.11',
+      $kind: 'method',
+      $key: 'Editor.prototype.replaceRange',
     },
     replaceSelection: {
-      $since: "0.11.11",
-      $kind: "method",
-      $key: "Editor.prototype.replaceSelection",
+      $since: '0.11.11',
+      $kind: 'method',
+      $key: 'Editor.prototype.replaceSelection',
     },
     scrollIntoView: {
-      $since: "0.13.0",
-      $kind: "method",
-      $key: "Editor.prototype.scrollIntoView",
+      $since: '0.13.0',
+      $kind: 'method',
+      $key: 'Editor.prototype.scrollIntoView',
     },
     scrollTo: {
-      $since: "0.11.11",
-      $kind: "method",
-      $key: "Editor.prototype.scrollTo",
+      $since: '0.11.11',
+      $kind: 'method',
+      $key: 'Editor.prototype.scrollTo',
     },
     setCursor: {
-      $since: "0.11.11",
-      $kind: "method",
-      $key: "Editor.prototype.setCursor",
+      $since: '0.11.11',
+      $kind: 'method',
+      $key: 'Editor.prototype.setCursor',
     },
     setLine: {
-      $since: "0.11.11",
-      $kind: "method",
-      $key: "Editor.prototype.setLine",
+      $since: '0.11.11',
+      $kind: 'method',
+      $key: 'Editor.prototype.setLine',
     },
     setSelection: {
-      $since: "0.11.11",
-      $kind: "method",
-      $key: "Editor.prototype.setSelection",
+      $since: '0.11.11',
+      $kind: 'method',
+      $key: 'Editor.prototype.setSelection',
     },
     setSelections: {
-      $since: "0.12.11",
-      $kind: "method",
-      $key: "Editor.prototype.setSelections",
+      $since: '0.12.11',
+      $kind: 'method',
+      $key: 'Editor.prototype.setSelections',
     },
     setValue: {
-      $since: "0.11.11",
-      $kind: "method",
-      $key: "Editor.prototype.setValue",
+      $since: '0.11.11',
+      $kind: 'method',
+      $key: 'Editor.prototype.setValue',
     },
     somethingSelected: {
-      $since: "0.11.11",
-      $kind: "method",
-      $key: "Editor.prototype.somethingSelected",
+      $since: '0.11.11',
+      $kind: 'method',
+      $key: 'Editor.prototype.somethingSelected',
     },
     transaction: {
-      $since: "0.13.0",
-      $kind: "method",
-      $key: "Editor.prototype.transaction",
+      $since: '0.13.0',
+      $kind: 'method',
+      $key: 'Editor.prototype.transaction',
     },
     undo: {
-      $since: "0.11.11",
-      $kind: "method",
-      $key: "Editor.prototype.undo",
+      $since: '0.11.11',
+      $kind: 'method',
+      $key: 'Editor.prototype.undo',
     },
     wordAt: {
-      $since: "0.11.11",
-      $kind: "method",
-      $key: "Editor.prototype.wordAt",
+      $since: '0.11.11',
+      $kind: 'method',
+      $key: 'Editor.prototype.wordAt',
     },
   },
   EditorChange: {
-    $since: "0.12.11",
-    $kind: "interface",
-    $key: "EditorChange",
+    $since: '0.12.11',
+    $kind: 'interface',
+    $key: 'EditorChange',
   },
   EditorPosition: {
-    $since: "0.12.11",
-    $kind: "interface",
-    $key: "EditorPosition",
+    $since: '0.12.11',
+    $kind: 'interface',
+    $key: 'EditorPosition',
   },
   EditorRange: {
-    $since: "0.12.11",
-    $kind: "interface",
-    $key: "EditorRange",
+    $since: '0.12.11',
+    $kind: 'interface',
+    $key: 'EditorRange',
   },
   EditorRangeOrCaret: {
-    $since: "0.12.11",
-    $kind: "interface",
-    $key: "EditorRangeOrCaret",
+    $since: '0.12.11',
+    $kind: 'interface',
+    $key: 'EditorRangeOrCaret',
   },
   EditorScrollInfo: {
-    $since: "0.15.0",
-    $kind: "interface",
-    $key: "EditorScrollInfo",
+    $since: '0.15.0',
+    $kind: 'interface',
+    $key: 'EditorScrollInfo',
   },
   EditorSelection: {
-    $since: "0.12.11",
-    $kind: "interface",
-    $key: "EditorSelection",
+    $since: '0.12.11',
+    $kind: 'interface',
+    $key: 'EditorSelection',
   },
   EditorSelectionOrCaret: {
-    $since: "0.12.11",
-    $kind: "interface",
-    $key: "EditorSelectionOrCaret",
+    $since: '0.12.11',
+    $kind: 'interface',
+    $key: 'EditorSelectionOrCaret',
   },
   EditorSuggest: {
-    $since: "0.12.17",
-    $kind: "class",
-    $key: "EditorSuggest",
+    $since: '0.12.17',
+    $kind: 'class',
+    $key: 'EditorSuggest',
     context: {
-      $since: "0.12.17",
-      $kind: "property",
-      $key: "EditorSuggest.prototype.context",
+      $since: '0.12.17',
+      $kind: 'property',
+      $key: 'EditorSuggest.prototype.context',
     },
     getSuggestions: {
-      $since: "0.12.17",
-      $kind: "method",
-      $key: "EditorSuggest.prototype.getSuggestions",
+      $since: '0.12.17',
+      $kind: 'method',
+      $key: 'EditorSuggest.prototype.getSuggestions',
     },
     limit: {
-      $since: "0.12.17",
-      $kind: "property",
-      $key: "EditorSuggest.prototype.limit",
+      $since: '0.12.17',
+      $kind: 'property',
+      $key: 'EditorSuggest.prototype.limit',
     },
     onTrigger: {
-      $since: "1.1.13",
-      $kind: "method",
-      $key: "EditorSuggest.prototype.onTrigger",
+      $since: '1.1.13',
+      $kind: 'method',
+      $key: 'EditorSuggest.prototype.onTrigger',
     },
     setInstructions: {
-      $since: "0.13.0",
-      $kind: "method",
-      $key: "EditorSuggest.prototype.setInstructions",
+      $since: '0.13.0',
+      $kind: 'method',
+      $key: 'EditorSuggest.prototype.setInstructions',
     },
   },
   EditorSuggestContext: {
-    $since: "0.12.17",
-    $kind: "interface",
-    $key: "EditorSuggestContext",
+    $since: '0.12.17',
+    $kind: 'interface',
+    $key: 'EditorSuggestContext',
   },
   EditorSuggestTriggerInfo: {
-    $since: "0.12.17",
-    $kind: "interface",
-    $key: "EditorSuggestTriggerInfo",
+    $since: '0.12.17',
+    $kind: 'interface',
+    $key: 'EditorSuggestTriggerInfo',
   },
   EmbedCache: {
-    $since: "0.9.7",
-    $kind: "interface",
-    $key: "EmbedCache",
+    $since: '0.9.7',
+    $kind: 'interface',
+    $key: 'EmbedCache',
   },
   Events: {
-    $since: "0.9.7",
-    $kind: "class",
-    $key: "Events",
+    $since: '0.9.7',
+    $kind: 'class',
+    $key: 'Events',
     off: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "Events.prototype.off",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'Events.prototype.off',
     },
     offref: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "Events.prototype.offref",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'Events.prototype.offref',
     },
     on: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "Events.prototype.on",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'Events.prototype.on',
     },
     trigger: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "Events.prototype.trigger",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'Events.prototype.trigger',
     },
     tryTrigger: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "Events.prototype.tryTrigger",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'Events.prototype.tryTrigger',
     },
   },
   ExtraButtonComponent: {
-    $since: "0.9.7",
-    $kind: "class",
-    $key: "ExtraButtonComponent",
+    $since: '0.9.7',
+    $kind: 'class',
+    $key: 'ExtraButtonComponent',
     extraSettingsEl: {
-      $since: "0.9.7",
-      $kind: "property",
-      $key: "ExtraButtonComponent.prototype.extraSettingsEl",
+      $since: '0.9.7',
+      $kind: 'property',
+      $key: 'ExtraButtonComponent.prototype.extraSettingsEl',
     },
     onClick: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "ExtraButtonComponent.prototype.onClick",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'ExtraButtonComponent.prototype.onClick',
     },
     setDisabled: {
-      $since: "1.2.3",
-      $kind: "method",
-      $key: "ExtraButtonComponent.prototype.setDisabled",
+      $since: '1.2.3',
+      $kind: 'method',
+      $key: 'ExtraButtonComponent.prototype.setDisabled',
     },
     setIcon: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "ExtraButtonComponent.prototype.setIcon",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'ExtraButtonComponent.prototype.setIcon',
     },
     setTooltip: {
-      $since: "1.1.0",
-      $kind: "method",
-      $key: "ExtraButtonComponent.prototype.setTooltip",
+      $since: '1.1.0',
+      $kind: 'method',
+      $key: 'ExtraButtonComponent.prototype.setTooltip',
     },
   },
   FileManager: {
-    $since: "0.9.7",
-    $kind: "class",
-    $key: "FileManager",
+    $since: '0.9.7',
+    $kind: 'class',
+    $key: 'FileManager',
     generateMarkdownLink: {
-      $since: "0.12.0",
-      $kind: "method",
-      $key: "FileManager.prototype.generateMarkdownLink",
+      $since: '0.12.0',
+      $kind: 'method',
+      $key: 'FileManager.prototype.generateMarkdownLink',
     },
     getAvailablePathForAttachment: {
-      $since: "1.5.7",
-      $kind: "method",
-      $key: "FileManager.prototype.getAvailablePathForAttachment",
+      $since: '1.5.7',
+      $kind: 'method',
+      $key: 'FileManager.prototype.getAvailablePathForAttachment',
     },
     getNewFileParent: {
-      $since: "1.1.13",
-      $kind: "method",
-      $key: "FileManager.prototype.getNewFileParent",
+      $since: '1.1.13',
+      $kind: 'method',
+      $key: 'FileManager.prototype.getNewFileParent',
     },
     processFrontMatter: {
-      $since: "1.4.4",
-      $kind: "method",
-      $key: "FileManager.prototype.processFrontMatter",
+      $since: '1.4.4',
+      $kind: 'method',
+      $key: 'FileManager.prototype.processFrontMatter',
     },
     promptForDeletion: {
-      $since: "0.15.0",
-      $kind: "method",
-      $key: "FileManager.prototype.promptForDeletion",
+      $since: '0.15.0',
+      $kind: 'method',
+      $key: 'FileManager.prototype.promptForDeletion',
     },
     renameFile: {
-      $since: "0.11.0",
-      $kind: "method",
-      $key: "FileManager.prototype.renameFile",
+      $since: '0.11.0',
+      $kind: 'method',
+      $key: 'FileManager.prototype.renameFile',
     },
     trashFile: {
-      $since: "1.6.6",
-      $kind: "method",
-      $key: "FileManager.prototype.trashFile",
+      $since: '1.6.6',
+      $kind: 'method',
+      $key: 'FileManager.prototype.trashFile',
     },
   },
   FileSystemAdapter: {
-    $since: "1.12.3",
-    $kind: "method",
-    $key: "FileSystemAdapter",
+    $since: '1.12.3',
+    $kind: 'method',
+    $key: 'FileSystemAdapter',
     appendBinary: {
-      $since: "1.12.3",
-      $kind: "method",
-      $key: "FileSystemAdapter.prototype.appendBinary",
+      $since: '1.12.3',
+      $kind: 'method',
+      $key: 'FileSystemAdapter.prototype.appendBinary',
     },
     getFilePath: {
-      $since: "0.14.3",
-      $kind: "method",
-      $key: "FileSystemAdapter.prototype.getFilePath",
+      $since: '0.14.3',
+      $kind: 'method',
+      $key: 'FileSystemAdapter.prototype.getFilePath',
     },
     stat: {
-      $since: "0.12.2",
-      $kind: "method",
-      $key: "FileSystemAdapter.prototype.stat",
+      $since: '0.12.2',
+      $kind: 'method',
+      $key: 'FileSystemAdapter.prototype.stat',
     },
   },
   FileValue: {
-    $since: "1.10.0",
-    $kind: "class",
-    $key: "FileValue",
+    $since: '1.10.0',
+    $kind: 'class',
+    $key: 'FileValue',
     isTruthy: {
-      $since: "1.10.0",
-      $kind: "method",
-      $key: "FileValue.prototype.isTruthy",
+      $since: '1.10.0',
+      $kind: 'method',
+      $key: 'FileValue.prototype.isTruthy',
     },
     toString: {
-      $since: "1.10.0",
-      $kind: "method",
-      $key: "FileValue.prototype.toString",
+      $since: '1.10.0',
+      $kind: 'method',
+      $key: 'FileValue.prototype.toString',
     },
   },
   FileView: {
-    $since: "0.9.7",
-    $kind: "method",
-    $key: "FileView",
+    $since: '0.9.7',
+    $kind: 'method',
+    $key: 'FileView',
     canAcceptExtension: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "FileView.prototype.canAcceptExtension",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'FileView.prototype.canAcceptExtension',
     },
     setState: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "FileView.prototype.setState",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'FileView.prototype.setState',
     },
   },
   FootnoteSubpathResult: {
-    $since: "1.7.2",
-    $kind: "interface",
-    $key: "FootnoteSubpathResult",
+    $since: '1.7.2',
+    $kind: 'interface',
+    $key: 'FootnoteSubpathResult',
   },
   FormulaContext: {
-    $since: "1.10.0",
-    $kind: "interface",
-    $key: "FormulaContext",
+    $since: '1.10.0',
+    $kind: 'interface',
+    $key: 'FormulaContext',
   },
   FuzzyMatch: {
-    $since: "0.9.20",
-    $kind: "interface",
-    $key: "FuzzyMatch",
+    $since: '0.9.20',
+    $kind: 'interface',
+    $key: 'FuzzyMatch',
   },
   FuzzySuggestModal: {
-    $since: "0.9.20",
-    $kind: "class",
-    $key: "FuzzySuggestModal",
+    $since: '0.9.20',
+    $kind: 'class',
+    $key: 'FuzzySuggestModal',
     getItems: {
-      $since: "0.9.20",
-      $kind: "method",
-      $key: "FuzzySuggestModal.prototype.getItems",
+      $since: '0.9.20',
+      $kind: 'method',
+      $key: 'FuzzySuggestModal.prototype.getItems',
     },
     getItemText: {
-      $since: "0.9.20",
-      $kind: "method",
-      $key: "FuzzySuggestModal.prototype.getItemText",
+      $since: '0.9.20',
+      $kind: 'method',
+      $key: 'FuzzySuggestModal.prototype.getItemText',
     },
     getSuggestions: {
-      $since: "0.9.20",
-      $kind: "method",
-      $key: "FuzzySuggestModal.prototype.getSuggestions",
+      $since: '0.9.20',
+      $kind: 'method',
+      $key: 'FuzzySuggestModal.prototype.getSuggestions',
     },
     onChooseItem: {
-      $since: "0.9.20",
-      $kind: "method",
-      $key: "FuzzySuggestModal.prototype.onChooseItem",
+      $since: '0.9.20',
+      $kind: 'method',
+      $key: 'FuzzySuggestModal.prototype.onChooseItem',
     },
     onChooseSuggestion: {
-      $since: "0.9.20",
-      $kind: "method",
-      $key: "FuzzySuggestModal.prototype.onChooseSuggestion",
+      $since: '0.9.20',
+      $kind: 'method',
+      $key: 'FuzzySuggestModal.prototype.onChooseSuggestion',
     },
     renderSuggestion: {
-      $since: "0.9.20",
-      $kind: "method",
-      $key: "FuzzySuggestModal.prototype.renderSuggestion",
+      $since: '0.9.20',
+      $kind: 'method',
+      $key: 'FuzzySuggestModal.prototype.renderSuggestion',
     },
   },
   getFrontMatterInfo: {
-    $since: "1.5.7",
-    $kind: "function",
-    $key: "getFrontMatterInfo",
+    $since: '1.5.7',
+    $kind: 'function',
+    $key: 'getFrontMatterInfo',
   },
   getLanguage: {
-    $since: "1.8.7",
-    $kind: "function",
-    $key: "getLanguage",
+    $since: '1.8.7',
+    $kind: 'function',
+    $key: 'getLanguage',
   },
   HeadingSubpathResult: {
-    $since: "0.9.16",
-    $kind: "interface",
-    $key: "HeadingSubpathResult",
+    $since: '0.9.16',
+    $kind: 'interface',
+    $key: 'HeadingSubpathResult',
   },
   HoverParent: {
-    $since: "0.11.13",
-    $kind: "interface",
-    $key: "HoverParent",
+    $since: '0.11.13',
+    $kind: 'interface',
+    $key: 'HoverParent',
   },
   HoverPopover: {
-    $since: "0.15.0",
-    $kind: "class",
-    $key: "HoverPopover",
+    $since: '0.15.0',
+    $kind: 'class',
+    $key: 'HoverPopover',
   },
   HSL: {
-    $since: "0.16.0",
-    $kind: "interface",
-    $key: "HSL",
+    $since: '0.16.0',
+    $kind: 'interface',
+    $key: 'HSL',
   },
   HTMLValue: {
-    $since: "1.10.0",
-    $kind: "class",
-    $key: "HTMLValue",
+    $since: '1.10.0',
+    $kind: 'class',
+    $key: 'HTMLValue',
   },
   IconValue: {
-    $since: "1.10.0",
-    $kind: "class",
-    $key: "IconValue",
+    $since: '1.10.0',
+    $kind: 'class',
+    $key: 'IconValue',
   },
   ImageValue: {
-    $since: "1.10.0",
-    $kind: "class",
-    $key: "ImageValue",
+    $since: '1.10.0',
+    $kind: 'class',
+    $key: 'ImageValue',
   },
   Instruction: {
-    $since: "0.9.20",
-    $kind: "interface",
-    $key: "Instruction",
+    $since: '0.9.20',
+    $kind: 'interface',
+    $key: 'Instruction',
   },
   ItemView: {
-    $since: "0.9.7",
-    $kind: "class",
-    $key: "ItemView",
+    $since: '0.9.7',
+    $kind: 'class',
+    $key: 'ItemView',
     addAction: {
-      $since: "1.1.0",
-      $kind: "method",
-      $key: "ItemView.prototype.addAction",
+      $since: '1.1.0',
+      $kind: 'method',
+      $key: 'ItemView.prototype.addAction',
     },
   },
   Keymap: {
-    $since: "0.13.9",
-    $kind: "class",
-    $key: "Keymap",
+    $since: '0.13.9',
+    $kind: 'class',
+    $key: 'Keymap',
     isModEvent: {
-      $since: "0.16.0",
-      $kind: "method",
-      $key: "Keymap.isModEvent",
+      $since: '0.16.0',
+      $kind: 'method',
+      $key: 'Keymap.isModEvent',
     },
     isModifier: {
-      $since: "0.12.17",
-      $kind: "method",
-      $key: "Keymap.isModifier",
+      $since: '0.12.17',
+      $kind: 'method',
+      $key: 'Keymap.isModifier',
     },
     popScope: {
-      $since: "0.13.9",
-      $kind: "method",
-      $key: "Keymap.prototype.popScope",
+      $since: '0.13.9',
+      $kind: 'method',
+      $key: 'Keymap.prototype.popScope',
     },
     pushScope: {
-      $since: "0.13.9",
-      $kind: "method",
-      $key: "Keymap.prototype.pushScope",
+      $since: '0.13.9',
+      $kind: 'method',
+      $key: 'Keymap.prototype.pushScope',
     },
   },
   KeymapInfo: {
-    $since: "0.10.4",
-    $kind: "interface",
-    $key: "KeymapInfo",
+    $since: '0.10.4',
+    $kind: 'interface',
+    $key: 'KeymapInfo',
   },
   LinkCache: {
-    $since: "0.9.7",
-    $kind: "interface",
-    $key: "LinkCache",
+    $since: '0.9.7',
+    $kind: 'interface',
+    $key: 'LinkCache',
   },
   LinkValue: {
-    $since: "1.10.0",
-    $kind: "class",
-    $key: "LinkValue",
+    $since: '1.10.0',
+    $kind: 'class',
+    $key: 'LinkValue',
     parseFromString: {
-      $since: "1.10.0",
-      $kind: "method",
-      $key: "LinkValue.parseFromString",
+      $since: '1.10.0',
+      $kind: 'method',
+      $key: 'LinkValue.parseFromString',
     },
   },
   ListValue: {
-    $since: "1.10.0",
-    $kind: "class",
-    $key: "ListValue",
+    $since: '1.10.0',
+    $kind: 'class',
+    $key: 'ListValue',
     concat: {
-      $since: "1.10.0",
-      $kind: "method",
-      $key: "ListValue.prototype.concat",
+      $since: '1.10.0',
+      $kind: 'method',
+      $key: 'ListValue.prototype.concat',
     },
     get: {
-      $since: "1.10.0",
-      $kind: "method",
-      $key: "ListValue.prototype.get",
+      $since: '1.10.0',
+      $kind: 'method',
+      $key: 'ListValue.prototype.get',
     },
     includes: {
-      $since: "1.10.0",
-      $kind: "method",
-      $key: "ListValue.prototype.includes",
+      $since: '1.10.0',
+      $kind: 'method',
+      $key: 'ListValue.prototype.includes',
     },
     isTruthy: {
-      $since: "1.10.0",
-      $kind: "method",
-      $key: "ListValue.prototype.isTruthy",
+      $since: '1.10.0',
+      $kind: 'method',
+      $key: 'ListValue.prototype.isTruthy',
     },
     length: {
-      $since: "1.10.0",
-      $kind: "method",
-      $key: "ListValue.prototype.length",
+      $since: '1.10.0',
+      $kind: 'method',
+      $key: 'ListValue.prototype.length',
     },
     toString: {
-      $since: "1.10.0",
-      $kind: "method",
-      $key: "ListValue.prototype.toString",
+      $since: '1.10.0',
+      $kind: 'method',
+      $key: 'ListValue.prototype.toString',
     },
     type: {
-      $since: "1.10.0",
-      $kind: "property",
-      $key: "ListValue.type",
+      $since: '1.10.0',
+      $kind: 'property',
+      $key: 'ListValue.type',
     },
   },
   MarkdownPostProcessor: {
-    $since: "0.10.12",
-    $kind: "interface",
-    $key: "MarkdownPostProcessor",
+    $since: '0.10.12',
+    $kind: 'interface',
+    $key: 'MarkdownPostProcessor',
   },
   MarkdownPreviewRenderer: {
-    $since: "0.9.7",
-    $kind: "class",
-    $key: "MarkdownPreviewRenderer",
+    $since: '0.9.7',
+    $kind: 'class',
+    $key: 'MarkdownPreviewRenderer',
     createCodeBlockPostProcessor: {
-      $since: "0.12.11",
-      $kind: "method",
-      $key: "MarkdownPreviewRenderer.createCodeBlockPostProcessor",
+      $since: '0.12.11',
+      $kind: 'method',
+      $key: 'MarkdownPreviewRenderer.createCodeBlockPostProcessor',
     },
     registerPostProcessor: {
-      $since: "0.10.12",
-      $kind: "method",
-      $key: "MarkdownPreviewRenderer.registerPostProcessor",
+      $since: '0.10.12',
+      $kind: 'method',
+      $key: 'MarkdownPreviewRenderer.registerPostProcessor',
     },
     unregisterPostProcessor: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "MarkdownPreviewRenderer.unregisterPostProcessor",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'MarkdownPreviewRenderer.unregisterPostProcessor',
     },
   },
   MarkdownRenderer: {
-    $since: "0.9.7",
-    $kind: "class",
-    $key: "MarkdownRenderer",
+    $since: '0.9.7',
+    $kind: 'class',
+    $key: 'MarkdownRenderer',
     renderMarkdown: {
-      $since: "0.10.6",
-      $kind: "method",
-      $key: "MarkdownRenderer.renderMarkdown",
+      $since: '0.10.6',
+      $kind: 'method',
+      $key: 'MarkdownRenderer.renderMarkdown',
     },
   },
   Menu: {
-    $since: "1.6.0",
-    $kind: "method",
-    $key: "Menu",
+    $since: '1.6.0',
+    $kind: 'method',
+    $key: 'Menu',
+    addItem: {
+      $since: '0.15.3',
+      $kind: 'method',
+      $key: 'Menu.prototype.addItem',
+    },
+    addSeparator: {
+      $since: '0.15.3',
+      $kind: 'method',
+      $key: 'Menu.prototype.addSeparator',
+    },
     forEvent: {
-      $since: "1.6.0",
-      $kind: "method",
-      $key: "Menu.forEvent",
+      $since: '1.6.0',
+      $kind: 'method',
+      $key: 'Menu.forEvent',
+    },
+    setParentElement: {
+      $since: '0.16.0',
+      $kind: 'method',
+      $key: 'Menu.prototype.setParentElement',
     },
     setUseNativeMenu: {
-      $since: "0.16.0",
-      $kind: "method",
-      $key: "Menu.prototype.setUseNativeMenu",
+      $since: '0.16.0',
+      $kind: 'method',
+      $key: 'Menu.prototype.setUseNativeMenu',
     },
     showAtMouseEvent: {
-      $since: "0.12.6",
-      $kind: "method",
-      $key: "Menu.prototype.showAtMouseEvent",
+      $since: '0.12.6',
+      $kind: 'method',
+      $key: 'Menu.prototype.showAtMouseEvent',
     },
     showAtPosition: {
-      $since: "1.1.0",
-      $kind: "method",
-      $key: "Menu.prototype.showAtPosition",
+      $since: '1.1.0',
+      $kind: 'method',
+      $key: 'Menu.prototype.showAtPosition',
     },
   },
   MenuItem: {
-    $since: "0.15.0",
-    $kind: "method",
-    $key: "MenuItem",
+    $since: '0.16.2',
+    $kind: 'method',
+    $key: 'MenuItem',
+    setChecked: {
+      $since: '0.16.2',
+      $kind: 'method',
+      $key: 'MenuItem.prototype.setChecked',
+    },
+    setDisabled: {
+      $since: '0.15.0',
+      $kind: 'method',
+      $key: 'MenuItem.prototype.setDisabled',
+    },
+    setIcon: {
+      $since: '0.16.2',
+      $kind: 'method',
+      $key: 'MenuItem.prototype.setIcon',
+    },
     setIsLabel: {
-      $since: "0.15.0",
-      $kind: "method",
-      $key: "MenuItem.prototype.setIsLabel",
+      $since: '0.15.0',
+      $kind: 'method',
+      $key: 'MenuItem.prototype.setIsLabel',
+    },
+    setSection: {
+      $since: '0.15.3',
+      $kind: 'method',
+      $key: 'MenuItem.prototype.setSection',
     },
     setWarning: {
-      $since: "0.15.0",
-      $kind: "method",
-      $key: "MenuItem.prototype.setWarning",
+      $since: '0.15.0',
+      $kind: 'method',
+      $key: 'MenuItem.prototype.setWarning',
     },
   },
   MenuPositionDef: {
-    $since: "1.1.0",
-    $kind: "interface",
-    $key: "MenuPositionDef",
+    $since: '1.1.0',
+    $kind: 'interface',
+    $key: 'MenuPositionDef',
   },
   MenuSeparator: {
-    $since: "0.15.3",
-    $kind: "class",
-    $key: "MenuSeparator",
+    $since: '0.15.3',
+    $kind: 'class',
+    $key: 'MenuSeparator',
   },
   MetadataCache: {
-    $since: "0.14.5",
-    $kind: "method",
-    $key: "MetadataCache",
+    $since: '0.14.5',
+    $kind: 'method',
+    $key: 'MetadataCache',
     getCache: {
-      $since: "0.14.5",
-      $kind: "method",
-      $key: "MetadataCache.prototype.getCache",
+      $since: '0.14.5',
+      $kind: 'method',
+      $key: 'MetadataCache.prototype.getCache',
     },
     getFileCache: {
-      $since: "0.9.21",
-      $kind: "method",
-      $key: "MetadataCache.prototype.getFileCache",
+      $since: '0.9.21',
+      $kind: 'method',
+      $key: 'MetadataCache.prototype.getFileCache',
     },
     getFirstLinkpathDest: {
-      $since: "0.12.5",
-      $kind: "method",
-      $key: "MetadataCache.prototype.getFirstLinkpathDest",
+      $since: '0.12.5',
+      $kind: 'method',
+      $key: 'MetadataCache.prototype.getFirstLinkpathDest',
     },
   },
   Modal: {
-    $since: "1.10.0",
-    $kind: "method",
-    $key: "Modal",
+    $since: '1.10.0',
+    $kind: 'method',
+    $key: 'Modal',
     setCloseCallback: {
-      $since: "1.10.0",
-      $kind: "method",
-      $key: "Modal.prototype.setCloseCallback",
+      $since: '1.10.0',
+      $kind: 'method',
+      $key: 'Modal.prototype.setCloseCallback',
     },
     shouldRestoreSelection: {
-      $since: "0.9.16",
-      $kind: "property",
-      $key: "Modal.prototype.shouldRestoreSelection",
+      $since: '0.9.16',
+      $kind: 'property',
+      $key: 'Modal.prototype.shouldRestoreSelection',
     },
   },
   MomentFormatComponent: {
-    $since: "0.9.7",
-    $kind: "class",
-    $key: "MomentFormatComponent",
+    $since: '0.9.7',
+    $kind: 'class',
+    $key: 'MomentFormatComponent',
     onChanged: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "MomentFormatComponent.prototype.onChanged",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'MomentFormatComponent.prototype.onChanged',
     },
     sampleEl: {
-      $since: "0.9.7",
-      $kind: "property",
-      $key: "MomentFormatComponent.prototype.sampleEl",
+      $since: '0.9.7',
+      $kind: 'property',
+      $key: 'MomentFormatComponent.prototype.sampleEl',
     },
     setDefaultFormat: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "MomentFormatComponent.prototype.setDefaultFormat",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'MomentFormatComponent.prototype.setDefaultFormat',
     },
     setSampleEl: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "MomentFormatComponent.prototype.setSampleEl",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'MomentFormatComponent.prototype.setSampleEl',
     },
     setValue: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "MomentFormatComponent.prototype.setValue",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'MomentFormatComponent.prototype.setValue',
     },
     updateSample: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "MomentFormatComponent.prototype.updateSample",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'MomentFormatComponent.prototype.updateSample',
     },
   },
   Notice: {
-    $since: "0.9.7",
-    $kind: "class",
-    $key: "Notice",
+    $since: '0.9.7',
+    $kind: 'class',
+    $key: 'Notice',
     containerEl: {
-      $since: "1.8.7",
-      $kind: "property",
-      $key: "Notice.prototype.containerEl",
+      $since: '1.8.7',
+      $kind: 'property',
+      $key: 'Notice.prototype.containerEl',
     },
     hide: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "Notice.prototype.hide",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'Notice.prototype.hide',
     },
     messageEl: {
-      $since: "1.8.7",
-      $kind: "property",
-      $key: "Notice.prototype.messageEl",
+      $since: '1.8.7',
+      $kind: 'property',
+      $key: 'Notice.prototype.messageEl',
     },
     noticeEl: {
-      $since: "0.9.7",
-      $kind: "property",
-      $key: "Notice.prototype.noticeEl",
+      $since: '0.9.7',
+      $kind: 'property',
+      $key: 'Notice.prototype.noticeEl',
     },
     setMessage: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "Notice.prototype.setMessage",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'Notice.prototype.setMessage',
     },
   },
   NotNullValue: {
-    $since: "1.10.0",
-    $kind: "class",
-    $key: "NotNullValue",
+    $since: '1.10.0',
+    $kind: 'class',
+    $key: 'NotNullValue',
   },
   NullValue: {
-    $since: "1.10.0",
-    $kind: "class",
-    $key: "NullValue",
+    $since: '1.10.0',
+    $kind: 'class',
+    $key: 'NullValue',
     isTruthy: {
-      $since: "1.10.0",
-      $kind: "method",
-      $key: "NullValue.prototype.isTruthy",
+      $since: '1.10.0',
+      $kind: 'method',
+      $key: 'NullValue.prototype.isTruthy',
     },
     toString: {
-      $since: "1.10.0",
-      $kind: "method",
-      $key: "NullValue.prototype.toString",
+      $since: '1.10.0',
+      $kind: 'method',
+      $key: 'NullValue.prototype.toString',
     },
     value: {
-      $since: "1.10.0",
-      $kind: "property",
-      $key: "NullValue.value",
+      $since: '1.10.0',
+      $kind: 'property',
+      $key: 'NullValue.value',
     },
   },
   NumberValue: {
-    $since: "1.10.0",
-    $kind: "class",
-    $key: "NumberValue",
+    $since: '1.10.0',
+    $kind: 'class',
+    $key: 'NumberValue',
     type: {
-      $since: "1.10.0",
-      $kind: "property",
-      $key: "NumberValue.type",
+      $since: '1.10.0',
+      $kind: 'property',
+      $key: 'NumberValue.type',
     },
   },
   ObjectValue: {
-    $since: "1.10.0",
-    $kind: "class",
-    $key: "ObjectValue",
+    $since: '1.10.0',
+    $kind: 'class',
+    $key: 'ObjectValue',
     get: {
-      $since: "1.10.0",
-      $kind: "method",
-      $key: "ObjectValue.prototype.get",
+      $since: '1.10.0',
+      $kind: 'method',
+      $key: 'ObjectValue.prototype.get',
     },
     isEmpty: {
-      $since: "1.10.0",
-      $kind: "method",
-      $key: "ObjectValue.prototype.isEmpty",
+      $since: '1.10.0',
+      $kind: 'method',
+      $key: 'ObjectValue.prototype.isEmpty',
     },
     isTruthy: {
-      $since: "1.10.0",
-      $kind: "method",
-      $key: "ObjectValue.prototype.isTruthy",
+      $since: '1.10.0',
+      $kind: 'method',
+      $key: 'ObjectValue.prototype.isTruthy',
     },
     toString: {
-      $since: "1.10.0",
-      $kind: "method",
-      $key: "ObjectValue.prototype.toString",
+      $since: '1.10.0',
+      $kind: 'method',
+      $key: 'ObjectValue.prototype.toString',
     },
     type: {
-      $since: "1.10.0",
-      $kind: "property",
-      $key: "ObjectValue.type",
+      $since: '1.10.0',
+      $kind: 'property',
+      $key: 'ObjectValue.type',
     },
   },
   parsePropertyId: {
-    $since: "1.10.0",
-    $kind: "function",
-    $key: "parsePropertyId",
+    $since: '1.10.0',
+    $kind: 'function',
+    $key: 'parsePropertyId',
   },
   Platform: {
-    $since: "0.12.2",
-    $kind: "variable",
-    $key: "Platform",
+    $since: '0.12.2',
+    $kind: 'variable',
+    $key: 'Platform',
   },
   Plugin: {
-    $since: "0.9.7",
-    $kind: "class",
-    $key: "Plugin",
+    $since: '0.9.7',
+    $kind: 'class',
+    $key: 'Plugin',
     addCommand: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "Plugin.prototype.addCommand",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'Plugin.prototype.addCommand',
     },
     addRibbonIcon: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "Plugin.prototype.addRibbonIcon",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'Plugin.prototype.addRibbonIcon',
     },
     addSettingTab: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "Plugin.prototype.addSettingTab",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'Plugin.prototype.addSettingTab',
     },
     addStatusBarItem: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "Plugin.prototype.addStatusBarItem",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'Plugin.prototype.addStatusBarItem',
     },
     app: {
-      $since: "0.9.7",
-      $kind: "property",
-      $key: "Plugin.prototype.app",
+      $since: '0.9.7',
+      $kind: 'property',
+      $key: 'Plugin.prototype.app',
     },
     loadData: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "Plugin.prototype.loadData",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'Plugin.prototype.loadData',
     },
     manifest: {
-      $since: "0.9.7",
-      $kind: "property",
-      $key: "Plugin.prototype.manifest",
+      $since: '0.9.7',
+      $kind: 'property',
+      $key: 'Plugin.prototype.manifest',
     },
     onExternalSettingsChange: {
-      $since: "1.5.7",
-      $kind: "method",
-      $key: "Plugin.prototype.onExternalSettingsChange",
+      $since: '1.5.7',
+      $kind: 'method',
+      $key: 'Plugin.prototype.onExternalSettingsChange',
     },
     onload: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "Plugin.prototype.onload",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'Plugin.prototype.onload',
     },
     onUserEnable: {
-      $since: "1.7.2",
-      $kind: "method",
-      $key: "Plugin.prototype.onUserEnable",
+      $since: '1.7.2',
+      $kind: 'method',
+      $key: 'Plugin.prototype.onUserEnable',
     },
     registerBasesView: {
-      $since: "1.10.0",
-      $kind: "method",
-      $key: "Plugin.prototype.registerBasesView",
+      $since: '1.10.0',
+      $kind: 'method',
+      $key: 'Plugin.prototype.registerBasesView',
     },
     registerCliHandler: {
-      $since: "1.12.2",
-      $kind: "method",
-      $key: "Plugin.prototype.registerCliHandler",
+      $since: '1.12.2',
+      $kind: 'method',
+      $key: 'Plugin.prototype.registerCliHandler',
     },
     registerEditorExtension: {
-      $since: "0.12.8",
-      $kind: "method",
-      $key: "Plugin.prototype.registerEditorExtension",
+      $since: '0.12.8',
+      $kind: 'method',
+      $key: 'Plugin.prototype.registerEditorExtension',
     },
     registerEditorSuggest: {
-      $since: "0.12.7",
-      $kind: "method",
-      $key: "Plugin.prototype.registerEditorSuggest",
+      $since: '0.12.7',
+      $kind: 'method',
+      $key: 'Plugin.prototype.registerEditorSuggest',
     },
     registerExtensions: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "Plugin.prototype.registerExtensions",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'Plugin.prototype.registerExtensions',
     },
     registerHoverLinkSource: {
-      $since: "1.1.0",
-      $kind: "method",
-      $key: "Plugin.prototype.registerHoverLinkSource",
+      $since: '1.1.0',
+      $kind: 'method',
+      $key: 'Plugin.prototype.registerHoverLinkSource',
     },
     registerMarkdownCodeBlockProcessor: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "Plugin.prototype.registerMarkdownCodeBlockProcessor",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'Plugin.prototype.registerMarkdownCodeBlockProcessor',
     },
     registerMarkdownPostProcessor: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "Plugin.prototype.registerMarkdownPostProcessor",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'Plugin.prototype.registerMarkdownPostProcessor',
     },
     registerObsidianProtocolHandler: {
-      $since: "0.11.0",
-      $kind: "method",
-      $key: "Plugin.prototype.registerObsidianProtocolHandler",
+      $since: '0.11.0',
+      $kind: 'method',
+      $key: 'Plugin.prototype.registerObsidianProtocolHandler',
     },
     registerView: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "Plugin.prototype.registerView",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'Plugin.prototype.registerView',
     },
     removeCommand: {
-      $since: "1.7.2",
-      $kind: "method",
-      $key: "Plugin.prototype.removeCommand",
+      $since: '1.7.2',
+      $kind: 'method',
+      $key: 'Plugin.prototype.removeCommand',
     },
     saveData: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "Plugin.prototype.saveData",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'Plugin.prototype.saveData',
+    },
+    settings: {
+      $since: '1.13.0',
+      $kind: 'property',
+      $key: 'Plugin.prototype.settings',
     },
   },
   PluginSettingTab: {
-    $since: "0.9.7",
-    $kind: "class",
-    $key: "PluginSettingTab",
+    $since: '0.9.7',
+    $kind: 'class',
+    $key: 'PluginSettingTab',
+    getControlValue: {
+      $since: '1.13.0',
+      $kind: 'method',
+      $key: 'PluginSettingTab.prototype.getControlValue',
+    },
+    getSettingDefinitions: {
+      $since: '1.13.0',
+      $kind: 'method',
+      $key: 'PluginSettingTab.prototype.getSettingDefinitions',
+    },
+    setControlValue: {
+      $since: '1.13.0',
+      $kind: 'method',
+      $key: 'PluginSettingTab.prototype.setControlValue',
+    },
   },
   PrimitiveValue: {
-    $since: "1.10.0",
-    $kind: "class",
-    $key: "PrimitiveValue",
+    $since: '1.10.0',
+    $kind: 'class',
+    $key: 'PrimitiveValue',
     isTruthy: {
-      $since: "1.10.0",
-      $kind: "method",
-      $key: "PrimitiveValue.prototype.isTruthy",
+      $since: '1.10.0',
+      $kind: 'method',
+      $key: 'PrimitiveValue.prototype.isTruthy',
     },
     toString: {
-      $since: "1.10.0",
-      $kind: "method",
-      $key: "PrimitiveValue.prototype.toString",
+      $since: '1.10.0',
+      $kind: 'method',
+      $key: 'PrimitiveValue.prototype.toString',
     },
   },
   ProgressBarComponent: {
-    $since: "1.4.4",
-    $kind: "class",
-    $key: "ProgressBarComponent",
+    $since: '1.4.4',
+    $kind: 'class',
+    $key: 'ProgressBarComponent',
   },
   QueryController: {
-    $since: "1.10.0",
-    $kind: "class",
-    $key: "QueryController",
+    $since: '1.10.0',
+    $kind: 'class',
+    $key: 'QueryController',
   },
   ReferenceLinkCache: {
-    $since: "1.8.7",
-    $kind: "interface",
-    $key: "ReferenceLinkCache",
+    $since: '1.8.7',
+    $kind: 'interface',
+    $key: 'ReferenceLinkCache',
   },
   RegExpValue: {
-    $since: "1.10.0",
-    $kind: "class",
-    $key: "RegExpValue",
+    $since: '1.10.0',
+    $kind: 'class',
+    $key: 'RegExpValue',
     isTruthy: {
-      $since: "1.10.0",
-      $kind: "method",
-      $key: "RegExpValue.prototype.isTruthy",
+      $since: '1.10.0',
+      $kind: 'method',
+      $key: 'RegExpValue.prototype.isTruthy',
     },
     toString: {
-      $since: "1.10.0",
-      $kind: "method",
-      $key: "RegExpValue.prototype.toString",
+      $since: '1.10.0',
+      $kind: 'method',
+      $key: 'RegExpValue.prototype.toString',
     },
   },
   RelativeDateValue: {
-    $since: "1.10.0",
-    $kind: "class",
-    $key: "RelativeDateValue",
+    $since: '1.10.0',
+    $kind: 'class',
+    $key: 'RelativeDateValue',
   },
   RenderContext: {
-    $since: "1.10.0",
-    $kind: "class",
-    $key: "RenderContext",
+    $since: '1.10.0',
+    $kind: 'class',
+    $key: 'RenderContext',
     hoverPopover: {
-      $since: "1.10.0",
-      $kind: "property",
-      $key: "RenderContext.prototype.hoverPopover",
+      $since: '1.10.0',
+      $kind: 'property',
+      $key: 'RenderContext.prototype.hoverPopover',
     },
   },
   request: {
-    $since: "0.12.11",
-    $kind: "function",
-    $key: "request",
+    $since: '0.12.11',
+    $kind: 'function',
+    $key: 'request',
   },
   RGB: {
-    $since: "0.16.0",
-    $kind: "interface",
-    $key: "RGB",
+    $since: '0.16.0',
+    $kind: 'interface',
+    $key: 'RGB',
   },
   SearchComponent: {
-    $since: "0.9.21",
-    $kind: "class",
-    $key: "SearchComponent",
+    $since: '0.9.21',
+    $kind: 'class',
+    $key: 'SearchComponent',
     clearButtonEl: {
-      $since: "0.9.21",
-      $kind: "property",
-      $key: "SearchComponent.prototype.clearButtonEl",
+      $since: '0.9.21',
+      $kind: 'property',
+      $key: 'SearchComponent.prototype.clearButtonEl',
     },
   },
   SearchResult: {
-    $since: "0.9.21",
-    $kind: "interface",
-    $key: "SearchResult",
+    $since: '0.9.21',
+    $kind: 'interface',
+    $key: 'SearchResult',
   },
   SearchResultContainer: {
-    $since: "0.9.21",
-    $kind: "interface",
-    $key: "SearchResultContainer",
+    $since: '0.9.21',
+    $kind: 'interface',
+    $key: 'SearchResultContainer',
   },
   SecretComponent: {
-    $since: "1.11.1",
-    $kind: "class",
-    $key: "SecretComponent",
+    $since: '1.11.1',
+    $kind: 'class',
+    $key: 'SecretComponent',
     onChange: {
-      $since: "1.11.4",
-      $kind: "method",
-      $key: "SecretComponent.prototype.onChange",
+      $since: '1.11.4',
+      $kind: 'method',
+      $key: 'SecretComponent.prototype.onChange',
     },
     setValue: {
-      $since: "1.11.4",
-      $kind: "method",
-      $key: "SecretComponent.prototype.setValue",
+      $since: '1.11.4',
+      $kind: 'method',
+      $key: 'SecretComponent.prototype.setValue',
     },
   },
   SecretStorage: {
-    $since: "1.11.4",
-    $kind: "class",
-    $key: "SecretStorage",
+    $since: '1.11.4',
+    $kind: 'class',
+    $key: 'SecretStorage',
     getSecret: {
-      $since: "1.11.4",
-      $kind: "method",
-      $key: "SecretStorage.prototype.getSecret",
+      $since: '1.11.4',
+      $kind: 'method',
+      $key: 'SecretStorage.prototype.getSecret',
     },
     listSecrets: {
-      $since: "1.11.4",
-      $kind: "method",
-      $key: "SecretStorage.prototype.listSecrets",
+      $since: '1.11.4',
+      $kind: 'method',
+      $key: 'SecretStorage.prototype.listSecrets',
     },
     setSecret: {
-      $since: "1.11.4",
-      $kind: "method",
-      $key: "SecretStorage.prototype.setSecret",
+      $since: '1.11.4',
+      $kind: 'method',
+      $key: 'SecretStorage.prototype.setSecret',
     },
   },
   Setting: {
-    $since: "0.9.7",
-    $kind: "class",
-    $key: "Setting",
+    $since: '0.9.7',
+    $kind: 'class',
+    $key: 'Setting',
     addButton: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "Setting.prototype.addButton",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'Setting.prototype.addButton',
     },
     addComponent: {
-      $since: "1.11.0",
-      $kind: "method",
-      $key: "Setting.prototype.addComponent",
+      $since: '1.11.0',
+      $kind: 'method',
+      $key: 'Setting.prototype.addComponent',
     },
     addExtraButton: {
-      $since: "0.9.16",
-      $kind: "method",
-      $key: "Setting.prototype.addExtraButton",
+      $since: '0.9.16',
+      $kind: 'method',
+      $key: 'Setting.prototype.addExtraButton',
     },
     addMomentFormat: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "Setting.prototype.addMomentFormat",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'Setting.prototype.addMomentFormat',
     },
     addSearch: {
-      $since: "0.9.21",
-      $kind: "method",
-      $key: "Setting.prototype.addSearch",
+      $since: '0.9.21',
+      $kind: 'method',
+      $key: 'Setting.prototype.addSearch',
     },
     addSlider: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "Setting.prototype.addSlider",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'Setting.prototype.addSlider',
     },
     addText: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "Setting.prototype.addText",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'Setting.prototype.addText',
     },
     addTextArea: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "Setting.prototype.addTextArea",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'Setting.prototype.addTextArea',
     },
     addToggle: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "Setting.prototype.addToggle",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'Setting.prototype.addToggle',
     },
     clear: {
-      $since: "0.13.8",
-      $kind: "method",
-      $key: "Setting.prototype.clear",
+      $since: '0.13.8',
+      $kind: 'method',
+      $key: 'Setting.prototype.clear',
     },
     components: {
-      $since: "0.9.7",
-      $kind: "property",
-      $key: "Setting.prototype.components",
+      $since: '0.9.7',
+      $kind: 'property',
+      $key: 'Setting.prototype.components',
     },
     controlEl: {
-      $since: "0.9.7",
-      $kind: "property",
-      $key: "Setting.prototype.controlEl",
+      $since: '0.9.7',
+      $kind: 'property',
+      $key: 'Setting.prototype.controlEl',
     },
     descEl: {
-      $since: "0.9.7",
-      $kind: "property",
-      $key: "Setting.prototype.descEl",
+      $since: '0.9.7',
+      $kind: 'property',
+      $key: 'Setting.prototype.descEl',
+    },
+    errorEl: {
+      $since: '1.13.0',
+      $kind: 'property',
+      $key: 'Setting.prototype.errorEl',
     },
     infoEl: {
-      $since: "0.9.7",
-      $kind: "property",
-      $key: "Setting.prototype.infoEl",
+      $since: '0.9.7',
+      $kind: 'property',
+      $key: 'Setting.prototype.infoEl',
     },
     nameEl: {
-      $since: "0.9.7",
-      $kind: "property",
-      $key: "Setting.prototype.nameEl",
+      $since: '0.9.7',
+      $kind: 'property',
+      $key: 'Setting.prototype.nameEl',
     },
     setClass: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "Setting.prototype.setClass",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'Setting.prototype.setClass',
     },
     setDesc: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "Setting.prototype.setDesc",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'Setting.prototype.setDesc',
     },
     setDisabled: {
-      $since: "1.2.3",
-      $kind: "method",
-      $key: "Setting.prototype.setDisabled",
+      $since: '1.2.3',
+      $kind: 'method',
+      $key: 'Setting.prototype.setDisabled',
+    },
+    setErrorMessage: {
+      $since: '1.13.0',
+      $kind: 'method',
+      $key: 'Setting.prototype.setErrorMessage',
     },
     setHeading: {
-      $since: "0.9.16",
-      $kind: "method",
-      $key: "Setting.prototype.setHeading",
+      $since: '0.9.16',
+      $kind: 'method',
+      $key: 'Setting.prototype.setHeading',
     },
     setName: {
-      $since: "0.12.16",
-      $kind: "method",
-      $key: "Setting.prototype.setName",
+      $since: '0.12.16',
+      $kind: 'method',
+      $key: 'Setting.prototype.setName',
     },
     settingEl: {
-      $since: "0.9.7",
-      $kind: "property",
-      $key: "Setting.prototype.settingEl",
+      $since: '0.9.7',
+      $kind: 'property',
+      $key: 'Setting.prototype.settingEl',
     },
     setTooltip: {
-      $since: "1.1.0",
-      $kind: "method",
-      $key: "Setting.prototype.setTooltip",
+      $since: '1.1.0',
+      $kind: 'method',
+      $key: 'Setting.prototype.setTooltip',
     },
     then: {
-      $since: "0.9.20",
-      $kind: "method",
-      $key: "Setting.prototype.then",
+      $since: '0.9.20',
+      $kind: 'method',
+      $key: 'Setting.prototype.then',
     },
+  },
+  SettingColorControl: {
+    $since: '1.13.0',
+    $kind: 'interface',
+    $key: 'SettingColorControl',
+  },
+  SettingControl: {
+    $since: '1.13.0',
+    $kind: 'type',
+    $key: 'SettingControl',
+  },
+  SettingControlBase: {
+    $since: '1.13.0',
+    $kind: 'interface',
+    $key: 'SettingControlBase',
+  },
+  SettingDefinition: {
+    $since: '1.13.0',
+    $kind: 'type',
+    $key: 'SettingDefinition',
+  },
+  SettingDefinitionAction: {
+    $since: '1.13.0',
+    $kind: 'interface',
+    $key: 'SettingDefinitionAction',
+  },
+  SettingDefinitionAddItem: {
+    $since: '1.13.0',
+    $kind: 'interface',
+    $key: 'SettingDefinitionAddItem',
+  },
+  SettingDefinitionBase: {
+    $since: '1.13.0',
+    $kind: 'interface',
+    $key: 'SettingDefinitionBase',
+  },
+  SettingDefinitionControl: {
+    $since: '1.13.0',
+    $kind: 'interface',
+    $key: 'SettingDefinitionControl',
+  },
+  SettingDefinitionEmpty: {
+    $since: '1.13.0',
+    $kind: 'interface',
+    $key: 'SettingDefinitionEmpty',
+  },
+  SettingDefinitionGroup: {
+    $since: '1.13.0',
+    $kind: 'interface',
+    $key: 'SettingDefinitionGroup',
+  },
+  SettingDefinitionItem: {
+    $since: '1.13.0',
+    $kind: 'type',
+    $key: 'SettingDefinitionItem',
+  },
+  SettingDefinitionList: {
+    $since: '1.13.0',
+    $kind: 'interface',
+    $key: 'SettingDefinitionList',
+  },
+  SettingDefinitionPage: {
+    $since: '1.13.0',
+    $kind: 'interface',
+    $key: 'SettingDefinitionPage',
+  },
+  SettingDefinitionRender: {
+    $since: '1.13.0',
+    $kind: 'interface',
+    $key: 'SettingDefinitionRender',
+  },
+  SettingDropdownControl: {
+    $since: '1.13.0',
+    $kind: 'interface',
+    $key: 'SettingDropdownControl',
+  },
+  SettingFileControl: {
+    $since: '1.13.0',
+    $kind: 'interface',
+    $key: 'SettingFileControl',
+  },
+  SettingFolderControl: {
+    $since: '1.13.0',
+    $kind: 'interface',
+    $key: 'SettingFolderControl',
   },
   SettingGroup: {
-    $since: "1.11.0",
-    $kind: "class",
-    $key: "SettingGroup",
+    $since: '1.11.0',
+    $kind: 'class',
+    $key: 'SettingGroup',
     addClass: {
-      $since: "1.11.0",
-      $kind: "method",
-      $key: "SettingGroup.prototype.addClass",
+      $since: '1.11.0',
+      $kind: 'method',
+      $key: 'SettingGroup.prototype.addClass',
     },
     addExtraButton: {
-      $since: "1.11.0",
-      $kind: "method",
-      $key: "SettingGroup.prototype.addExtraButton",
+      $since: '1.11.0',
+      $kind: 'method',
+      $key: 'SettingGroup.prototype.addExtraButton',
     },
     addSearch: {
-      $since: "1.11.0",
-      $kind: "method",
-      $key: "SettingGroup.prototype.addSearch",
+      $since: '1.11.0',
+      $kind: 'method',
+      $key: 'SettingGroup.prototype.addSearch',
     },
     addSetting: {
-      $since: "1.11.0",
-      $kind: "method",
-      $key: "SettingGroup.prototype.addSetting",
+      $since: '1.11.0',
+      $kind: 'method',
+      $key: 'SettingGroup.prototype.addSetting',
+    },
+    listEl: {
+      $since: '1.11.0',
+      $kind: 'property',
+      $key: 'SettingGroup.prototype.listEl',
     },
     setHeading: {
-      $since: "1.11.0",
-      $kind: "method",
-      $key: "SettingGroup.prototype.setHeading",
+      $since: '1.11.0',
+      $kind: 'method',
+      $key: 'SettingGroup.prototype.setHeading',
     },
+  },
+  SettingGroupItem: {
+    $since: '1.13.0',
+    $kind: 'type',
+    $key: 'SettingGroupItem',
+  },
+  SettingNumberControl: {
+    $since: '1.13.0',
+    $kind: 'interface',
+    $key: 'SettingNumberControl',
+  },
+  SettingPage: {
+    $since: '1.13.0',
+    $kind: 'class',
+    $key: 'SettingPage',
+    containerEl: {
+      $since: '1.13.0',
+      $kind: 'property',
+      $key: 'SettingPage.prototype.containerEl',
+    },
+    display: {
+      $since: '1.13.0',
+      $kind: 'method',
+      $key: 'SettingPage.prototype.display',
+    },
+    hide: {
+      $since: '1.13.0',
+      $kind: 'method',
+      $key: 'SettingPage.prototype.hide',
+    },
+    rootEl: {
+      $since: '1.13.0',
+      $kind: 'property',
+      $key: 'SettingPage.prototype.rootEl',
+    },
+    title: {
+      $since: '1.13.0',
+      $kind: 'property',
+      $key: 'SettingPage.prototype.title',
+    },
+    titlebarEl: {
+      $since: '1.13.0',
+      $kind: 'property',
+      $key: 'SettingPage.prototype.titlebarEl',
+    },
+  },
+  SettingSliderControl: {
+    $since: '1.13.0',
+    $kind: 'interface',
+    $key: 'SettingSliderControl',
   },
   SettingTab: {
-    $since: "0.9.7",
-    $kind: "class",
-    $key: "SettingTab",
-    icon: {
-      $since: "1.11.0",
-      $kind: "property",
-      $key: "SettingTab.prototype.icon",
+    $since: '0.9.7',
+    $kind: 'class',
+    $key: 'SettingTab',
+    getControlValue: {
+      $since: '1.13.0',
+      $kind: 'method',
+      $key: 'SettingTab.prototype.getControlValue',
     },
+    getSettingDefinitions: {
+      $since: '1.13.0',
+      $kind: 'method',
+      $key: 'SettingTab.prototype.getSettingDefinitions',
+    },
+    icon: {
+      $since: '1.11.0',
+      $kind: 'property',
+      $key: 'SettingTab.prototype.icon',
+    },
+    refreshDomState: {
+      $since: '1.13.0',
+      $kind: 'method',
+      $key: 'SettingTab.prototype.refreshDomState',
+    },
+    setControlValue: {
+      $since: '1.13.0',
+      $kind: 'method',
+      $key: 'SettingTab.prototype.setControlValue',
+    },
+    settingItems: {
+      $since: '1.13.0',
+      $kind: 'property',
+      $key: 'SettingTab.prototype.settingItems',
+    },
+    update: {
+      $since: '1.13.0',
+      $kind: 'method',
+      $key: 'SettingTab.prototype.update',
+    },
+  },
+  SettingTextAreaControl: {
+    $since: '1.13.0',
+    $kind: 'interface',
+    $key: 'SettingTextAreaControl',
+  },
+  SettingTextControl: {
+    $since: '1.13.0',
+    $kind: 'interface',
+    $key: 'SettingTextControl',
+  },
+  SettingToggleControl: {
+    $since: '1.13.0',
+    $kind: 'interface',
+    $key: 'SettingToggleControl',
   },
   setTooltip: {
-    $since: "1.4.4",
-    $kind: "function",
-    $key: "setTooltip",
+    $since: '1.4.4',
+    $kind: 'function',
+    $key: 'setTooltip',
   },
   SliderComponent: {
-    $since: "0.9.7",
-    $kind: "class",
-    $key: "SliderComponent",
+    $since: '0.9.7',
+    $kind: 'class',
+    $key: 'SliderComponent',
     getValue: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "SliderComponent.prototype.getValue",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'SliderComponent.prototype.getValue',
     },
     getValuePretty: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "SliderComponent.prototype.getValuePretty",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'SliderComponent.prototype.getValuePretty',
     },
     onChange: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "SliderComponent.prototype.onChange",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'SliderComponent.prototype.onChange',
     },
     setDisabled: {
-      $since: "1.2.3",
-      $kind: "method",
-      $key: "SliderComponent.prototype.setDisabled",
+      $since: '1.2.3',
+      $kind: 'method',
+      $key: 'SliderComponent.prototype.setDisabled',
     },
     setDynamicTooltip: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "SliderComponent.prototype.setDynamicTooltip",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'SliderComponent.prototype.setDynamicTooltip',
     },
     setInstant: {
-      $since: "1.6.6",
-      $kind: "method",
-      $key: "SliderComponent.prototype.setInstant",
+      $since: '1.6.6',
+      $kind: 'method',
+      $key: 'SliderComponent.prototype.setInstant',
     },
     setLimits: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "SliderComponent.prototype.setLimits",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'SliderComponent.prototype.setLimits',
     },
     setValue: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "SliderComponent.prototype.setValue",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'SliderComponent.prototype.setValue',
     },
     showTooltip: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "SliderComponent.prototype.showTooltip",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'SliderComponent.prototype.showTooltip',
     },
   },
   StringValue: {
-    $since: "1.10.0",
-    $kind: "class",
-    $key: "StringValue",
+    $since: '1.10.0',
+    $kind: 'class',
+    $key: 'StringValue',
     type: {
-      $since: "1.10.0",
-      $kind: "property",
-      $key: "StringValue.type",
+      $since: '1.10.0',
+      $kind: 'property',
+      $key: 'StringValue.type',
     },
   },
   SuggestModal: {
-    $since: "0.9.20",
-    $kind: "property",
-    $key: "SuggestModal",
+    $since: '0.9.20',
+    $kind: 'property',
+    $key: 'SuggestModal',
     emptyStateText: {
-      $since: "0.9.20",
-      $kind: "property",
-      $key: "SuggestModal.prototype.emptyStateText",
+      $since: '0.9.20',
+      $kind: 'property',
+      $key: 'SuggestModal.prototype.emptyStateText',
     },
     getSuggestions: {
-      $since: "1.5.7",
-      $kind: "method",
-      $key: "SuggestModal.prototype.getSuggestions",
+      $since: '1.5.7',
+      $kind: 'method',
+      $key: 'SuggestModal.prototype.getSuggestions',
     },
     onChooseSuggestion: {
-      $since: "1.5.7",
-      $kind: "method",
-      $key: "SuggestModal.prototype.onChooseSuggestion",
+      $since: '1.5.7',
+      $kind: 'method',
+      $key: 'SuggestModal.prototype.onChooseSuggestion',
     },
     onNoSuggestion: {
-      $since: "0.9.20",
-      $kind: "method",
-      $key: "SuggestModal.prototype.onNoSuggestion",
+      $since: '0.9.20',
+      $kind: 'method',
+      $key: 'SuggestModal.prototype.onNoSuggestion',
     },
     renderSuggestion: {
-      $since: "1.5.7",
-      $kind: "method",
-      $key: "SuggestModal.prototype.renderSuggestion",
+      $since: '1.5.7',
+      $kind: 'method',
+      $key: 'SuggestModal.prototype.renderSuggestion',
     },
     resultContainerEl: {
-      $since: "0.9.20",
-      $kind: "property",
-      $key: "SuggestModal.prototype.resultContainerEl",
+      $since: '0.9.20',
+      $kind: 'property',
+      $key: 'SuggestModal.prototype.resultContainerEl',
     },
     selectActiveSuggestion: {
-      $since: "1.7.2",
-      $kind: "method",
-      $key: "SuggestModal.prototype.selectActiveSuggestion",
+      $since: '1.7.2',
+      $kind: 'method',
+      $key: 'SuggestModal.prototype.selectActiveSuggestion',
     },
     selectSuggestion: {
-      $since: "0.9.20",
-      $kind: "method",
-      $key: "SuggestModal.prototype.selectSuggestion",
+      $since: '0.9.20',
+      $kind: 'method',
+      $key: 'SuggestModal.prototype.selectSuggestion',
     },
     setInstructions: {
-      $since: "0.9.20",
-      $kind: "method",
-      $key: "SuggestModal.prototype.setInstructions",
+      $since: '0.9.20',
+      $kind: 'method',
+      $key: 'SuggestModal.prototype.setInstructions',
     },
     setPlaceholder: {
-      $since: "0.9.20",
-      $kind: "method",
-      $key: "SuggestModal.prototype.setPlaceholder",
+      $since: '0.9.20',
+      $kind: 'method',
+      $key: 'SuggestModal.prototype.setPlaceholder',
     },
   },
   TAbstractFile: {
-    $since: "0.9.7",
-    $kind: "class",
-    $key: "TAbstractFile",
+    $since: '0.9.7',
+    $kind: 'class',
+    $key: 'TAbstractFile',
     name: {
-      $since: "0.9.7",
-      $kind: "property",
-      $key: "TAbstractFile.prototype.name",
+      $since: '0.9.7',
+      $kind: 'property',
+      $key: 'TAbstractFile.prototype.name',
     },
     parent: {
-      $since: "0.9.7",
-      $kind: "property",
-      $key: "TAbstractFile.prototype.parent",
+      $since: '0.9.7',
+      $kind: 'property',
+      $key: 'TAbstractFile.prototype.parent',
     },
     path: {
-      $since: "0.9.7",
-      $kind: "property",
-      $key: "TAbstractFile.prototype.path",
+      $since: '0.9.7',
+      $kind: 'property',
+      $key: 'TAbstractFile.prototype.path',
     },
     vault: {
-      $since: "0.9.7",
-      $kind: "property",
-      $key: "TAbstractFile.prototype.vault",
+      $since: '0.9.7',
+      $kind: 'property',
+      $key: 'TAbstractFile.prototype.vault',
     },
   },
   TagCache: {
-    $since: "0.9.7",
-    $kind: "interface",
-    $key: "TagCache",
+    $since: '0.9.7',
+    $kind: 'interface',
+    $key: 'TagCache',
   },
   TagValue: {
-    $since: "1.10.0",
-    $kind: "class",
-    $key: "TagValue",
+    $since: '1.10.0',
+    $kind: 'class',
+    $key: 'TagValue',
   },
   Tasks: {
-    $since: "0.10.2",
-    $kind: "class",
-    $key: "Tasks",
+    $since: '0.10.2',
+    $kind: 'class',
+    $key: 'Tasks',
     add: {
-      $since: "0.10.2",
-      $kind: "method",
-      $key: "Tasks.prototype.add",
+      $since: '0.10.2',
+      $kind: 'method',
+      $key: 'Tasks.prototype.add',
     },
     addPromise: {
-      $since: "0.10.2",
-      $kind: "method",
-      $key: "Tasks.prototype.addPromise",
+      $since: '0.10.2',
+      $kind: 'method',
+      $key: 'Tasks.prototype.addPromise',
     },
     isEmpty: {
-      $since: "0.10.2",
-      $kind: "method",
-      $key: "Tasks.prototype.isEmpty",
+      $since: '0.10.2',
+      $kind: 'method',
+      $key: 'Tasks.prototype.isEmpty',
     },
     promise: {
-      $since: "0.10.2",
-      $kind: "method",
-      $key: "Tasks.prototype.promise",
+      $since: '0.10.2',
+      $kind: 'method',
+      $key: 'Tasks.prototype.promise',
     },
   },
   TextAreaComponent: {
-    $since: "0.9.7",
-    $kind: "class",
-    $key: "TextAreaComponent",
+    $since: '0.9.7',
+    $kind: 'class',
+    $key: 'TextAreaComponent',
   },
   TextComponent: {
-    $since: "0.9.21",
-    $kind: "class",
-    $key: "TextComponent",
+    $since: '0.9.21',
+    $kind: 'class',
+    $key: 'TextComponent',
   },
   TextFileView: {
-    $since: "0.10.12",
-    $kind: "class",
-    $key: "TextFileView",
+    $since: '0.10.12',
+    $kind: 'class',
+    $key: 'TextFileView',
     clear: {
-      $since: "0.10.12",
-      $kind: "method",
-      $key: "TextFileView.prototype.clear",
+      $since: '0.10.12',
+      $kind: 'method',
+      $key: 'TextFileView.prototype.clear',
     },
     data: {
-      $since: "0.10.12",
-      $kind: "property",
-      $key: "TextFileView.prototype.data",
+      $since: '0.10.12',
+      $kind: 'property',
+      $key: 'TextFileView.prototype.data',
     },
     getViewData: {
-      $since: "0.10.12",
-      $kind: "method",
-      $key: "TextFileView.prototype.getViewData",
+      $since: '0.10.12',
+      $kind: 'method',
+      $key: 'TextFileView.prototype.getViewData',
     },
     onLoadFile: {
-      $since: "0.10.12",
-      $kind: "method",
-      $key: "TextFileView.prototype.onLoadFile",
+      $since: '0.10.12',
+      $kind: 'method',
+      $key: 'TextFileView.prototype.onLoadFile',
     },
     onUnloadFile: {
-      $since: "0.10.12",
-      $kind: "method",
-      $key: "TextFileView.prototype.onUnloadFile",
+      $since: '0.10.12',
+      $kind: 'method',
+      $key: 'TextFileView.prototype.onUnloadFile',
     },
     requestSave: {
-      $since: "0.10.12",
-      $kind: "property",
-      $key: "TextFileView.prototype.requestSave",
+      $since: '0.10.12',
+      $kind: 'property',
+      $key: 'TextFileView.prototype.requestSave',
     },
     save: {
-      $since: "0.10.12",
-      $kind: "method",
-      $key: "TextFileView.prototype.save",
+      $since: '0.10.12',
+      $kind: 'method',
+      $key: 'TextFileView.prototype.save',
     },
     setViewData: {
-      $since: "0.10.12",
-      $kind: "method",
-      $key: "TextFileView.prototype.setViewData",
+      $since: '0.10.12',
+      $kind: 'method',
+      $key: 'TextFileView.prototype.setViewData',
     },
   },
   TFile: {
-    $since: "0.9.7",
-    $kind: "class",
-    $key: "TFile",
+    $since: '0.9.7',
+    $kind: 'class',
+    $key: 'TFile',
     basename: {
-      $since: "0.9.7",
-      $kind: "property",
-      $key: "TFile.prototype.basename",
+      $since: '0.9.7',
+      $kind: 'property',
+      $key: 'TFile.prototype.basename',
     },
     extension: {
-      $since: "0.9.7",
-      $kind: "property",
-      $key: "TFile.prototype.extension",
+      $since: '0.9.7',
+      $kind: 'property',
+      $key: 'TFile.prototype.extension',
     },
     stat: {
-      $since: "0.9.7",
-      $kind: "property",
-      $key: "TFile.prototype.stat",
+      $since: '0.9.7',
+      $kind: 'property',
+      $key: 'TFile.prototype.stat',
     },
   },
   TFolder: {
-    $since: "0.9.7",
-    $kind: "class",
-    $key: "TFolder",
+    $since: '0.9.7',
+    $kind: 'class',
+    $key: 'TFolder',
     children: {
-      $since: "0.9.7",
-      $kind: "property",
-      $key: "TFolder.prototype.children",
+      $since: '0.9.7',
+      $kind: 'property',
+      $key: 'TFolder.prototype.children',
     },
     isRoot: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "TFolder.prototype.isRoot",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'TFolder.prototype.isRoot',
     },
   },
   ToggleComponent: {
-    $since: "0.9.7",
-    $kind: "class",
-    $key: "ToggleComponent",
+    $since: '0.9.7',
+    $kind: 'class',
+    $key: 'ToggleComponent',
     getValue: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "ToggleComponent.prototype.getValue",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'ToggleComponent.prototype.getValue',
     },
     onChange: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "ToggleComponent.prototype.onChange",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'ToggleComponent.prototype.onChange',
     },
     onClick: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "ToggleComponent.prototype.onClick",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'ToggleComponent.prototype.onClick',
     },
     setDisabled: {
-      $since: "1.2.3",
-      $kind: "method",
-      $key: "ToggleComponent.prototype.setDisabled",
+      $since: '1.2.3',
+      $kind: 'method',
+      $key: 'ToggleComponent.prototype.setDisabled',
     },
     setTooltip: {
-      $since: "1.1.1",
-      $kind: "method",
-      $key: "ToggleComponent.prototype.setTooltip",
+      $since: '1.1.1',
+      $kind: 'method',
+      $key: 'ToggleComponent.prototype.setTooltip',
     },
     setValue: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "ToggleComponent.prototype.setValue",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'ToggleComponent.prototype.setValue',
     },
     toggleEl: {
-      $since: "0.9.7",
-      $kind: "property",
-      $key: "ToggleComponent.prototype.toggleEl",
+      $since: '0.9.7',
+      $kind: 'property',
+      $key: 'ToggleComponent.prototype.toggleEl',
     },
   },
   UrlValue: {
-    $since: "1.10.0",
-    $kind: "class",
-    $key: "UrlValue",
+    $since: '1.10.0',
+    $kind: 'class',
+    $key: 'UrlValue',
   },
   Value: {
-    $since: "1.10.0",
-    $kind: "class",
-    $key: "Value",
+    $since: '1.10.0',
+    $kind: 'class',
+    $key: 'Value',
     equals: {
-      $since: "1.10.0",
-      $kind: "method",
-      $key: "Value.equals",
+      $since: '1.10.0',
+      $kind: 'method',
+      $key: 'Value.equals',
     },
     isTruthy: {
-      $since: "1.10.0",
-      $kind: "method",
-      $key: "Value.prototype.isTruthy",
+      $since: '1.10.0',
+      $kind: 'method',
+      $key: 'Value.prototype.isTruthy',
     },
     looseEquals: {
-      $since: "1.10.0",
-      $kind: "method",
-      $key: "Value.looseEquals",
+      $since: '1.10.0',
+      $kind: 'method',
+      $key: 'Value.looseEquals',
     },
     renderTo: {
-      $since: "1.10.0",
-      $kind: "method",
-      $key: "Value.prototype.renderTo",
+      $since: '1.10.0',
+      $kind: 'method',
+      $key: 'Value.prototype.renderTo',
     },
     toString: {
-      $since: "1.10.0",
-      $kind: "method",
-      $key: "Value.prototype.toString",
+      $since: '1.10.0',
+      $kind: 'method',
+      $key: 'Value.prototype.toString',
     },
     type: {
-      $since: "1.10.0",
-      $kind: "property",
-      $key: "Value.type",
+      $since: '1.10.0',
+      $kind: 'property',
+      $key: 'Value.type',
     },
   },
   ValueComponent: {
-    $since: "0.9.7",
-    $kind: "class",
-    $key: "ValueComponent",
+    $since: '0.9.7',
+    $kind: 'class',
+    $key: 'ValueComponent',
     getValue: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "ValueComponent.prototype.getValue",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'ValueComponent.prototype.getValue',
     },
     registerOptionListener: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "ValueComponent.prototype.registerOptionListener",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'ValueComponent.prototype.registerOptionListener',
     },
     setValue: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "ValueComponent.prototype.setValue",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'ValueComponent.prototype.setValue',
     },
   },
   Vault: {
-    $since: "0.9.7",
-    $kind: "class",
-    $key: "Vault",
+    $since: '0.9.7',
+    $kind: 'class',
+    $key: 'Vault',
     adapter: {
-      $since: "0.9.7",
-      $kind: "property",
-      $key: "Vault.prototype.adapter",
+      $since: '0.9.7',
+      $kind: 'property',
+      $key: 'Vault.prototype.adapter',
     },
     append: {
-      $since: "0.13.0",
-      $kind: "method",
-      $key: "Vault.prototype.append",
+      $since: '0.13.0',
+      $kind: 'method',
+      $key: 'Vault.prototype.append',
     },
     appendBinary: {
-      $since: "1.12.3",
-      $kind: "method",
-      $key: "Vault.prototype.appendBinary",
+      $since: '1.12.3',
+      $kind: 'method',
+      $key: 'Vault.prototype.appendBinary',
     },
     cachedRead: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "Vault.prototype.cachedRead",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'Vault.prototype.cachedRead',
     },
     configDir: {
-      $since: "0.11.1",
-      $kind: "property",
-      $key: "Vault.prototype.configDir",
+      $since: '0.11.1',
+      $kind: 'property',
+      $key: 'Vault.prototype.configDir',
     },
     copy: {
-      $since: "1.8.7",
-      $kind: "method",
-      $key: "Vault.prototype.copy",
+      $since: '1.8.7',
+      $kind: 'method',
+      $key: 'Vault.prototype.copy',
     },
     create: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "Vault.prototype.create",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'Vault.prototype.create',
     },
     createBinary: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "Vault.prototype.createBinary",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'Vault.prototype.createBinary',
     },
     createFolder: {
-      $since: "1.4.0",
-      $kind: "method",
-      $key: "Vault.prototype.createFolder",
+      $since: '1.4.0',
+      $kind: 'method',
+      $key: 'Vault.prototype.createFolder',
     },
     delete: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "Vault.prototype.delete",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'Vault.prototype.delete',
     },
     getAbstractFileByPath: {
-      $since: "0.11.11",
-      $kind: "method",
-      $key: "Vault.prototype.getAbstractFileByPath",
+      $since: '0.11.11',
+      $kind: 'method',
+      $key: 'Vault.prototype.getAbstractFileByPath',
     },
     getAllFolders: {
-      $since: "1.6.6",
-      $kind: "method",
-      $key: "Vault.prototype.getAllFolders",
+      $since: '1.6.6',
+      $kind: 'method',
+      $key: 'Vault.prototype.getAllFolders',
     },
     getAllLoadedFiles: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "Vault.prototype.getAllLoadedFiles",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'Vault.prototype.getAllLoadedFiles',
     },
     getFileByPath: {
-      $since: "1.5.7",
-      $kind: "method",
-      $key: "Vault.prototype.getFileByPath",
+      $since: '1.5.7',
+      $kind: 'method',
+      $key: 'Vault.prototype.getFileByPath',
     },
     getFiles: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "Vault.prototype.getFiles",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'Vault.prototype.getFiles',
     },
     getFolderByPath: {
-      $since: "1.5.7",
-      $kind: "method",
-      $key: "Vault.prototype.getFolderByPath",
+      $since: '1.5.7',
+      $kind: 'method',
+      $key: 'Vault.prototype.getFolderByPath',
     },
     getMarkdownFiles: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "Vault.prototype.getMarkdownFiles",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'Vault.prototype.getMarkdownFiles',
     },
     getName: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "Vault.prototype.getName",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'Vault.prototype.getName',
     },
     getResourcePath: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "Vault.prototype.getResourcePath",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'Vault.prototype.getResourcePath',
     },
     getRoot: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "Vault.prototype.getRoot",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'Vault.prototype.getRoot',
     },
     modify: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "Vault.prototype.modify",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'Vault.prototype.modify',
     },
     modifyBinary: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "Vault.prototype.modifyBinary",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'Vault.prototype.modifyBinary',
     },
     on: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "Vault.prototype.on",
-      create: { $since: "0.9.7", $key: "Vault.prototype.on:create" },
-      delete: { $since: "0.9.7", $key: "Vault.prototype.on:delete" },
-      modify: { $since: "0.9.7", $key: "Vault.prototype.on:modify" },
-      rename: { $since: "0.9.7", $key: "Vault.prototype.on:rename" },
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'Vault.prototype.on',
+      create: { $since: '0.9.7', $key: 'Vault.prototype.on:create' },
+      delete: { $since: '0.9.7', $key: 'Vault.prototype.on:delete' },
+      modify: { $since: '0.9.7', $key: 'Vault.prototype.on:modify' },
+      rename: { $since: '0.9.7', $key: 'Vault.prototype.on:rename' },
     },
     process: {
-      $since: "1.1.0",
-      $kind: "method",
-      $key: "Vault.prototype.process",
+      $since: '1.1.0',
+      $kind: 'method',
+      $key: 'Vault.prototype.process',
     },
     read: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "Vault.prototype.read",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'Vault.prototype.read',
     },
     readBinary: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "Vault.prototype.readBinary",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'Vault.prototype.readBinary',
     },
     recurseChildren: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "Vault.recurseChildren",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'Vault.recurseChildren',
     },
     rename: {
-      $since: "0.9.11",
-      $kind: "method",
-      $key: "Vault.prototype.rename",
+      $since: '0.9.11',
+      $kind: 'method',
+      $key: 'Vault.prototype.rename',
     },
     trash: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "Vault.prototype.trash",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'Vault.prototype.trash',
     },
   },
   View: {
-    $since: "0.9.7",
-    $kind: "class",
-    $key: "View",
+    $since: '0.9.7',
+    $kind: 'class',
+    $key: 'View',
     app: {
-      $since: "0.9.7",
-      $kind: "property",
-      $key: "View.prototype.app",
+      $since: '0.9.7',
+      $kind: 'property',
+      $key: 'View.prototype.app',
     },
     containerEl: {
-      $since: "0.9.7",
-      $kind: "property",
-      $key: "View.prototype.containerEl",
+      $since: '0.9.7',
+      $kind: 'property',
+      $key: 'View.prototype.containerEl',
     },
     getDisplayText: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "View.prototype.getDisplayText",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'View.prototype.getDisplayText',
     },
     getEphemeralState: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "View.prototype.getEphemeralState",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'View.prototype.getEphemeralState',
     },
     getIcon: {
-      $since: "1.1.0",
-      $kind: "method",
-      $key: "View.prototype.getIcon",
+      $since: '1.1.0',
+      $kind: 'method',
+      $key: 'View.prototype.getIcon',
     },
     getState: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "View.prototype.getState",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'View.prototype.getState',
     },
     getViewType: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "View.prototype.getViewType",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'View.prototype.getViewType',
     },
     icon: {
-      $since: "1.1.0",
-      $kind: "property",
-      $key: "View.prototype.icon",
+      $since: '1.1.0',
+      $kind: 'property',
+      $key: 'View.prototype.icon',
     },
     leaf: {
-      $since: "0.9.7",
-      $kind: "property",
-      $key: "View.prototype.leaf",
+      $since: '0.9.7',
+      $kind: 'property',
+      $key: 'View.prototype.leaf',
     },
     navigation: {
-      $since: "0.15.1",
-      $kind: "property",
-      $key: "View.prototype.navigation",
+      $since: '0.15.1',
+      $kind: 'property',
+      $key: 'View.prototype.navigation',
     },
     onClose: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "View.prototype.onClose",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'View.prototype.onClose',
     },
     onOpen: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "View.prototype.onOpen",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'View.prototype.onOpen',
     },
     onPaneMenu: {
-      $since: "0.15.3",
-      $kind: "method",
-      $key: "View.prototype.onPaneMenu",
+      $since: '0.15.3',
+      $kind: 'method',
+      $key: 'View.prototype.onPaneMenu',
     },
     onResize: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "View.prototype.onResize",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'View.prototype.onResize',
     },
     scope: {
-      $since: "1.5.7",
-      $kind: "property",
-      $key: "View.prototype.scope",
+      $since: '1.5.7',
+      $kind: 'property',
+      $key: 'View.prototype.scope',
     },
     setEphemeralState: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "View.prototype.setEphemeralState",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'View.prototype.setEphemeralState',
     },
     setState: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "View.prototype.setState",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'View.prototype.setState',
     },
   },
   Workspace: {
-    $since: "0.9.7",
-    $kind: "class",
-    $key: "Workspace",
+    $since: '0.9.7',
+    $kind: 'class',
+    $key: 'Workspace',
     activeLeaf: {
-      $since: "0.9.7",
-      $kind: "property",
-      $key: "Workspace.prototype.activeLeaf",
+      $since: '0.9.7',
+      $kind: 'property',
+      $key: 'Workspace.prototype.activeLeaf',
     },
     changeLayout: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "Workspace.prototype.changeLayout",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'Workspace.prototype.changeLayout',
     },
     containerEl: {
-      $since: "0.9.7",
-      $kind: "property",
-      $key: "Workspace.prototype.containerEl",
+      $since: '0.9.7',
+      $kind: 'property',
+      $key: 'Workspace.prototype.containerEl',
     },
     createLeafBySplit: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "Workspace.prototype.createLeafBySplit",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'Workspace.prototype.createLeafBySplit',
     },
     createLeafInParent: {
-      $since: "0.9.11",
-      $kind: "method",
-      $key: "Workspace.prototype.createLeafInParent",
+      $since: '0.9.11',
+      $kind: 'method',
+      $key: 'Workspace.prototype.createLeafInParent',
     },
     detachLeavesOfType: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "Workspace.prototype.detachLeavesOfType",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'Workspace.prototype.detachLeavesOfType',
     },
     duplicateLeaf: {
-      $since: "1.1.0",
-      $kind: "method",
-      $key: "Workspace.prototype.duplicateLeaf",
+      $since: '1.1.0',
+      $kind: 'method',
+      $key: 'Workspace.prototype.duplicateLeaf',
     },
     ensureSideLeaf: {
-      $since: "1.7.2",
-      $kind: "method",
-      $key: "Workspace.prototype.ensureSideLeaf",
+      $since: '1.7.2',
+      $kind: 'method',
+      $key: 'Workspace.prototype.ensureSideLeaf',
     },
     getActiveViewOfType: {
-      $since: "0.9.16",
-      $kind: "method",
-      $key: "Workspace.prototype.getActiveViewOfType",
+      $since: '0.9.16',
+      $kind: 'method',
+      $key: 'Workspace.prototype.getActiveViewOfType',
     },
     getGroupLeaves: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "Workspace.prototype.getGroupLeaves",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'Workspace.prototype.getGroupLeaves',
     },
     getLastOpenFiles: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "Workspace.prototype.getLastOpenFiles",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'Workspace.prototype.getLastOpenFiles',
     },
     getLayout: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "Workspace.prototype.getLayout",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'Workspace.prototype.getLayout',
     },
     getLeaf: {
-      $since: "0.16.0",
-      $kind: "method",
-      $key: "Workspace.prototype.getLeaf",
-      split: { $since: "0.16.0", $key: "Workspace.prototype.getLeaf:split" },
+      $since: '0.16.0',
+      $kind: 'method',
+      $key: 'Workspace.prototype.getLeaf',
+      split: { $since: '0.16.0', $key: 'Workspace.prototype.getLeaf:split' },
     },
     getLeafById: {
-      $since: "1.5.1",
-      $kind: "method",
-      $key: "Workspace.prototype.getLeafById",
+      $since: '1.5.1',
+      $kind: 'method',
+      $key: 'Workspace.prototype.getLeafById',
     },
     getLeavesOfType: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "Workspace.prototype.getLeavesOfType",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'Workspace.prototype.getLeavesOfType',
     },
     getLeftLeaf: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "Workspace.prototype.getLeftLeaf",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'Workspace.prototype.getLeftLeaf',
     },
     getMostRecentLeaf: {
-      $since: "0.15.4",
-      $kind: "method",
-      $key: "Workspace.prototype.getMostRecentLeaf",
+      $since: '0.15.4',
+      $kind: 'method',
+      $key: 'Workspace.prototype.getMostRecentLeaf',
     },
     getRightLeaf: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "Workspace.prototype.getRightLeaf",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'Workspace.prototype.getRightLeaf',
     },
     handleLinkContextMenu: {
-      $since: "0.12.10",
-      $kind: "method",
-      $key: "Workspace.prototype.handleLinkContextMenu",
+      $since: '0.12.10',
+      $kind: 'method',
+      $key: 'Workspace.prototype.handleLinkContextMenu',
     },
     iterateAllLeaves: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "Workspace.prototype.iterateAllLeaves",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'Workspace.prototype.iterateAllLeaves',
     },
     iterateRootLeaves: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "Workspace.prototype.iterateRootLeaves",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'Workspace.prototype.iterateRootLeaves',
     },
     layoutReady: {
-      $since: "0.9.7",
-      $kind: "property",
-      $key: "Workspace.prototype.layoutReady",
+      $since: '0.9.7',
+      $kind: 'property',
+      $key: 'Workspace.prototype.layoutReady',
     },
     leftRibbon: {
-      $since: "0.9.7",
-      $kind: "property",
-      $key: "Workspace.prototype.leftRibbon",
+      $since: '0.9.7',
+      $kind: 'property',
+      $key: 'Workspace.prototype.leftRibbon',
     },
     leftSplit: {
-      $since: "0.9.7",
-      $kind: "property",
-      $key: "Workspace.prototype.leftSplit",
+      $since: '0.9.7',
+      $kind: 'property',
+      $key: 'Workspace.prototype.leftSplit',
     },
     moveLeafToPopout: {
-      $since: "0.15.4",
-      $kind: "method",
-      $key: "Workspace.prototype.moveLeafToPopout",
+      $since: '0.15.4',
+      $kind: 'method',
+      $key: 'Workspace.prototype.moveLeafToPopout',
     },
     on: {
-      $since: "1.5.1",
-      $kind: "method",
-      $key: "Workspace.prototype.on",
-      "active-leaf-change": {
-        $since: "0.10.9",
-        $key: "Workspace.prototype.on:active-leaf-change",
-      },
-      "css-change": {
-        $since: "0.9.7",
-        $key: "Workspace.prototype.on:css-change",
-      },
-      "editor-change": {
-        $since: "1.1.1",
-        $key: "Workspace.prototype.on:editor-change",
-      },
-      "editor-drop": {
-        $since: "1.1.0",
-        $key: "Workspace.prototype.on:editor-drop",
-      },
-      "editor-menu": {
-        $since: "1.1.0",
-        $key: "Workspace.prototype.on:editor-menu",
-      },
-      "editor-paste": {
-        $since: "1.1.0",
-        $key: "Workspace.prototype.on:editor-paste",
-      },
-      "file-menu": {
-        $since: "0.9.12",
-        $key: "Workspace.prototype.on:file-menu",
-      },
-      "file-open": {
-        $since: "0.10.9",
-        $key: "Workspace.prototype.on:file-open",
-      },
-      "files-menu": {
-        $since: "1.4.10",
-        $key: "Workspace.prototype.on:files-menu",
-      },
-      "layout-change": {
-        $since: "0.9.20",
-        $key: "Workspace.prototype.on:layout-change",
-      },
-      "quick-preview": {
-        $since: "0.9.7",
-        $key: "Workspace.prototype.on:quick-preview",
-      },
-      quit: { $since: "0.10.2", $key: "Workspace.prototype.on:quit" },
-      resize: { $since: "0.9.7", $key: "Workspace.prototype.on:resize" },
-      "url-menu": { $since: "1.5.1", $key: "Workspace.prototype.on:url-menu" },
-      "window-close": {
-        $since: "0.15.3",
-        $key: "Workspace.prototype.on:window-close",
-      },
-      "window-open": {
-        $since: "0.15.3",
-        $key: "Workspace.prototype.on:window-open",
-      },
+      $since: '1.5.1',
+      $kind: 'method',
+      $key: 'Workspace.prototype.on',
+      'active-leaf-change': { $since: '0.10.9', $key: 'Workspace.prototype.on:active-leaf-change' },
+      'css-change': { $since: '0.9.7', $key: 'Workspace.prototype.on:css-change' },
+      'editor-change': { $since: '1.1.1', $key: 'Workspace.prototype.on:editor-change' },
+      'editor-drop': { $since: '1.1.0', $key: 'Workspace.prototype.on:editor-drop' },
+      'editor-menu': { $since: '1.1.0', $key: 'Workspace.prototype.on:editor-menu' },
+      'editor-paste': { $since: '1.1.0', $key: 'Workspace.prototype.on:editor-paste' },
+      'file-menu': { $since: '0.9.12', $key: 'Workspace.prototype.on:file-menu' },
+      'file-open': { $since: '0.10.9', $key: 'Workspace.prototype.on:file-open' },
+      'files-menu': { $since: '1.4.10', $key: 'Workspace.prototype.on:files-menu' },
+      'layout-change': { $since: '0.9.20', $key: 'Workspace.prototype.on:layout-change' },
+      'quick-preview': { $since: '0.9.7', $key: 'Workspace.prototype.on:quick-preview' },
+      quit: { $since: '0.10.2', $key: 'Workspace.prototype.on:quit' },
+      resize: { $since: '0.9.7', $key: 'Workspace.prototype.on:resize' },
+      'url-menu': { $since: '1.5.1', $key: 'Workspace.prototype.on:url-menu' },
+      'window-close': { $since: '0.15.3', $key: 'Workspace.prototype.on:window-close' },
+      'window-open': { $since: '0.15.3', $key: 'Workspace.prototype.on:window-open' },
     },
     onLayoutReady: {
-      $since: "0.11.0",
-      $kind: "method",
-      $key: "Workspace.prototype.onLayoutReady",
+      $since: '0.11.0',
+      $kind: 'method',
+      $key: 'Workspace.prototype.onLayoutReady',
     },
     openLinkText: {
-      $since: "0.16.0",
-      $kind: "method",
-      $key: "Workspace.prototype.openLinkText",
+      $since: '0.16.0',
+      $kind: 'method',
+      $key: 'Workspace.prototype.openLinkText',
     },
     openPopoutLeaf: {
-      $since: "0.15.4",
-      $kind: "method",
-      $key: "Workspace.prototype.openPopoutLeaf",
+      $since: '0.15.4',
+      $kind: 'method',
+      $key: 'Workspace.prototype.openPopoutLeaf',
     },
     requestSaveLayout: {
-      $since: "0.16.0",
-      $kind: "property",
-      $key: "Workspace.prototype.requestSaveLayout",
+      $since: '0.16.0',
+      $kind: 'property',
+      $key: 'Workspace.prototype.requestSaveLayout',
     },
     revealLeaf: {
-      $since: "1.7.2",
-      $kind: "method",
-      $key: "Workspace.prototype.revealLeaf",
+      $since: '1.7.2',
+      $kind: 'method',
+      $key: 'Workspace.prototype.revealLeaf',
     },
     rightSplit: {
-      $since: "0.9.7",
-      $kind: "property",
-      $key: "Workspace.prototype.rightSplit",
+      $since: '0.9.7',
+      $kind: 'property',
+      $key: 'Workspace.prototype.rightSplit',
     },
     rootSplit: {
-      $since: "0.9.7",
-      $kind: "property",
-      $key: "Workspace.prototype.rootSplit",
+      $since: '0.9.7',
+      $kind: 'property',
+      $key: 'Workspace.prototype.rootSplit',
     },
     setActiveLeaf: {
-      $since: "0.16.3",
-      $kind: "method",
-      $key: "Workspace.prototype.setActiveLeaf",
+      $since: '0.16.3',
+      $kind: 'method',
+      $key: 'Workspace.prototype.setActiveLeaf',
     },
     splitActiveLeaf: {
-      $since: "0.9.7",
-      $kind: "method",
-      $key: "Workspace.prototype.splitActiveLeaf",
+      $since: '0.9.7',
+      $kind: 'method',
+      $key: 'Workspace.prototype.splitActiveLeaf',
     },
     updateOptions: {
-      $since: "0.13.21",
-      $kind: "method",
-      $key: "Workspace.prototype.updateOptions",
+      $since: '0.13.21',
+      $kind: 'method',
+      $key: 'Workspace.prototype.updateOptions',
     },
   },
   WorkspaceContainer: {
-    $since: "0.15.4",
-    $kind: "class",
-    $key: "WorkspaceContainer",
+    $since: '0.15.4',
+    $kind: 'class',
+    $key: 'WorkspaceContainer',
     doc: {
-      $since: "0.15.4",
-      $kind: "property",
-      $key: "WorkspaceContainer.prototype.doc",
+      $since: '0.15.4',
+      $kind: 'property',
+      $key: 'WorkspaceContainer.prototype.doc',
     },
     win: {
-      $since: "0.15.4",
-      $kind: "property",
-      $key: "WorkspaceContainer.prototype.win",
+      $since: '0.15.4',
+      $kind: 'property',
+      $key: 'WorkspaceContainer.prototype.win',
     },
   },
   WorkspaceFloating: {
-    $since: "0.15.2",
-    $kind: "class",
-    $key: "WorkspaceFloating",
+    $since: '0.15.2',
+    $kind: 'class',
+    $key: 'WorkspaceFloating',
     parent: {
-      $since: "0.15.2",
-      $kind: "property",
-      $key: "WorkspaceFloating.prototype.parent",
+      $since: '0.15.2',
+      $kind: 'property',
+      $key: 'WorkspaceFloating.prototype.parent',
     },
   },
   WorkspaceItem: {
-    $since: "0.10.2",
-    $kind: "class",
-    $key: "WorkspaceItem",
+    $since: '0.10.2',
+    $kind: 'class',
+    $key: 'WorkspaceItem',
     getContainer: {
-      $since: "0.15.4",
-      $kind: "method",
-      $key: "WorkspaceItem.prototype.getContainer",
+      $since: '0.15.4',
+      $kind: 'method',
+      $key: 'WorkspaceItem.prototype.getContainer',
     },
     getRoot: {
-      $since: "0.10.2",
-      $kind: "method",
-      $key: "WorkspaceItem.prototype.getRoot",
+      $since: '0.10.2',
+      $kind: 'method',
+      $key: 'WorkspaceItem.prototype.getRoot',
     },
     parent: {
-      $since: "1.6.6",
-      $kind: "property",
-      $key: "WorkspaceItem.prototype.parent",
+      $since: '1.6.6',
+      $kind: 'property',
+      $key: 'WorkspaceItem.prototype.parent',
     },
   },
   WorkspaceLeaf: {
-    $since: "1.7.2",
-    $kind: "method",
-    $key: "WorkspaceLeaf",
+    $since: '1.7.2',
+    $kind: 'method',
+    $key: 'WorkspaceLeaf',
     loadIfDeferred: {
-      $since: "1.7.2",
-      $kind: "method",
-      $key: "WorkspaceLeaf.prototype.loadIfDeferred",
+      $since: '1.7.2',
+      $kind: 'method',
+      $key: 'WorkspaceLeaf.prototype.loadIfDeferred',
     },
   },
   WorkspaceMobileDrawer: {
-    $since: "1.6.6",
-    $kind: "class",
-    $key: "WorkspaceMobileDrawer",
+    $since: '1.6.6',
+    $kind: 'class',
+    $key: 'WorkspaceMobileDrawer',
   },
   WorkspaceParent: {
-    $since: "0.9.7",
-    $kind: "class",
-    $key: "WorkspaceParent",
+    $since: '0.9.7',
+    $kind: 'class',
+    $key: 'WorkspaceParent',
   },
   WorkspaceRoot: {
-    $since: "0.15.2",
-    $kind: "class",
-    $key: "WorkspaceRoot",
+    $since: '0.15.2',
+    $kind: 'class',
+    $key: 'WorkspaceRoot',
   },
   WorkspaceSidedock: {
-    $since: "0.15.4",
-    $kind: "class",
-    $key: "WorkspaceSidedock",
+    $since: '0.15.4',
+    $kind: 'class',
+    $key: 'WorkspaceSidedock',
     collapse: {
-      $since: "0.12.11",
-      $kind: "method",
-      $key: "WorkspaceSidedock.prototype.collapse",
+      $since: '0.12.11',
+      $kind: 'method',
+      $key: 'WorkspaceSidedock.prototype.collapse',
     },
     collapsed: {
-      $since: "0.12.11",
-      $kind: "property",
-      $key: "WorkspaceSidedock.prototype.collapsed",
+      $since: '0.12.11',
+      $kind: 'property',
+      $key: 'WorkspaceSidedock.prototype.collapsed',
     },
     expand: {
-      $since: "0.12.11",
-      $kind: "method",
-      $key: "WorkspaceSidedock.prototype.expand",
+      $since: '0.12.11',
+      $kind: 'method',
+      $key: 'WorkspaceSidedock.prototype.expand',
     },
     toggle: {
-      $since: "0.12.11",
-      $kind: "method",
-      $key: "WorkspaceSidedock.prototype.toggle",
+      $since: '0.12.11',
+      $kind: 'method',
+      $key: 'WorkspaceSidedock.prototype.toggle',
     },
   },
   WorkspaceSplit: {
-    $since: "0.9.7",
-    $kind: "class",
-    $key: "WorkspaceSplit",
+    $since: '0.9.7',
+    $kind: 'class',
+    $key: 'WorkspaceSplit',
   },
   WorkspaceWindow: {
-    $since: "0.15.4",
-    $kind: "class",
-    $key: "WorkspaceWindow",
+    $since: '0.15.4',
+    $kind: 'class',
+    $key: 'WorkspaceWindow',
   },
 } as const;
